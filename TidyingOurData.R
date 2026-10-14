@@ -50,3 +50,8 @@ dog_data_clean$`max_life (yrs)`[dog_data_clean$`max_life (yrs)` == 0] <- NA
 
 dog_data_clean$max_wt_lbs[dog_data_clean$max_wt_lbs == 0] <- NA
 dog_data_clean$min_wt_lbs[dog_data_clean$min_wt_lbs == 0] <- NA
+
+#Saving to Data Folder
+
+write.csv(dog_data_clean, "Data/dog_data_clean.csv", row.names = FALSE)
+
