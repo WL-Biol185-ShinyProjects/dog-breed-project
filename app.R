@@ -23,9 +23,6 @@ server <- function(input, output, session) {}
 
 library(shiny)
 
-ui <- fluidPage(
-  
-)
 
 server <- function(input, output, session) {
   
@@ -34,11 +31,10 @@ server <- function(input, output, session) {
 shinyApp(ui, server)
 
 
-# TODO: Give the app a title and short subtitle/description
 
 ui <- fluidPage(
   
-  
+  # TODO: Give the app a title and short subtitle/description
   #App title
   titlePanel("Find Your Perfect Dog"),
   
@@ -46,7 +42,10 @@ ui <- fluidPage(
   p("Looking for a new furry friend? Tell us a little bit about yourself
     and we'll use the AKC's comprehensive breed dataset to match you 
     with your perfect pet. Use the tabs to explore breeds and see what 
-    makes each dog unique.")
+    makes each dog unique."),
+  
+  #theme
+  theme = app_theme
 )
 
 
