@@ -13,11 +13,7 @@ library(readxl)
 
 #Making our data from .xlsx -> .txt
 
-dog_data_working <- read_excel("dog_data_working.xlsx",
-                               header = TRUE, 
-                               na.strings = ("NA")
-)
-
+dog_data_working <- read_excel("dog_data_working.xlsx")
 
 #Lowercasing all Column Names
 
@@ -47,6 +43,10 @@ dog_data_clean$`min_wt (kg)` <- NULL
 dog_data_clean$max_wt_lbs <- ((dog_data_clean$`max_wt (kg)`)*2.205)
 dog_data_clean$`max_wt (kg)` <- NULL
 
-#Fixing american hairless terrier
+#Converting 0s into NA
 
+dog_data_clean$`min_life (yrs)`[dog_data_clean$`min_life (yrs)` == 0] <- NA
+dog_data_clean$`max_life (yrs)`[dog_data_clean$`max_life (yrs)` == 0] <- NA
 
+dog_data_clean$max_wt_lbs[dog_data_clean$max_wt_lbs == 0] <- NA
+dog_data_clean$min_wt_lbs[dog_data_clean$min_wt_lbs == 0] <- NA
