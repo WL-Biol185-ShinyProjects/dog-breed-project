@@ -12,7 +12,10 @@ library(readxl)
 
 #Making our data from .xlsx -> .txt
 
-dog_data_working <- read_excel("dog_data_working.xlsx")
+dog_data_working <- read_excel("dog_data_working.xlsx",
+                               header = TRUE, 
+                               na.strings = ("NA")
+)
 
 
 #Lowercasing all Column Names
