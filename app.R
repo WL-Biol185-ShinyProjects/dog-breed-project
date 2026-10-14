@@ -4,7 +4,7 @@ library(tidyverse)  # Data cleaning, manipulation, and ggplot visualizations
 library(readxl)     # Reads the Excel dog dataset
 library(bslib)      # Makes it easier to style/theme the Shiny app
 
-#Load cleaned dog dataset
+#Load cleaned dog dataset #REDO this
 
 dog_data_clean <- read_csv("data/dog_data_clean")
 
