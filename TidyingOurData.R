@@ -29,3 +29,19 @@ clus_name_fixed <- gsub(pattern = "_", replacement = " ", x = dog_data_clean$clu
 
 dog_data_clean$clus_name <- clus_name_fixed
 
+#Changing cm to inches 
+
+dog_data_clean$min_ht_inch <- ((dog_data_clean$`min_ht (cm)`)/2.54)
+dog_data_clean$`min_ht (cm)` <- NULL
+
+dog_data_clean$max_ht_inch <- ((dog_data_clean$`max_ht (cm)`)/2.54)
+dog_data_clean$`max_ht (cm)` <- NULL
+
+dog_data_clean$min_wt_lbs <- ((dog_data_clean$`min_wt (kg)`)*2.205)
+dog_data_clean$`min_wt (kg)` <- NULL
+
+dog_data_clean$max_wt_lbs <- ((dog_data_clean$`max_wt (kg)`)*2.205)
+dog_data_clean$`max_wt (kg)` <- NULL
+
+#Fixing american hairless terrier
+
