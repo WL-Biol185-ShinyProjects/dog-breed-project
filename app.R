@@ -6,14 +6,10 @@ library(bslib)      # Makes it easier to style/theme the Shiny app
 
 #Load cleaned dog dataset #REDO this
 
-dog_data_clean <- read_csv("data/dog_data_clean")
 
 
 ## TODO: Create the basic Shiny app structure (UI + server)
 
-#UI 
-
-ui <- fluidPage ()
 
 #Server
 
