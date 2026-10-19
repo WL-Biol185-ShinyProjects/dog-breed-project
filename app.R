@@ -6,7 +6,11 @@ library(bslib)      # Makes it easier to style/theme the Shiny app
 
 #Load cleaned dog dataset #REDO this
 
+<<<<<<< HEAD
 
+=======
+dog_data_clean <- read_csv("Data/dog_data_clean.csv")
+>>>>>>> 068aa0fd56c8a7a5552da2d3343a7ac34c8cc13e
 
 ## TODO: Create the basic Shiny app structure (UI + server)
 
