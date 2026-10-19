@@ -1,56 +1,37 @@
-#Load packages we will need
-library(shiny)      # Builds the interactive web app
-library(tidyverse)  # Data cleaning, manipulation, and ggplot visualizations
-library(readxl)     # Reads the Excel dog dataset
-library(bslib)      # Makes it easier to style/theme the Shiny app
-
-#Load cleaned dog dataset #REDO this
-
-<<<<<<< HEAD
-
-=======
-dog_data_clean <- read_csv("Data/dog_data_clean.csv")
->>>>>>> 068aa0fd56c8a7a5552da2d3343a7ac34c8cc13e
-
-## TODO: Create the basic Shiny app structure (UI + server)
+# ================================================================
+# DOG MATCHING SHINY APP
+# ================================================================
+#   1. UI = what the user sees
+#   2. Server = what the app does behind the scenes
+# ================================================================
 
 
-#Server
-
-server <- function(input, output, session) {}
-
-#Runapp
+# PACKAGES --------------------------------------------------------
 
 library(shiny)
 
+library(tidyverse)
 
-server <- function(input, output, session) {
-  
-}
+library(readxl)
 
-shinyApp(ui, server)
+library(bslib)
 
+library(shinydashboard)
 
+# LOAD DATA -------------------------------------------------------
 
-ui <- fluidPage(
-  
-  # TODO: Give the app a title and short subtitle/description
-  #App title
-  titlePanel("Find Your Perfect Dog"),
-  
-  #Short Description
-  p("Looking for a new furry friend? Tell us a little bit about yourself
-    and we'll use the AKC's comprehensive breed dataset to match you 
-    with your perfect pet. Use the tabs to explore breeds and see what 
-    makes each dog unique."),
-  
-  #theme
-  theme = app_theme
-)
+# Read our cleaned dog dataset into R.
+# Replace the filename below with the EXACT name of the Excel file
+# in the Files pane.
+
+dog_data_clean <- read_excel("dog_data_clean.xlsx")
 
 
 
-# TODO: Choose a basic Shiny theme/color scheme
+# APP THEME -------------------------------------------------------
+
+# This creates the visual theme that will be used throughout the app.
+# "minty" can be replaced later with another Bootswatch theme.
 
 app_theme <- bs_theme(
   bootswatch = "minty"
@@ -58,16 +39,232 @@ app_theme <- bs_theme(
 
 
 
+# USER INTERFACE (UI) ---------------------------------------------
+
+# USER INTERFACE ----------------------------------------------------------
+
+ui <- dashboardPage(
+  
+  
+  # HEADER ---------------------------------------------------------------
+  
+  # This is the bar across the top of the app.
+  # The title also appears at the top of the sidebar.
+  
+  dashboardHeader(
+    title = "Dog Breed Explorer"
+  ),
+  
+  
+  # SIDEBAR --------------------------------------------------------------
+  
+  # This creates the permanent navigation bar on the left side.
+  
+  dashboardSidebar(
+    
+    sidebarMenu(
+      
+      # HOME
+      # tabName tells Shiny which page this button should open.
+      menuItem(
+        "Home",
+        tabName = "home",
+        icon = icon("house")
+      ),
+      
+      # BREED EXPLORER
+      menuItem(
+        "Breed Explorer",
+        tabName = "breed_explorer",
+        icon = icon("dog")
+      ),
+      
+      # TRAITS & TRENDS
+      menuItem(
+        "Traits & Trends",
+        tabName = "traits",
+        icon = icon("chart-column")
+      ),
+      
+      # COMPARE BREEDS
+      menuItem(
+        "Compare Breeds",
+        tabName = "compare",
+        icon = icon("scale-balanced")
+      ),
+      
+      # FIND A BREED
+      menuItem(
+        "Find a Breed",
+        tabName = "find_breed",
+        icon = icon("magnifying-glass")
+      ),
+      
+      # YOUR MATCH
+      menuItem(
+        "Your Match",
+        tabName = "match",
+        icon = icon("heart")
+      ),
+      
+      # ABOUT
+      menuItem(
+        "About",
+        tabName = "about",
+        icon = icon("circle-info")
+      )
+      
+    )
+  ),
+  
+  
+  # BODY -----------------------------------------------------------------
+  
+  # This is the large area on the right.
+  # The content displayed here changes when someone clicks
+  # a page in the sidebar.
+  
+  dashboardBody(
+    
+    tabItems(
+      
+      # HOME PAGE
+      tabItem(
+        tabName = "home",
+        
+        h1("Dog Breed Explorer"),
+        
+        h3("Find your new best friend"),
+        
+        p("Discover breeds that fit your lifestyle, preferences, 
+          and personality.")
+      ), 
+      
+  
+      
+      # EXPLORE PAGE
+      tabItem(
+        tabName = "breed_explorer",
+        
+        h1("Breed Explorer"),
+        
+        # Short instructions
+        p("Select a breed below to explore its characteristics."),
+        
+        # Dropdown menu containing all dog breeds
+        selectInput(
+          inputId = "selected_breed",
+          label = "Choose a breed:",
+          choices = sort(dog_data_clean$name)
+        ), 
+        
+        # Displays the name of the breed selected by the user
+        h2(textOutput("breed_name"))
+      ),
+      
+      
+      # TRAITS & TRENDS ---------------------------------------------------
+      
+      tabItem(
+        tabName = "traits",
+        
+        h1("Traits & Trends"),
+        p("Interactive data visualizations will go here.")
+      ),
+      
+      
+      # COMPARE BREEDS ----------------------------------------------------
+      
+      tabItem(
+        tabName = "compare",
+        
+        h1("Compare Breeds"),
+        p("Breed comparison tools will go here.")
+      ),
+      
+      
+      # FIND A BREED ------------------------------------------------------
+      
+      tabItem(
+        tabName = "find_breed",
+        
+        h1("Find a Breed"),
+        p("Breed filtering tools will go here.")
+      ),
+      
+      
+      # YOUR MATCH --------------------------------------------------------
+      
+      tabItem(
+        tabName = "match",
+        
+        h1("Your Match"),
+        p("Dog matching questionnaire will go here.")
+      ),
+      
+      
+      # ABOUT -------------------------------------------------------------
+      
+      tabItem(
+        tabName = "about",
+        
+        h1("About"),
+        p("Information about the data and project will go here.")
+      )
+      
+    )
+  )
+  
+)
+
+# SERVER ----------------------------------------------------------
+
+# The server controls what the app DOES behind the scenes.
+#
+# Eventually this is where we will:
+#   - Read answers users give us
+#   - Filter the dog dataset
+#   - Calculate dog matches
+#   - Create graphs
+#   - Update information based on user selections
+#
+# We do not need any server instructions yet because our
+# webpage is currently just displaying static content.
+
+server <- function(input, output, session) {
+  
+  
+  # Create the breed name that will appear on the Breed Explorer page
+ 
+  # Filter the dataset to only the breed selected by the user
+  selected_breed_data <- reactive({
+    
+    dog_data_clean |>
+      filter(name == input$selected_breed)
+    
+  })
+  
+  
+  # Display the selected breed's name
+  
+   output$breed_name <- renderText({
+    
+    input$selected_breed
+    
+  })
+  
+  
+  
+}
 
 
-# TODO: Create the navigation bar for the site
 
-# TODO: Create an empty Home tab
+# RUN THE APP -----------------------------------------------------
 
-# TODO: Create an empty "Find Your Dog" quiz tab
+# This combines the UI and server and tells R to launch
+# the Shiny application.
 
-# TODO: Create an empty "Explore Breeds" tab
-
-# TODO: Create an empty "Compare Breeds" tab
-
-# TODO: Create an empty "About the Data" tab
+shinyApp(
+  ui = ui,
+  server = server
+)
