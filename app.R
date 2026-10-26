@@ -200,12 +200,12 @@ ui <- dashboardPage(
       ),
       
       
-      # YOUR MATCH --------------------------------------------------------
+      # What dog are you questionnaire --------------------------------------------------------
       
       tabItem(
-        tabName = "match",
+        tabName = "Soul Dog",
         
-        h1("Your Match"),
+        h1("Soul Dog"),
         p("Dog matching questionnaire will go here.")
       ),
       
