@@ -162,6 +162,9 @@ ui <- dashboardPage(
         #Display the breed description
         textOutput("breed_description"), 
         
+        h4("Temperament"),
+        textOutput("breed_temperament"),
+        
         
         # Quick Facts
         h3("Quick Facts"),
@@ -330,6 +333,13 @@ server <- function(input, output, session) {
      )
      
    })
+   
+   
+   output$breed_temperament <- renderText({
+     selected_breed_data()$temperament
+   })
+   
+   
    
   
 }
