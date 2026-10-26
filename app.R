@@ -103,7 +103,7 @@ ui <- dashboardPage(
       # What dog are you questionnaire
       menuItem(
         "Soul Dog",
-        tabName = "souldogog",
+        tabName = "soul_dog",
         icon = icon("heart")
       ),
       
@@ -203,9 +203,9 @@ ui <- dashboardPage(
       # What dog are you questionnaire --------------------------------------------------------
       
       tabItem(
-        tabName = "Soul Dog",
+        tabName = "soul_dog",
         
-        h1("souldog"),
+        h1("Soul Dog"),
         p("Dog matching questionnaire will go here.")
       ),
       
