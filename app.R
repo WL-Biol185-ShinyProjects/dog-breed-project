@@ -100,10 +100,10 @@ ui <- dashboardPage(
         icon = icon("magnifying-glass")
       ),
       
-      # YOUR MATCH
+      # What dog are you questionnaire
       menuItem(
-        "Your Match",
-        tabName = "match",
+        "Soul Dog",
+        tabName = "Soul Dog",
         icon = icon("heart")
       ),
       
