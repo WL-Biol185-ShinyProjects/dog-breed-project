@@ -22,7 +22,7 @@ library(shinydashboard)
 # Replace the filename below with the EXACT name of the Excel file
 # in the Files pane.
 
-dog_data_clean <- read_csv("data/dog_data_clean.csv")
+dog_data_clean <- read_csv("Data/dog_data_clean.csv")
 
 
 
