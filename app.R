@@ -168,7 +168,11 @@ ui <- dashboardPage(
         #Quick facts about the selected breed
         h3("Quick Facts"), 
         
-        
+        textOutput("breed_group"),
+        textOutput("breed_temperament"),
+        textOutput("breed_lifespan"),
+        textOutput("breed_height"),
+        textOutput("breed_weight")
         
         
         
@@ -273,7 +277,62 @@ server <- function(input, output, session) {
      
    })
    
+   # Display breed group
+   output$breed_group <- renderText({
+     
+     paste("Breed Group:", selected_breed_data()$group)
+     
+   })
    
+   
+   # Display temperament
+   output$breed_temperament <- renderText({
+     
+     paste("Temperament:", selected_breed_data()$temperament)
+     
+   })
+   
+   
+   # Display lifespan
+   output$breed_lifespan <- renderText({
+     
+     paste(
+       "Lifespan:",
+       selected_breed_data()[["min_life (yrs)"]],
+       "-",
+       selected_breed_data()[["max_life (yrs)"]],
+       "years"
+     )
+     
+   })
+   
+   
+   # Display height
+   output$breed_height <- renderText({
+     
+     paste(
+       "Height:",
+       selected_breed_data()$min_ht_inch,
+       "-",
+       selected_breed_data()$max_ht_inch,
+       "inches"
+     )
+     
+   })
+   
+   
+   # Display weight
+   output$breed_weight <- renderText({
+     
+     paste(
+       "Weight:",
+       selected_breed_data()$min_wt_lbs,
+       "-",
+       selected_breed_data()$max_wt_lbs,
+       "lbs"
+     )
+     
+   })
    
   
 }
