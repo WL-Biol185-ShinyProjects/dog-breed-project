@@ -55,3 +55,5 @@ dog_data_clean$min_wt_lbs[dog_data_clean$min_wt_lbs == 0] <- NA
 
 write.csv(dog_data_clean, "Data/dog_data_clean.csv", row.names = FALSE)
 
+breed_temperament <- read.csv("Data/breed_temperament.csv")
+
