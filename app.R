@@ -159,7 +159,14 @@ ui <- dashboardPage(
         ), 
         
         # Displays the name of the breed selected by the user
-        h2(textOutput("breed_name"))
+        h2(textOutput("breed_name")),
+        
+        #Display the breed desciption
+        textOutput("breed_description")
+        
+        
+        
+        
       ),
       
       
