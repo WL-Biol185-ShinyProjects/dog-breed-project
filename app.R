@@ -163,14 +163,20 @@ ui <- dashboardPage(
         textOutput("breed_description"), 
         
         
-        #Quick facts about the selected breed
-        h3("Quick Facts"), 
+        # Quick Facts
+        h3("Quick Facts"),
         
-        textOutput("breed_group"),
-        textOutput("breed_temperament"),
-        textOutput("breed_lifespan"),
-        textOutput("breed_height"),
-        textOutput("breed_weight")
+        fluidRow(
+          
+          valueBoxOutput("breed_group_box", width = 3),
+          
+          valueBoxOutput("breed_lifespan_box", width = 3),
+          
+          valueBoxOutput("breed_weight_box", width = 3),
+          
+          valueBoxOutput("breed_height_box", width = 3)
+          
+        )
         
         
         
