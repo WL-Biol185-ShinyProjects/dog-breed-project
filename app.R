@@ -280,60 +280,53 @@ server <- function(input, output, session) {
      
      
    })
-   
-   # Display breed group
-   output$breed_group <- renderText({
+
+   # Lifespan box
+   output$breed_lifespan_box <- renderValueBox({
      
-     paste("Breed Group:", selected_breed_data()$group)
-     
-   })
-   
-   
-   # Display temperament
-   output$breed_temperament <- renderText({
-     
-     paste("Temperament:", selected_breed_data()$temperament)
-     
-   })
-   
-   
-   # Display lifespan
-   output$breed_lifespan <- renderText({
-     
-     paste(
-       "Lifespan:",
-       selected_breed_data()[["min_life (yrs)"]],
-       "-",
-       selected_breed_data()[["max_life (yrs)"]],
-       "years"
+     valueBox(
+       value = paste0(
+         selected_breed_data()[["min_life (yrs)"]],
+         "–",
+         selected_breed_data()[["max_life (yrs)"]],
+         " years"
+       ),
+       subtitle = "Typical Lifespan",
+       icon = icon("heart")
      )
      
    })
    
    
-   # Display height
-   output$breed_height <- renderText({
+   # Weight box
+   output$breed_weight_box <- renderValueBox({
      
-     paste(
-       "Height:",
-       selected_breed_data()$min_ht_inch,
-       "-",
-       selected_breed_data()$max_ht_inch,
-       "inches"
+     valueBox(
+       value = paste0(
+         selected_breed_data()$min_wt_lbs,
+         "–",
+         selected_breed_data()$max_wt_lbs,
+         " lbs"
+       ),
+       subtitle = "Weight",
+       icon = icon("weight")
      )
      
    })
    
    
-   # Display weight
-   output$breed_weight <- renderText({
+   # Height box
+   output$breed_height_box <- renderValueBox({
      
-     paste(
-       "Weight:",
-       selected_breed_data()$min_wt_lbs,
-       "-",
-       selected_breed_data()$max_wt_lbs,
-       "lbs"
+     valueBox(
+       value = paste0(
+         selected_breed_data()$min_ht_inch,
+         "–",
+         selected_breed_data()$max_ht_inch,
+         " in"
+       ),
+       subtitle = "Height",
+       icon = icon("arrows-alt-v")
      )
      
    })
