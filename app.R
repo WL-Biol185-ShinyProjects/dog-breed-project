@@ -306,9 +306,9 @@ server <- function(input, output, session) {
      
      valueBox(
        value = paste0(
-         selected_breed_data()$min_wt_lbs,
+         round(selected_breed_data()$min_wt_lbs, 1),
          "–",
-         selected_breed_data()$max_wt_lbs,
+         round(selected_breed_data()$max_wt_lbs, 1),
          " lbs"
        ),
        subtitle = "Weight",
