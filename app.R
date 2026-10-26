@@ -260,7 +260,16 @@ server <- function(input, output, session) {
     
   })
   
-  
+  #Display the description for the selected breed
+   output$breed_description <- renderText({
+     
+     selected_breed_data()$description
+     
+     
+   })
+   
+   
+   
   
 }
 
