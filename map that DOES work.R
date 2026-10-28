@@ -5,26 +5,31 @@ library(readr)
 library(sf)
 library(rnaturalearth)
 
-# 1. Load the data
+# Load the data
 fci_breeds_clean <- read_csv("Data/fci_breeds_clean.csv")
 
-# 2. Clean the country names
+#  Clean the country names
 breeds_by_country <- fci_breeds_clean %>%
   separate_rows(country, sep = ",\\s*") %>%        # split "BELGIUM, FRANCE" into two rows
-  mutate(country = toupper(trimws(country)),        # make everything upper case
+  mutate(country = toupper(trimws(country))),        # make everything upper case
          country = recode(country,
-                          "GREAT BRITAIN" = "UNITED KINGDOM",
-                          "HOLLAND" = "NETHERLANDS")) %>%
+                               "GREAT BRITAIN" = "UNITED KINGDOM",
+                             "THE NETHERLANDS" = "NETHERLANDS",
+                          "RUSSIAN FEDERATION" = "RUSSIA",
+                              "CZECHOSLOVAKIA" = "CZECHIA",
+                              "CENTRAL AFRICA" = "CENTRAL AFRICAN REP",
+                               "TIBET (CHINA)" = "CHINA",
+                         "KOREA (REPUBLIC OF)" = "SOUTH KOREA") %>%
   group_by(country) %>%
   summarise(breed_list = paste(sort(unique(breed)), collapse = "<br>"))
 
-# 3. Get country shapes, make their names upper case too, and join
+#  Get country shapes, make their names upper case too, and join
 world <- ne_countries(scale = "medium", returnclass = "sf") %>%
   mutate(join_name = toupper(admin))
 
 world_breeds <- left_join(world, breeds_by_country, by = c("join_name" = "country"))
 
-# 4. Build the map
+#  Build the map
 dog_map <- leaflet(world_breeds) %>%
   addTiles() %>%
   addPolygons(
