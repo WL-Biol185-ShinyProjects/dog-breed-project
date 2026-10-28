@@ -24,9 +24,28 @@ library(shinydashboard)
 # Replace the filename below with the EXACT name of the Excel file
 # in the Files pane.
 
-dog_data_clean <- read.csv("dog_data_clean.csv",
-                           stringsAsFactors = FALSE,
-                           check.names = TRUE)
+dog_data_clean <- read.csv(
+  "dog_data_clean.csv",
+  stringsAsFactors = FALSE,
+  fileEncoding = "Windows-1252",
+  check.names = TRUE
+)
+# Load the dog breed dataset
+dog_data_clean <- read.csv(
+  "dog_data_clean.csv",
+  stringsAsFactors = FALSE,
+  check.names = TRUE
+)
+
+# Fix weird characters in breed descriptions
+dog_data_clean$description <- gsub(
+  "‚Äî",
+  "—",
+  dog_data_clean$description,
+  fixed = TRUE
+)
+
+
 
 # Make the dataset available to the questionnaire code
 dog_data <- dog_data_clean
