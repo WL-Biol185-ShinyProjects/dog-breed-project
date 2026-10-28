@@ -24,9 +24,28 @@ library(shinydashboard)
 # Replace the filename below with the EXACT name of the Excel file
 # in the Files pane.
 
-dog_data_clean <- read.csv("dog_data_clean.csv",
-                           stringsAsFactors = FALSE,
-                           check.names = TRUE)
+dog_data_clean <- read.csv(
+  "dog_data_clean.csv",
+  stringsAsFactors = FALSE,
+  fileEncoding = "Windows-1252",
+  check.names = TRUE
+)
+# Load the dog breed dataset
+dog_data_clean <- read.csv(
+  "dog_data_clean.csv",
+  stringsAsFactors = FALSE,
+  check.names = TRUE
+)
+
+# Fix weird characters in breed descriptions
+dog_data_clean$description <- gsub(
+  "‚Äî",
+  "—",
+  dog_data_clean$description,
+  fixed = TRUE
+)
+
+
 
 # Make the dataset available to the questionnaire code
 dog_data <- dog_data_clean
@@ -177,27 +196,39 @@ ui <- dashboardPage(
           inputId = "selected_breed",
           label = "Choose a breed:",
           choices = sort(dog_data_clean$name)
-        ), 
+        ),
         
         # Displays the name of the breed selected by the user
         h2(textOutput("breed_name")),
         
-        #Display the breed description
-        textOutput("breed_description"), 
+        # Display the breed description
+        textOutput("breed_description"),
         
+        br(),
         
-        #Quick facts about the selected breed
-        h3("Quick Facts"), 
-        
-        textOutput("breed_group"),
+        # Display temperament separately because it is longer text
+        h4("Temperament"),
         textOutput("breed_temperament"),
-        textOutput("breed_lifespan"),
-        textOutput("breed_height"),
-        textOutput("breed_weight")
         
+        br(),
         
+        # Quick facts section
+        h3("Quick Facts"),
         
-      ),
+        # Put four quick facts in boxes across one row
+        fluidRow(
+          
+          valueBoxOutput("breed_group_box", width = 3),
+          
+          valueBoxOutput("breed_lifespan_box", width = 3),
+          
+          valueBoxOutput("breed_weight_box", width = 3),
+          
+          valueBoxOutput("breed_height_box", width = 3)
+          
+        )
+        
+      ), 
       
       
       # TRAITS & TRENDS ---------------------------------------------------
@@ -377,59 +408,75 @@ server <- function(input, output, session) {
      
    })
    
-   # Display breed group
-   output$breed_group <- renderText({
-     
-     paste("Breed Group:", selected_breed_data()$group)
-     
-   })
-   
-   
    # Display temperament
    output$breed_temperament <- renderText({
      
-     paste("Temperament:", selected_breed_data()$temperament)
+     selected_breed_data()$temperament
      
    })
    
    
-   # Display lifespan
-   output$breed_lifespan <- renderText({
+   # QUICK FACT BOXES -------------------------------------------------
+   
+   
+   # Breed group box
+   output$breed_group_box <- renderValueBox({
      
-     paste(
-       "Lifespan:",
-       selected_breed_data()[["min_life (yrs)"]],
-       "-",
-       selected_breed_data()[["max_life (yrs)"]],
-       "years"
+     valueBox(
+       value = selected_breed_data()$group,
+       subtitle = "Breed Group",
+       icon = icon("dog")
      )
      
    })
    
    
-   # Display height
-   output$breed_height <- renderText({
+   # Lifespan box
+   output$breed_lifespan_box <- renderValueBox({
      
-     paste(
-       "Height:",
-       selected_breed_data()$min_ht_inch,
-       "-",
-       selected_breed_data()$max_ht_inch,
-       "inches"
+     valueBox(
+       value = paste0(
+         selected_breed_data()[["min_life (yrs)"]],
+         "–",
+         selected_breed_data()[["max_life (yrs)"]],
+         " years"
+       ),
+       subtitle = "Typical Lifespan",
+       icon = icon("heart")
      )
      
    })
    
    
-   # Display weight
-   output$breed_weight <- renderText({
+   # Weight box
+   output$breed_weight_box <- renderValueBox({
      
-     paste(
-       "Weight:",
-       selected_breed_data()$min_wt_lbs,
-       "-",
-       selected_breed_data()$max_wt_lbs,
-       "lbs"
+     valueBox(
+       value = paste0(
+         round(selected_breed_data()$min_wt_lbs, 1),
+         "–",
+         round(selected_breed_data()$max_wt_lbs, 1),
+         " lbs"
+       ),
+       subtitle = "Weight",
+       icon = icon("weight")
+     )
+     
+   })
+   
+   
+   # Height box
+   output$breed_height_box <- renderValueBox({
+     
+     valueBox(
+       value = paste0(
+         round(selected_breed_data()$min_ht_inch, 1),
+         "–",
+         round(selected_breed_data()$max_ht_inch, 1),
+         " in"
+       ),
+       subtitle = "Height",
+       icon = icon("arrows-alt-v")
      )
      
    })
