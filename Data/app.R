@@ -18,6 +18,8 @@ library(bslib)
 
 library(shinydashboard)
 
+library(plotly)
+
 # LOAD DATA -------------------------------------------------------
 
 # Read our cleaned dog dataset into R.
