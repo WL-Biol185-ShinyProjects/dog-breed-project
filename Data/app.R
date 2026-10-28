@@ -22,24 +22,25 @@ library(plotly)
 
 # LOAD DATA -------------------------------------------------------
 
-# Read our cleaned dog dataset into R.
-# Replace the filename below with the EXACT name of the Excel file
-# in the Files pane.
-
+# Read the cleaned dog breed CSV into R.
+#
+# stringsAsFactors = FALSE keeps text columns as text rather
+# than automatically converting them into categories.
+#
+# fileEncoding tells R how the text in this CSV is encoded.
+#
+# check.names = TRUE converts unusual column names into
+# R-friendly names. For example:
+# "min_life (yrs)" becomes "min_life..yrs."
 dog_data_clean <- read.csv(
   "dog_data_clean.csv",
   stringsAsFactors = FALSE,
   fileEncoding = "Windows-1252",
   check.names = TRUE
 )
-# Load the dog breed dataset
-dog_data_clean <- read.csv(
-  "dog_data_clean.csv",
-  stringsAsFactors = FALSE,
-  check.names = TRUE
-)
 
-# Fix weird characters in breed descriptions
+
+# Fix weird characters that appeared in some breed descriptions
 dog_data_clean$description <- gsub(
   "‚Äî",
   "—",
@@ -48,8 +49,8 @@ dog_data_clean$description <- gsub(
 )
 
 
-
-# Make the dataset available to the questionnaire code
+# Create a second name for the same dataset for use
+# in the Soul Dog questionnaire
 dog_data <- dog_data_clean
 
 # Traits used by the questionnaire
