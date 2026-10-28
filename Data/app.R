@@ -346,8 +346,6 @@ ui <- dashboardPage(
 #   - Create graphs
 #   - Update information based on user selections
 #
-# We do not need any server instructions yet because our
-# webpage is currently just displaying static content.
 
 server <- function(input, output, session) {
   
