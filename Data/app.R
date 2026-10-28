@@ -177,27 +177,37 @@ ui <- dashboardPage(
           inputId = "selected_breed",
           label = "Choose a breed:",
           choices = sort(dog_data_clean$name)
-        ), 
+        ),
         
         # Displays the name of the breed selected by the user
         h2(textOutput("breed_name")),
         
-        #Display the breed description
-        textOutput("breed_description"), 
+        # Display the breed description
+        textOutput("breed_description"),
         
+        br(),
         
-        #Quick facts about the selected breed
-        h3("Quick Facts"), 
-        
-        textOutput("breed_group"),
+        # Display temperament separately because it is longer text
+        h4("Temperament"),
         textOutput("breed_temperament"),
-        textOutput("breed_lifespan"),
-        textOutput("breed_height"),
-        textOutput("breed_weight")
         
+        br(),
         
+        # Quick facts section
+        h3("Quick Facts"),
         
-      ),
+        # Put four quick facts in boxes across one row
+        fluidRow(
+          
+          valueBoxOutput("breed_group_box", width = 3),
+          
+          valueBoxOutput("breed_lifespan_box", width = 3),
+          
+          valueBoxOutput("breed_weight_box", width = 3),
+          
+          valueBoxOutput("breed_height_box", width = 3)
+          
+        ),
       
       
       # TRAITS & TRENDS ---------------------------------------------------
