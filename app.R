@@ -440,7 +440,7 @@ ui <- dashboardPage(
           h3("Your Top 3 Matches"),
           tableOutput("other_matches")
         )
-      )
+      ),
       
       # ABOUT -------------------------------------------------------------
       
