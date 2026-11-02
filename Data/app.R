@@ -432,10 +432,7 @@ ui <- dashboardPage(
       ),
       
       
-      
-      # SOUL DOG QUESTIONNAIRE
-      
-      # SOUL DOG QUESTIONNAIRE
+ # SOUL DOG QUESTIONNAIRE
       tabItem(
         tabName = "souldog",
         
@@ -467,7 +464,7 @@ ui <- dashboardPage(
           font-size: 16px;
         "
             )
-          ),
+          ), 
           
           # QUESTION 1
           div(
@@ -955,6 +952,7 @@ server <- function(input, output, session) {
      
    })
    
+   
    # BREED 2 INFORMATION CARD -----------------------------------------
    
    # This works exactly like the Breed 1 information card,
@@ -1338,7 +1336,6 @@ output$other_matches <- renderTable({
 
 }
 
-#ui and server for soul dog questionnaire
 
 # RUN THE APP -----------------------------------------------------
 
