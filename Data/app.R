@@ -66,16 +66,6 @@ traits <- c(
 )
 
 
-
-# APP THEME -------------------------------------------------------
-
-# This creates the visual theme that will be used throughout the app.
-# "minty" can be replaced later with another Bootswatch theme.
-
-app_theme <- bs_theme(
-  bootswatch = "minty"
-)
-
 for (trait in traits) {
   dog_data[[trait]] <- suppressWarnings(
     as.numeric(as.character(dog_data[[trait]]))
