@@ -390,36 +390,82 @@ ui <- dashboardPage(
         ),
         
         
-        # TRAIT COMPARISON ------------------------------------------------
+        # TRAIT COMPARISON VISUALIZATION ---------------------------------
         
-        # Create one full-width box for the interactive visualization
+        # Create a full-width dashboard box for the interactive comparison
         box(
           
-          # width = 12 makes the box span the entire page
+          # Use all 12 columns so the visualization spans the page
           width = 12,
           
           # Title displayed in the box header
           title = "Trait Showdown",
           
+          # Use the dashboard's primary styling for now
           status = "primary",
           solidHeader = TRUE,
           
-          # Explain how to interpret the visualization
-          p("Compare the two breeds across key behavioral and lifestyle traits. Each trait is rated from 1 to 5."),
           
-          # plotlyOutput() reserves space for the interactive graph
-          # that we will create in the server.
-          #
-          # The name "trait_comparison" must match
-          # output$trait_comparison in the server.
+          # HEADER ROW ----------------------------------------------------
+          
+          # Put the explanation and category selector on the same row
+          fluidRow(
+            
+            
+            # LEFT SIDE: explanation
+            
+            column(
+              width = 8,
+              
+              # Explain what the visualization represents
+              p(
+                "Compare the two breeds across key characteristics. All traits are rated from 1 to 5."
+              )
+            ),
+            
+            
+            # RIGHT SIDE: trait category selector
+            
+            column(
+              width = 4,
+              
+              # selectInput() lets the user decide which group of
+              # characteristics they want to compare
+              selectInput(
+                
+                # We will access this selection in the server using
+                # input$trait_category
+                inputId = "trait_category",
+                
+                # Label displayed above the dropdown
+                label = "Compare:",
+                
+                # These are the three categories the user can choose
+                choices = c(
+                  "Personality",
+                  "Social",
+                  "Care & Lifestyle"
+                ),
+                
+                # Personality will be shown when the page first opens
+                selected = "Personality"
+              )
+            )
+            
+          ),
+          
+          
+          # INTERACTIVE GRAPH ---------------------------------------------
+          
+          # This creates the space where our Plotly graph will appear.
+          # It connects to output$trait_comparison in the server.
           plotlyOutput(
             outputId = "trait_comparison",
-            height = "500px"
+            height = "420px"
           )
           
         )
         
-      ),
       
       
       # FIND A BREED ------------------------------------------------------
