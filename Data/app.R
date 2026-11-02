@@ -53,7 +53,7 @@ dog_data_clean$description <- gsub(
 # in the Soul Dog questionnaire
 dog_data <- dog_data_clean
 
-# Traits used by the questionnaire
+# Traits used by the Soul Dog questionnaire
 traits <- c(
   "energy.level",
   "affectionate.with.family",
@@ -65,16 +65,13 @@ traits <- c(
   "watchdog.protective.nature"
 )
 
-
-
-#Convert questionnaire traits to numeric
-
-
-
+# Convert questionnaire traits to numeric values
 for (trait in traits) {
+  
   dog_data[[trait]] <- suppressWarnings(
     as.numeric(as.character(dog_data[[trait]]))
   )
+  
 }
 
 # USER INTERFACE (UI) ---------------------------------------------
@@ -716,19 +713,25 @@ ui <- dashboardPage(
       ),
       
       
-      # ABOUT -------------------------------------------------------------
-      
-      tabItem(
-        tabName = "about",
-        
-        h1("About"),
-        p("Information about the data and project will go here.")
+ # ABOUT -------------------------------------------------------------
+ 
+ tabItem(
+   tabName = "about",
+   
+   h1("About"),
+   p("Information about the data and project will go here.")
+ )
+ 
+ # Close tabItems()
       )
-      
+ 
+ # Close dashboardBody()
     )
+ 
+ # Close dashboardPage()
   )
-  
-)
+ 
+ 
 
 # SERVER ----------------------------------------------------------
 
