@@ -421,6 +421,7 @@ ui <- dashboardPage(
         
       ),
       
+      
       # FIND A BREED ------------------------------------------------------
       
       tabItem(
@@ -651,7 +652,39 @@ server <- function(input, output, session) {
      
    })
    
-# Convert the breed traits to numeric values
+   # COMPARE BREEDS ----------------------------------------------------
+   
+   
+   # SELECT DATA FOR BREED 1 ------------------------------------------
+   
+   # reactive() creates an object that automatically updates
+   # whenever the user changes the first breed dropdown.
+   compare_breed_1_data <- reactive({
+     
+     # Start with the complete dog dataset
+     dog_data_clean |>
+       
+       # filter() keeps only the row where the breed name
+       # matches the user's selection in the first dropdown.
+       #
+       # input$compare_breed_1 comes from:
+       # selectInput(inputId = "compare_breed_1") in the UI.
+       filter(name == input$compare_breed_1)
+     
+   })
+   
+   
+   # SELECT DATA FOR BREED 2 ------------------------------------------
+   
+   # This does exactly the same thing for the second dropdown.
+   compare_breed_2_data <- reactive({
+     
+     dog_data_clean |>
+       
+       # Keep only the selected second breed
+       filter(name == input$compare_breed_2)
+     
+   })
 
 
 # Calculate breed matches when the button is clicked
