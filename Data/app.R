@@ -461,10 +461,9 @@ ui <- dashboardPage(
             height = "420px"
           )
           
-        ), 
+        )
         
-        
-      
+      ),  # CLOSE COMPARE BREEDS TAB
       
       # FIND A BREED ------------------------------------------------------
       
