@@ -1230,18 +1230,14 @@ server <- function(input, output, session) {
      )
      
      
-     # Start building the Plotly graph
      plot_ly(
        
-       # Tell Plotly which dataset to use
+       # Tell Plotly which dataset to use.
+       # We are NOT creating any bars yet.
        data = comparison_data,
        
-       # Trait names appear on the vertical axis
-       y = ~Trait,
-       
-       # Create a horizontal bar chart
-       type = "bar",
-       orientation = "h"
+       # Trait names will appear on the vertical axis.
+       y = ~Trait
        
      ) |>
        
