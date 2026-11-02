@@ -1377,7 +1377,7 @@ server <- function(input, output, session) {
    })
    
 
-
+#SOULDOG
 # Calculate breed matches when the button is clicked
 matches <- eventReactive(input$match, {
 
