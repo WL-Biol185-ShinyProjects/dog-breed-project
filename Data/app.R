@@ -460,10 +460,10 @@ ui <- dashboardPage(
             outputId = "trait_comparison",
             height = "420px"
           )
-        ), 
+      
+        ),
         
-      ), 
-        
+      ),
       
       # FIND A BREED ------------------------------------------------------
       
