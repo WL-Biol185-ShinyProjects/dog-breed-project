@@ -1265,8 +1265,12 @@ server <- function(input, output, session) {
          " / 5"
        ),
        
-       # Only display our custom text when the user hovers
+       # Do not print the text directly on the bars.
+       # Users can still see this information when they hover.
+       textposition = "none",
+       
        hoverinfo = "text"
+       
        
      ) |>
        
@@ -1288,7 +1292,12 @@ server <- function(input, output, session) {
          " / 5"
        ),
        
+       # Do not print the text directly on the bars.
+       # Users can still see this information when they hover.
+       textposition = "none",
+       
        hoverinfo = "text"
+       
        
      ) |>
        
