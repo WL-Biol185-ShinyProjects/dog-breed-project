@@ -66,6 +66,11 @@ traits <- c(
 )
 
 
+
+#Convert questionnaire traits to numeric
+
+
+
 for (trait in traits) {
   dog_data[[trait]] <- suppressWarnings(
     as.numeric(as.character(dog_data[[trait]]))
