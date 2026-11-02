@@ -805,6 +805,254 @@ server <- function(input, output, session) {
      )
      
    })
+   
+   # BREED 2 INFORMATION CARD -----------------------------------------
+   
+   # This works exactly like the Breed 1 information card,
+   # but uses compare_breed_2_data().
+   output$compare_info_2 <- renderUI({
+     
+     # Store the selected second breed's row in a shorter variable
+     breed <- compare_breed_2_data()
+     
+     
+     # Combine all of the information into one UI output
+     tagList(
+       
+       
+       # BREED GROUP
+       
+       h4("Breed Group"),
+       
+       p(breed$group),
+       
+       
+       # TEMPERAMENT
+       
+       h4("Temperament"),
+       
+       p(breed$temperament),
+       
+       
+       # LIFESPAN
+       
+       h4("Typical Lifespan"),
+       
+       p(
+         paste0(
+           breed[["min_life (yrs)"]],
+           "–",
+           breed[["max_life (yrs)"]],
+           " years"
+         )
+       ),
+       
+       
+       # WEIGHT
+       
+       h4("Weight"),
+       
+       p(
+         paste0(
+           round(breed$min_wt_lbs, 1),
+           "–",
+           round(breed$max_wt_lbs, 1),
+           " lbs"
+         )
+       ),
+       
+       
+       # HEIGHT
+       
+       h4("Height"),
+       
+       p(
+         paste0(
+           round(breed$min_ht_inch, 1),
+           "–",
+           round(breed$max_ht_inch, 1),
+           " inches"
+         )
+       )
+       
+     )
+     
+   })
+   
+   # TRAIT COMPARISON DATA --------------------------------------------
+   
+   # reactive() means this dataset will automatically be rebuilt
+   # whenever either selected breed changes.
+   comparison_traits <- reactive({
+     
+     
+     # Get the data for each selected breed
+     breed1 <- compare_breed_1_data()
+     breed2 <- compare_breed_2_data()
+     
+     
+     # data.frame() creates a new small dataset specifically
+     # for our comparison graph.
+     data.frame(
+       
+       
+       # These are the readable trait names that will appear
+       # on the graph instead of the raw dataset column names.
+       Trait = c(
+         "Energy",
+         "Trainability",
+         "Playfulness",
+         "Adaptability",
+         "Affection",
+         "Stranger Friendliness",
+         "Protectiveness",
+         "Mental Stimulation",
+         "Barking"
+       ),
+       
+       
+       # Pull the corresponding trait scores for Breed 1.
+       #
+       # as.numeric() makes sure Plotly receives numbers
+       # rather than text.
+       Breed1 = as.numeric(
+         c(
+           breed1$energy.level,
+           breed1$trainability.level,
+           breed1$playfulness.level,
+           breed1$adaptability.level,
+           breed1$affectionate.with.family,
+           breed1$openness.to.strangers,
+           breed1$watchdog.protective.nature,
+           breed1$mental.stimulation.needs,
+           breed1$barking.level
+         )
+       ),
+       
+       
+       # Pull the same trait scores for Breed 2.
+       Breed2 = as.numeric(
+         c(
+           breed2$energy.level,
+           breed2$trainability.level,
+           breed2$playfulness.level,
+           breed2$adaptability.level,
+           breed2$affectionate.with.family,
+           breed2$openness.to.strangers,
+           breed2$watchdog.protective.nature,
+           breed2$mental.stimulation.needs,
+           breed2$barking.level
+         )
+       )
+       
+     )
+     
+   })
+   
+   # TRAIT COMPARISON GRAPH -------------------------------------------
+   
+   # renderPlotly() creates an interactive Plotly visualization
+   # that will be sent to plotlyOutput("trait_comparison") in the UI.
+   output$trait_comparison <- renderPlotly({
+     
+     
+     # Get the trait comparison dataset we created above.
+     comparison_data <- comparison_traits()
+     
+     
+     # plot_ly() begins creating the interactive graph.
+     plot_ly(
+       
+       # Tell Plotly which dataset to use
+       data = comparison_data,
+       
+       # Put the trait names on the y-axis.
+       #
+       # ~Trait means "use the Trait column from comparison_data."
+       y = ~Trait,
+       
+       # We are making a bar graph
+       type = "bar",
+       
+       # orientation = "h" makes the bars horizontal
+       orientation = "h"
+       
+     ) |>
+       
+       
+       # FIRST BREED --------------------------------------------------
+     
+     # add_trace() adds one set of bars to the graph.
+     add_trace(
+       
+       # Use Breed1 scores for the length of the bars
+       x = ~Breed1,
+       
+       # The legend name will automatically display
+       # the currently selected breed's name
+       name = input$compare_breed_1
+       
+     ) |>
+       
+       
+       # SECOND BREED -------------------------------------------------
+     
+     # Add a second set of bars for Breed 2
+     add_trace(
+       
+       x = ~Breed2,
+       
+       name = input$compare_breed_2
+       
+     ) |>
+       
+       
+       # GRAPH APPEARANCE ---------------------------------------------
+     
+     # layout() controls the appearance and organization
+     # of the finished graph.
+     layout(
+       
+       # barmode = "group" places the two breeds' bars
+       # next to each other rather than stacking them.
+       barmode = "group",
+       
+       
+       # Configure the horizontal numeric axis
+       xaxis = list(
+         
+         # Label underneath the axis
+         title = "Trait Rating",
+         
+         # All traits use a 1–5 scale, so keep the graph
+         # on the same scale regardless of breed.
+         range = c(0, 5),
+         
+         # Show tick marks at each whole number
+         tickvals = c(1, 2, 3, 4, 5)
+       ),
+       
+       
+       # Configure the vertical trait-name axis
+       yaxis = list(
+         
+         # We don't need another title because the trait names
+         # themselves already explain the axis.
+         title = ""
+       ),
+       
+       
+       # Put the legend horizontally above the graph
+       legend = list(
+         orientation = "h",
+         x = 0,
+         y = 1.1
+       )
+       
+     )
+     
+   })
+   
 
 
 # Calculate breed matches when the button is clicked
