@@ -390,36 +390,83 @@ ui <- dashboardPage(
         ),
         
         
-        # TRAIT COMPARISON ------------------------------------------------
+        # TRAIT COMPARISON VISUALIZATION ---------------------------------
         
-        # Create one full-width box for the interactive visualization
+        # Create a full-width dashboard box for the interactive comparison
         box(
           
-          # width = 12 makes the box span the entire page
+          # Use all 12 columns so the visualization spans the page
           width = 12,
           
           # Title displayed in the box header
           title = "Trait Showdown",
           
+          # Use the dashboard's primary styling for now
           status = "primary",
           solidHeader = TRUE,
           
-          # Explain how to interpret the visualization
-          p("Compare the two breeds across key behavioral and lifestyle traits. Each trait is rated from 1 to 5."),
           
-          # plotlyOutput() reserves space for the interactive graph
-          # that we will create in the server.
-          #
-          # The name "trait_comparison" must match
-          # output$trait_comparison in the server.
+          # HEADER ROW ----------------------------------------------------
+          
+          # Put the explanation and category selector on the same row
+          fluidRow(
+            
+            
+            # LEFT SIDE: explanation
+            
+            column(
+              width = 8,
+              
+              # Explain what the visualization represents
+              p(
+                "Compare the two breeds across key characteristics. All traits are rated from 1 to 5."
+              )
+            ),
+            
+            
+            # RIGHT SIDE: trait category selector
+            
+            column(
+              width = 4,
+              
+              # selectInput() lets the user decide which group of
+              # characteristics they want to compare
+              selectInput(
+                
+                # We will access this selection in the server using
+                # input$trait_category
+                inputId = "trait_category",
+                
+                # Label displayed above the dropdown
+                label = "Compare:",
+                
+                # These are the three categories the user can choose
+                choices = c(
+                  "Personality",
+                  "Social",
+                  "Care & Lifestyle"
+                ),
+                
+                # Personality will be shown when the page first opens
+                selected = "Personality"
+              )
+            )
+            
+          ),
+          
+          
+          # INTERACTIVE GRAPH ---------------------------------------------
+          
+          # This creates the space where our Plotly graph will appear.
+          # It connects to output$trait_comparison in the server.
           plotlyOutput(
             outputId = "trait_comparison",
-            height = "500px"
+            height = "420px"
           )
           
-        )
+        ), 
         
-      ),
+        
       
       
       # FIND A BREED ------------------------------------------------------
@@ -1028,175 +1075,304 @@ server <- function(input, output, session) {
    
    # TRAIT COMPARISON DATA --------------------------------------------
    
-   # reactive() means this dataset will automatically be rebuilt
-   # whenever either selected breed changes.
+   # Create the data that will be used in the comparison graph.
+   #
+   # Because this is reactive(), it will automatically recalculate
+   # whenever:
+   #   1. Breed 1 changes
+   #   2. Breed 2 changes
+   #   3. The trait category changes
    comparison_traits <- reactive({
      
      
-     # Get the data for each selected breed
+     # Store each selected breed's row in a shorter variable
      breed1 <- compare_breed_1_data()
      breed2 <- compare_breed_2_data()
      
      
-     # data.frame() creates a new small dataset specifically
-     # for our comparison graph.
-     data.frame(
+     # PERSONALITY TRAITS ---------------------------------------------
+     
+     # If the user chooses "Personality" from the dropdown,
+     # compare traits related to activity and behavior.
+     if (input$trait_category == "Personality") {
        
-       
-       # These are the readable trait names that will appear
-       # on the graph instead of the raw dataset column names.
-       Trait = c(
+       # Create readable labels for the graph
+       trait_names <- c(
          "Energy",
          "Trainability",
          "Playfulness",
          "Adaptability",
-         "Affection",
+         "Mental Stimulation"
+       )
+       
+       # These are the actual column names in our dataset
+       trait_columns <- c(
+         "energy.level",
+         "trainability.level",
+         "playfulness.level",
+         "adaptability.level",
+         "mental.stimulation.needs"
+       )
+       
+     }
+     
+     
+     # SOCIAL TRAITS --------------------------------------------------
+     
+     # If the user chooses "Social", compare characteristics
+     # related to interactions with people and other dogs.
+     else if (input$trait_category == "Social") {
+       
+       trait_names <- c(
+         "Family Affection",
+         "Good With Children",
+         "Good With Dogs",
          "Stranger Friendliness",
-         "Protectiveness",
-         "Mental Stimulation",
+         "Protectiveness"
+       )
+       
+       trait_columns <- c(
+         "affectionate.with.family",
+         "good.with.young.children",
+         "good.with.other.dogs",
+         "openness.to.strangers",
+         "watchdog.protective.nature"
+       )
+       
+     }
+     
+     
+     # CARE & LIFESTYLE TRAITS ----------------------------------------
+     
+     # Otherwise, the user selected "Care & Lifestyle".
+     else {
+       
+       trait_names <- c(
+         "Shedding",
+         "Grooming Needs",
+         "Drooling",
          "Barking"
-       ),
+       )
+       
+       trait_columns <- c(
+         "shedding.level",
+         "coat.grooming.frequency",
+         "drooling.level",
+         "barking.level"
+       )
+       
+     }
+     
+     
+     # CREATE GRAPH DATA ----------------------------------------------
+     
+     # data.frame() creates a small temporary dataset specifically
+     # for our graph.
+     data.frame(
+       
+       # Readable trait names displayed on the graph
+       Trait = trait_names,
        
        
-       # Pull the corresponding trait scores for Breed 1.
+       # Extract the selected columns for Breed 1.
        #
-       # as.numeric() makes sure Plotly receives numbers
-       # rather than text.
+       # breed1[1, trait_columns] selects:
+       #   - row 1
+       #   - the trait columns selected above
+       #
+       # unlist() turns those values into a simple vector.
+       #
+       # as.numeric() ensures Plotly receives numbers.
        Breed1 = as.numeric(
-         c(
-           breed1$energy.level,
-           breed1$trainability.level,
-           breed1$playfulness.level,
-           breed1$adaptability.level,
-           breed1$affectionate.with.family,
-           breed1$openness.to.strangers,
-           breed1$watchdog.protective.nature,
-           breed1$mental.stimulation.needs,
-           breed1$barking.level
-         )
+         unlist(breed1[1, trait_columns])
        ),
        
        
-       # Pull the same trait scores for Breed 2.
+       # Do exactly the same thing for Breed 2
        Breed2 = as.numeric(
-         c(
-           breed2$energy.level,
-           breed2$trainability.level,
-           breed2$playfulness.level,
-           breed2$adaptability.level,
-           breed2$affectionate.with.family,
-           breed2$openness.to.strangers,
-           breed2$watchdog.protective.nature,
-           breed2$mental.stimulation.needs,
-           breed2$barking.level
-         )
+         unlist(breed2[1, trait_columns])
        )
        
      )
      
    })
    
-   # TRAIT COMPARISON GRAPH -------------------------------------------
    
-   # renderPlotly() creates an interactive Plotly visualization
-   # that will be sent to plotlyOutput("trait_comparison") in the UI.
+   # INTERACTIVE TRAIT COMPARISON GRAPH -------------------------------
+   
+   # renderPlotly() creates the interactive graph that is displayed
+   # by plotlyOutput("trait_comparison") in the UI.
    output$trait_comparison <- renderPlotly({
      
      
-     # Get the trait comparison dataset we created above.
+     # Retrieve the comparison dataset created above
      comparison_data <- comparison_traits()
      
      
-     # plot_ly() begins creating the interactive graph.
+     # Reverse the order of the trait names.
+     #
+     # Plotly draws horizontal bar charts from bottom to top,
+     # so reversing the levels makes the traits appear in the
+     # same order that we listed them in our code.
+     comparison_data$Trait <- factor(
+       comparison_data$Trait,
+       levels = rev(comparison_data$Trait)
+     )
+     
+     
+     # Start building the Plotly graph
      plot_ly(
        
        # Tell Plotly which dataset to use
        data = comparison_data,
        
-       # Put the trait names on the y-axis.
-       #
-       # ~Trait means "use the Trait column from comparison_data."
+       # Trait names appear on the vertical axis
        y = ~Trait,
        
-       # We are making a bar graph
+       # Create a horizontal bar chart
        type = "bar",
-       
-       # orientation = "h" makes the bars horizontal
        orientation = "h"
        
      ) |>
        
        
-       # FIRST BREED --------------------------------------------------
+       # BREED 1 BARS -------------------------------------------------
      
-     # add_trace() adds one set of bars to the graph.
      add_trace(
        
-       # Use Breed1 scores for the length of the bars
+       # Breed 1's rating determines the length of each bar
        x = ~Breed1,
        
-       # The legend name will automatically display
-       # the currently selected breed's name
-       name = input$compare_breed_1
+       # Use the selected breed's name in the legend
+       name = input$compare_breed_1,
+       
+       # Create custom hover text.
+       #
+       # paste0() combines the breed name, trait name,
+       # and score into one message.
+       text = ~paste0(
+         input$compare_breed_1,
+         "<br>",
+         Trait,
+         ": ",
+         Breed1,
+         " / 5"
+       ),
+       
+       # Only display our custom text when the user hovers
+       hoverinfo = "text"
        
      ) |>
        
        
-       # SECOND BREED -------------------------------------------------
+       # BREED 2 BARS -------------------------------------------------
      
-     # Add a second set of bars for Breed 2
      add_trace(
        
        x = ~Breed2,
        
-       name = input$compare_breed_2
+       name = input$compare_breed_2,
+       
+       text = ~paste0(
+         input$compare_breed_2,
+         "<br>",
+         Trait,
+         ": ",
+         Breed2,
+         " / 5"
+       ),
+       
+       hoverinfo = "text"
        
      ) |>
        
        
-       # GRAPH APPEARANCE ---------------------------------------------
+       # GRAPH LAYOUT -------------------------------------------------
      
-     # layout() controls the appearance and organization
-     # of the finished graph.
      layout(
        
-       # barmode = "group" places the two breeds' bars
-       # next to each other rather than stacking them.
+       # Put the two breeds beside each other for each trait
        barmode = "group",
        
        
-       # Configure the horizontal numeric axis
+       # Remove unnecessary empty space around the graph
+       margin = list(
+         l = 140,
+         r = 30,
+         t = 30,
+         b = 50
+       ),
+       
+       
+       # HORIZONTAL RATING AXIS
        xaxis = list(
          
-         # Label underneath the axis
+         # Axis title
          title = "Trait Rating",
          
-         # All traits use a 1–5 scale, so keep the graph
-         # on the same scale regardless of breed.
+         # Every trait is measured from 1 to 5
          range = c(0, 5),
          
-         # Show tick marks at each whole number
-         tickvals = c(1, 2, 3, 4, 5)
+         # Display whole-number ratings
+         tickvals = c(1, 2, 3, 4, 5),
+         
+         # Add subtle grid lines to make comparisons easier
+         showgrid = TRUE,
+         
+         # Remove the heavy axis line
+         zeroline = FALSE
        ),
        
        
-       # Configure the vertical trait-name axis
+       # VERTICAL TRAIT AXIS
        yaxis = list(
          
-         # We don't need another title because the trait names
-         # themselves already explain the axis.
-         title = ""
+         # No additional title is necessary
+         title = "",
+         
+         # Prevent Plotly from automatically rearranging
+         # our factor levels
+         categoryorder = "array",
+         
+         categoryarray = levels(comparison_data$Trait)
        ),
        
        
-       # Put the legend horizontally above the graph
+       # LEGEND
        legend = list(
+         
+         # Display breed names horizontally
          orientation = "h",
+         
+         # Position the legend above the visualization
          x = 0,
-         y = 1.1
-       )
+         y = 1.12
+       ),
        
-     )
+       
+       # Make the graph background transparent so that it
+       # blends into the dashboard card
+       paper_bgcolor = "rgba(0,0,0,0)",
+       plot_bgcolor = "rgba(0,0,0,0)"
+       
+     ) |>
+       
+       
+       # config() changes Plotly's interactive controls
+       config(
+         
+         # Remove the Plotly logo from the toolbar
+         displaylogo = FALSE,
+         
+         # Remove buttons that aren't useful for this graph
+         modeBarButtonsToRemove = c(
+           "zoom2d",
+           "pan2d",
+           "select2d",
+           "lasso2d",
+           "autoScale2d"
+         )
+       )
      
    })
    
