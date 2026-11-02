@@ -685,6 +685,126 @@ server <- function(input, output, session) {
        filter(name == input$compare_breed_2)
      
    })
+   
+   # BREED CARD TITLES -------------------------------------------------
+   
+   
+   # renderText() creates text that can be sent to a textOutput()
+   # element in the UI.
+   output$compare_name_1 <- renderText({
+     
+     # Display whatever breed is currently selected
+     # in the first dropdown.
+     input$compare_breed_1
+     
+   })
+   
+   
+   # Do the same thing for Breed 2.
+   output$compare_name_2 <- renderText({
+     
+     input$compare_breed_2
+     
+   })
+   
+   # BREED 1 INFORMATION CARD -----------------------------------------
+   
+   # renderUI() allows us to create several pieces of formatted
+   # information and send them together to uiOutput("compare_info_1").
+   output$compare_info_1 <- renderUI({
+     
+     # Save the selected breed's row to a shorter variable called breed.
+     #
+     # This means we can write breed$group instead of repeatedly
+     # writing compare_breed_1_data()$group.
+     breed <- compare_breed_1_data()
+     
+     
+     # tagList() groups several UI elements together so they
+     # can all be returned by renderUI().
+     tagList(
+       
+       
+       # BREED GROUP
+       
+       # h4() creates a small heading
+       h4("Breed Group"),
+       
+       # p() displays the breed's group as regular paragraph text
+       p(breed$group),
+       
+       
+       # TEMPERAMENT
+       
+       h4("Temperament"),
+       
+       p(breed$temperament),
+       
+       
+       # LIFESPAN
+       
+       h4("Typical Lifespan"),
+       
+       # paste0() joins several pieces of text together
+       # without automatically adding spaces.
+       p(
+         paste0(
+           
+           # Minimum lifespan from the dataset
+           breed[["min_life (yrs)"]],
+           
+           # Add a dash between minimum and maximum
+           "–",
+           
+           # Maximum lifespan
+           breed[["max_life (yrs)"]],
+           
+           # Add the unit
+           " years"
+         )
+       ),
+       
+       
+       # WEIGHT
+       
+       h4("Weight"),
+       
+       p(
+         paste0(
+           
+           # round(..., 1) rounds the weight to one decimal place
+           # so we don't display long decimal values.
+           round(breed$min_wt_lbs, 1),
+           
+           "–",
+           
+           round(breed$max_wt_lbs, 1),
+           
+           " lbs"
+         )
+       ),
+       
+       
+       # HEIGHT
+       
+       h4("Height"),
+       
+       p(
+         paste0(
+           
+           round(breed$min_ht_inch, 1),
+           
+           "–",
+           
+           round(breed$max_ht_inch, 1),
+           
+           " inches"
+         )
+       )
+       
+     )
+     
+   })
 
 
 # Calculate breed matches when the button is clicked
