@@ -463,6 +463,10 @@ ui <- dashboardPage(
           
         ), 
         
+      ),
+      
+      
+        
         
       
       
@@ -731,8 +735,6 @@ ui <- dashboardPage(
  # Close dashboardPage()
   )
  
- # Close the overall ui <- dashboardPage() expression
-)
 
 
 # SERVER ----------------------------------------------------------
