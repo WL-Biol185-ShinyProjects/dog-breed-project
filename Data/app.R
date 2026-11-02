@@ -800,11 +800,18 @@ server <- function(input, output, session) {
      
      valueBox(
        value = paste0(
+         
+         # Minimum lifespan
          selected_breed_data()[["min_life (yrs)"]],
+         
          "–",
+         
+         # Maximum lifespan
          selected_breed_data()[["max_life (yrs)"]],
+         
          " years"
        ),
+       
        subtitle = "Typical Lifespan",
        icon = icon("heart")
      )
@@ -945,6 +952,7 @@ server <- function(input, output, session) {
            
            # Minimum lifespan from the dataset
            breed[["min_life (yrs)"]],
+           
            
            # Add a dash between minimum and maximum
            "–",
