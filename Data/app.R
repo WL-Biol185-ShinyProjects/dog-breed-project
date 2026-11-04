@@ -1249,6 +1249,9 @@ server <- function(input, output, session) {
        # Breed 1's rating determines the length of each bar
        x = ~Breed1,
        
+       # Set Breed 1's bar color to muted teal
+       marker = list(color = "#398A93"),
+       
        # Use the selected breed's name in the legend
        name = input$compare_breed_1,
        
@@ -1280,6 +1283,9 @@ server <- function(input, output, session) {
      add_trace(
        
        x = ~Breed2,
+       
+       # Set Breed 2's bar color to soft terracotta
+       marker = list(color = "#D58A63"),
        
        name = input$compare_breed_2,
        
