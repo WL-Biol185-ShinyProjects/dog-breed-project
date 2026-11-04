@@ -1246,6 +1246,9 @@ server <- function(input, output, session) {
      
      add_trace(
        
+       type = "bar",        # Explicitly create a bar chart
+       orientation = "h",   # Make the bars horizontal
+       
        # Breed 1's rating determines the length of each bar
        x = ~Breed1,
        
@@ -1281,6 +1284,9 @@ server <- function(input, output, session) {
        # BREED 2 BARS -------------------------------------------------
      
      add_trace(
+       
+       type = "bar",
+       orientation = "h",
        
        x = ~Breed2,
        
@@ -1319,7 +1325,7 @@ server <- function(input, output, session) {
        bargap = 0.35,
        
        # Small space between the two breeds within each category
-       bargroupgap = 0.08,
+       bargap = 0.08,
        
        # Remove unnecessary empty space around the graph
        margin = list(
