@@ -1319,7 +1319,7 @@ server <- function(input, output, session) {
        margin = list(
          l = 140,
          r = 30,
-         t = 30,
+         t = 45,
          b = 50
        ),
        
@@ -1361,14 +1361,18 @@ server <- function(input, output, session) {
        # LEGEND
        legend = list(
          
-         # Display breed names horizontally
+         # Keep breed names next to each other
          orientation = "h",
          
-         # Position the legend above the visualization
-         x = 0,
-         y = 1.12
+         # Center the legend horizontally
+         x = 0.5,
+         xanchor = "center",
+         
+         # Position the legend just above the bars
+         y = 1.02,
+         yanchor = "bottom"
+         
        ),
-       
        
        # Make the graph background transparent so that it
        # blends into the dashboard card
