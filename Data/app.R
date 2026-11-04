@@ -1333,22 +1333,37 @@ server <- function(input, output, session) {
        # HORIZONTAL RATING AXIS
        xaxis = list(
          
-         # Axis title
-         title = "Trait Rating",
+         # Label the numerical scale
+         title = "Trait Rating (1–5)",
          
-         # Every trait is measured from 1 to 5
+         # Keep the same scale for every comparison
          range = c(0, 5),
          
          # Display whole-number ratings
          tickvals = c(1, 2, 3, 4, 5),
          
-         # Add subtle grid lines to make comparisons easier
+         # Keep the vertical gridlines
          showgrid = TRUE,
          
-         # Remove the heavy axis line
-         zeroline = FALSE
+         # Use very light gray gridlines
+         gridcolor = "#E8EDF2",
+         
+         # Make gridlines thin
+         gridwidth = 1,
+         
+         # Remove the dark line at zero
+         zeroline = FALSE,
+         
+         # Remove the outer axis line
+         showline = FALSE,
+         
+         # Use a subtle color for the numbers
+         tickfont = list(color = "#667085", size = 12),
+         
+         # Style the axis title
+         titlefont = list(color = "#344054", size = 13)
+         
        ),
-       
        
        # VERTICAL TRAIT AXIS
        yaxis = list(
