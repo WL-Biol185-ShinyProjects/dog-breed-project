@@ -1309,6 +1309,11 @@ server <- function(input, output, session) {
        # Put the two breeds beside each other for each trait
        barmode = "group",
        
+       # Space between different trait categories
+       bargap = 0.35,
+       
+       # Small space between the two breeds within each category
+       bargroupgap = 0.08,
        
        # Remove unnecessary empty space around the graph
        margin = list(
