@@ -32,6 +32,64 @@
     
   })
   
+  # PHYSICAL CHARACTERISTICS DATA -------------------------------
+  
+  # reactive() automatically updates this dataset whenever
+  # either selected breed changes.
+  physical_comparison_data <- reactive({
+    
+    # Retrieve the selected breeds using our existing functions.
+    breed1 <- compare_breed_1_data()
+    breed2 <- compare_breed_2_data()
+    
+    # Make sure both breeds have been found before proceeding.
+    req(nrow(breed1) > 0, nrow(breed2) > 0)
+    
+    # Create a small dataset for our future visualization.
+    data.frame(
+      
+      # Identify the two breeds being compared.
+      Breed = rep(
+        c(input$compare_breed_1, input$compare_breed_2),
+        each = 3
+      ),
+      
+      # Label the three measurements for each breed.
+      Measurement = rep(
+        c("Height", "Weight", "Lifespan"),
+        times = 2
+      ),
+      
+      # Minimum recorded values for each measurement.
+      Minimum = c(
+        breed1$min_ht_inch,
+        breed1$min_wt_lbs,
+        breed1[["min_life..yrs."]],
+        
+        breed2$min_ht_inch,
+        breed2$min_wt_lbs,
+        breed2[["min_life..yrs."]]
+      ),
+      
+      # Maximum recorded values for each measurement.
+      Maximum = c(
+        breed1$max_ht_inch,
+        breed1$max_wt_lbs,
+        breed1[["max_life..yrs."]],
+        
+        breed2$max_ht_inch,
+        breed2$max_wt_lbs,
+        breed2[["max_life..yrs."]]
+      )
+    )
+  })
+  
+  # TEMPORARY TEST: Print the comparison data when it changes.
+  observe({
+    print(physical_comparison_data())
+  })
+  
+  
   # BREED CARD TITLES -------------------------------------------------
   
   
