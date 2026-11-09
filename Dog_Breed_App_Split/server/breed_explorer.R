@@ -28,7 +28,7 @@
       src = photo,
       alt = paste("Photo of", input$selected_breed),
       style = paste(
-        "width:100%; max-width:650px; height:400px;",,
+        "width:100%; max-width:650px; height:400px;",
         "object-fit:cover; border-radius:12px;",
         "margin:15px 0; box-shadow:0 4px 10px rgba(0,0,0,0.15);"
       )
