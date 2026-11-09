@@ -20,6 +20,11 @@ library(shinydashboard)
 
 library(plotly)
 
+shiny::addResourcePath(
+  prefix = "authors",
+  directoryPath = normalizePath("ui/www")
+)
+
 source("R/data_setup.R", local = TRUE)
 
 # USER INTERFACE (UI) ---------------------------------------------
