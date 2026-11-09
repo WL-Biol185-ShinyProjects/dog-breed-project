@@ -241,32 +241,47 @@
             "Compare the typical height, weight, and lifespan ranges of two breeds."
           ),
           
-          # HEIGHT COMPARISON -------------------------------------------
+          # PHYSICAL CHARACTERISTICS CHART LAYOUT -----------------------
           
-          h4("Height"),
-          
-          plotlyOutput(
-            outputId = "height_comparison",
-            height = "220px"
+          # First row: Height and Weight displayed side by side.
+          fluidRow(
+            
+            # Left column: Height
+            column(
+              width = 6,
+              
+              h4("Height"),
+              
+              plotlyOutput(
+                outputId = "height_comparison",
+                height = "220px"
+              )
+            ),
+            
+            # Right column: Weight
+            column(
+              width = 6,
+              
+              h4("Weight"),
+              
+              plotlyOutput(
+                outputId = "weight_comparison",
+                height = "220px"
+              )
+            )
           ),
           
-          # WEIGHT COMPARISON -------------------------------------------
-          
-          h4("Weight"),
-          
-          plotlyOutput(
-            outputId = "weight_comparison",
-            height = "220px"
-          ),
-          
-          # LIFESPAN COMPARISON -----------------------------------------
-          
-          h4("Typical Lifespan"),
-          
-          plotlyOutput(
-            outputId = "lifespan_comparison",
-            height = "220px"
+          # Second row: Lifespan uses the full width.
+          fluidRow(
+            
+            column(
+              width = 12,
+              
+              h4("Typical Lifespan"),
+              
+              plotlyOutput(
+                outputId = "lifespan_comparison",
+                height = "220px"
+              )
+            )
           )
-          
-        )
-      )
