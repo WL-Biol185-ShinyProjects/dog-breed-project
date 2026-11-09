@@ -11,7 +11,7 @@
               width = 6,
               h3("Brenna Luczak"),
               img(
-                src = "author1.jpg",
+                src = "Brenna.jpeg",
                 height = "200px",
                 width = "200px",
                 style = "border-radius: 50%; object-fit: cover;"
