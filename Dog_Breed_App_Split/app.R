@@ -20,6 +20,12 @@ library(shinydashboard)
 
 library(plotly)
 
+# AUTHOR PHOTOS
+addResourcePath(
+  "authors",
+  "Dog_Breed_App_Split/ui/www"
+)
+
 source("R/data_setup.R", local = TRUE)
 
 # USER INTERFACE (UI) ---------------------------------------------
