@@ -84,47 +84,46 @@
     )
   })
   
-  # HEIGHT COMPARISON VISUALIZATION ------------------------------
+  # PHYSICAL CHARACTERISTICS VISUALIZATIONS ---------------------
   
-  output$height_comparison <- renderPlotly({
+  # This function creates a range chart for any measurement.
+  # It accepts the measurement name and the x-axis label.
+  make_range_plot <- function(data, measurement, axis_label) {
     
-    # Get the comparison data we already created.
-    physical_data <- physical_comparison_data()
+    # Keep only the rows for the requested measurement.
+    plot_data <- data |>
+      dplyr::filter(Measurement == measurement)
     
-    # Keep only the height measurements.
-    height_data <- physical_data |>
-      dplyr::filter(Measurement == "Height")
-    
-    # Give each breed a consistent color.
+    # Define consistent colors for the first and second breed.
     breed_colors <- c("#398A93", "#D58A63")
     
-    # Start with an empty Plotly graph.
-    p <- plot_ly()
+    # Begin with an empty Plotly graph.
+    p <- plotly::plot_ly()
     
-    # Add one horizontal range for each breed.
-    for (i in seq_len(nrow(height_data))) {
+    # Add one range line for each selected breed.
+    for (i in seq_len(nrow(plot_data))) {
       
-      # Extract this breed's information.
-      breed <- height_data$Breed[i]
-      min_height <- height_data$Minimum[i]
-      max_height <- height_data$Maximum[i]
+      breed <- plot_data$Breed[i]
+      min_value <- plot_data$Minimum[i]
+      max_value <- plot_data$Maximum[i]
       
-      # Create a label showing the full height range.
+      # Text displayed when users hover over either endpoint.
       hover_label <- paste0(
         breed, "<br>",
-        "Height: ", min_height, "–", max_height, " inches"
+        measurement, ": ",
+        min_value, "–", max_value,
+        " ", axis_label
       )
       
-      # Add a horizontal line connecting the minimum and maximum.
+      # Draw the range and its two endpoints.
       p <- p |>
-        add_trace(
-          x = c(min_height, max_height),
+        plotly::add_trace(
+          x = c(min_value, max_value),
           y = c(breed, breed),
           
           type = "scatter",
           mode = "lines+markers",
           
-          # Match the color of the line and endpoint markers.
           line = list(
             color = breed_colors[i],
             width = 5
@@ -135,20 +134,17 @@
             size = 11
           ),
           
-          # Show the full range when hovering.
           text = c(hover_label, hover_label),
           hoverinfo = "text",
-          
-          # Avoid duplicate legend entries.
           showlegend = FALSE
         )
     }
     
-    # Format the completed chart.
+    # Apply consistent formatting to every chart.
     p |>
-      layout(
+      plotly::layout(
         xaxis = list(
-          title = "Height (inches)",
+          title = axis_label,
           rangemode = "tozero",
           zeroline = FALSE
         ),
@@ -156,19 +152,53 @@
         yaxis = list(
           title = "",
           categoryorder = "array",
-          categoryarray = rev(height_data$Breed)
+          categoryarray = rev(plot_data$Breed)
         ),
         
         showlegend = FALSE,
         
-        # Transparent backgrounds match the existing box.
         paper_bgcolor = "rgba(0,0,0,0)",
         plot_bgcolor = "rgba(0,0,0,0)",
         
         margin = list(l = 110, r = 30, t = 20, b = 50)
       )
+  }
+  
+  # HEIGHT CHART ------------------------------------------------
+  
+  output$height_comparison <- plotly::renderPlotly({
+    
+    make_range_plot(
+      physical_comparison_data(),
+      "Height",
+      "inches"
+    )
+    
   })
   
+  # WEIGHT CHART ------------------------------------------------
+  
+  output$weight_comparison <- plotly::renderPlotly({
+    
+    make_range_plot(
+      physical_comparison_data(),
+      "Weight",
+      "lbs"
+    )
+    
+  })
+  
+  # LIFESPAN CHART ----------------------------------------------
+  
+  output$lifespan_comparison <- plotly::renderPlotly({
+    
+    make_range_plot(
+      physical_comparison_data(),
+      "Lifespan",
+      "years"
+    )
+    
+  })
   
   # BREED CARD TITLES -------------------------------------------------
   
