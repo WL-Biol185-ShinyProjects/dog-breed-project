@@ -22,9 +22,7 @@ library(plotly)
 
 shiny::addResourcePath(
   prefix = "authors",
-  directoryPath = normalizePath(
-    "Dog_Breed_App_Split/ui/www"
-  )
+  directoryPath = normalizePath("ui/www")
 )
 
 source("R/data_setup.R", local = TRUE)
