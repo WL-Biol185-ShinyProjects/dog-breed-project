@@ -84,11 +84,64 @@
     )
   })
   
-  # TEMPORARY TEST: Print the comparison data when it changes.
-  observe({
-    print(physical_comparison_data())
-  })
+  # HEIGHT COMPARISON VISUALIZATION ------------------------------
   
+  output$height_comparison <- renderPlotly({
+    
+    # Retrieve the physical comparison data.
+    physical_data <- physical_comparison_data()
+    
+    # Keep only the rows containing height measurements.
+    height_data <- physical_data |>
+      filter(Measurement == "Height")
+    
+    # Create the horizontal range visualization.
+    plot_ly(
+      data = height_data,
+      
+      # The minimum height determines where each line begins.
+      x = ~Minimum,
+      
+      # Display the breed names on the vertical axis.
+      y = ~Breed,
+      
+      # Each line extends from the minimum to maximum height.
+      error_x = list(
+        type = "data",
+        array = height_data$Maximum - height_data$Minimum,
+        arrayminus = 0,
+        symmetric = FALSE
+      ),
+      
+      # Display markers at the minimum values.
+      type = "scatter",
+      mode = "markers",
+      
+      # Make the markers easy to see.
+      marker = list(size = 12, color = "#398A93")
+    ) |>
+      
+      # Customize the graph's appearance.
+      layout(
+        
+        # Label the horizontal axis.
+        xaxis = list(
+          title = "Height (inches)",
+          rangemode = "tozero"
+        ),
+        
+        # Breed names already identify the two rows.
+        yaxis = list(title = ""),
+        
+        # No separate legend is needed.
+        showlegend = FALSE,
+        
+        # Keep the graph background transparent.
+        paper_bgcolor = "rgba(0,0,0,0)",
+        plot_bgcolor = "rgba(0,0,0,0)"
+      )
+    
+  })
   
   # BREED CARD TITLES -------------------------------------------------
   

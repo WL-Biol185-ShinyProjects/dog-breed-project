@@ -241,8 +241,12 @@
             "Compare the typical height, weight, and lifespan ranges of two breeds."
           ),
           
-          # Temporary placeholder until we build the graph
-          p("Physical comparison visualization coming soon!")
+          # Display the interactive height comparison chart.
+          # The server will generate this using renderPlotly().
+          plotlyOutput(
+            outputId = "height_comparison",
+            height = "250px"
+          )
           
         )
         
