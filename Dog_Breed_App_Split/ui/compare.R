@@ -267,4 +267,6 @@
             outputId = "lifespan_comparison",
             height = "220px"
           )
+          
+        )
       )
