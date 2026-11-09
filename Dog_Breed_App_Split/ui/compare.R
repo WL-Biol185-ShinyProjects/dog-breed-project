@@ -243,15 +243,16 @@
           
           # PHYSICAL CHARACTERISTICS CHART LAYOUT -----------------------
           
-          # First row: Height and Weight displayed side by side.
+          # FIRST ROW: HEIGHT AND WEIGHT -------------------------------
+          
+          # Display the height and weight charts side by side.
           fluidRow(
             
-            # Left column: Height
+            # LEFT COLUMN: HEIGHT --------------------------------------
             column(
               width = 6,
               
-              # HEIGHT SECTION HEADING
-              # Display the measurement and units together.
+              # Heading with smaller, muted units
               tags$h4(
                 style = "font-size: 16px; font-weight: 600; margin-bottom: 4px;",
                 "Height ",
@@ -259,15 +260,22 @@
                   style = "color: #777; font-weight: 400;",
                   "(inches)"
                 )
-                
-              )
               ),
+              
+              # Interactive height range chart
+              plotlyOutput(
+                outputId = "height_comparison",
+                height = "170px"
+              )
+              
+            ), # End Height column
             
-            # Right column: Weight
+            
+            # RIGHT COLUMN: WEIGHT -------------------------------------
             column(
               width = 6,
               
-              # WEIGHT SECTION HEADING
+              # Heading with smaller, muted units
               tags$h4(
                 style = "font-size: 16px; font-weight: 600; margin-bottom: 4px;",
                 "Weight ",
@@ -276,6 +284,17 @@
                   "(lbs)"
                 )
               ),
+              
+              # Interactive weight range chart
+              plotlyOutput(
+                outputId = "weight_comparison",
+                height = "170px"
+              )
+              
+            ) # End Weight column
+            
+          ), # End first fluidRow()
+          
           
           # Second row: Lifespan uses the full width.
           fluidRow(
@@ -295,8 +314,10 @@
               
               plotlyOutput(
                 outputId = "lifespan_comparison",
-                height = "220px"
+                height = "170px"
               )
             )
           )
           
+        )
+      )
