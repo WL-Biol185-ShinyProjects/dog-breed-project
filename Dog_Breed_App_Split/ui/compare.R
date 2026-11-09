@@ -250,26 +250,32 @@
             column(
               width = 6,
               
-              h4("Height"),
-              
-              plotlyOutput(
-                outputId = "height_comparison",
-                height = "220px"
+              # HEIGHT SECTION HEADING
+              # Display the measurement and units together.
+              tags$h4(
+                style = "font-size: 16px; font-weight: 600; margin-bottom: 4px;",
+                "Height ",
+                tags$small(
+                  style = "color: #777; font-weight: 400;",
+                  "(inches)"
+                )
+                
               )
-            ),
+              ),
             
             # Right column: Weight
             column(
               width = 6,
               
-              h4("Weight"),
-              
-              plotlyOutput(
-                outputId = "weight_comparison",
-                height = "220px"
-              )
-            )
-          ),
+              # WEIGHT SECTION HEADING
+              tags$h4(
+                style = "font-size: 16px; font-weight: 600; margin-bottom: 4px;",
+                "Weight ",
+                tags$small(
+                  style = "color: #777; font-weight: 400;",
+                  "(lbs)"
+                )
+              ),
           
           # Second row: Lifespan uses the full width.
           fluidRow(
@@ -277,7 +283,15 @@
             column(
               width = 12,
               
-              h4("Typical Lifespan"),
+              # LIFESPAN SECTION HEADING
+              tags$h4(
+                style = "font-size: 16px; font-weight: 600; margin-bottom: 4px;",
+                "Typical Lifespan ",
+                tags$small(
+                  style = "color: #777; font-weight: 400;",
+                  "(years)"
+                )
+              ),
               
               plotlyOutput(
                 outputId = "lifespan_comparison",
