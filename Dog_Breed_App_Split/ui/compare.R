@@ -300,7 +300,7 @@
           fluidRow(
             
             column(
-              width = 12,
+              width = 6,
               
               # LIFESPAN SECTION HEADING
               tags$h4(
