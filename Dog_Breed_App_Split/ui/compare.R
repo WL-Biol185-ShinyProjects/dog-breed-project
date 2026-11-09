@@ -219,6 +219,31 @@
             height = "500px"
           )
           
+        ), 
+        
+        
+        # PHYSICAL CHARACTERISTICS COMPARISON -------------------------
+        
+        box(
+          
+          # Make the visualization span the full page width
+          width = 12,
+          
+          # Display a title at the top of the box
+          title = "Physical Characteristics Comparison",
+          
+          # Match the styling of Trait Showdown
+          status = "primary",
+          solidHeader = TRUE,
+          
+          # Explain what this comparison will show
+          p(
+            "Compare the typical height, weight, and lifespan ranges of two breeds."
+          ),
+          
+          # Temporary placeholder until we build the graph
+          p("Physical comparison visualization coming soon!")
+          
         )
         
       )
