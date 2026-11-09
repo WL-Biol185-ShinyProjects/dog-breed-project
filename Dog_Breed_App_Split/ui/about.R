@@ -9,7 +9,7 @@
             
             column(
               width = 6,
-              h3("Author 1"),
+              h3("Brenna Luczak"),
               img(
                 src = "author1.jpg",
                 height = "200px",
