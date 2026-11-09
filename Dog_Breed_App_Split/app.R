@@ -20,6 +20,7 @@ library(shinydashboard)
 
 library(plotly)
 
+#Make pictures show in our about section
 shiny::addResourcePath(
   prefix = "authors",
   directoryPath = normalizePath("ui/www")
