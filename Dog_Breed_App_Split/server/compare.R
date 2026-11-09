@@ -160,7 +160,7 @@
         paper_bgcolor = "rgba(0,0,0,0)",
         plot_bgcolor = "rgba(0,0,0,0)",
         
-        margin = list(l = 110, r = 30, t = 20, b = 50)
+        margin = list(l = 110, r = 10, t = 5, b = 25)
       )
   }
   
