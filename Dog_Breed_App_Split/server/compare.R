@@ -88,60 +88,87 @@
   
   output$height_comparison <- renderPlotly({
     
-    # Retrieve the physical comparison data.
+    # Get the comparison data we already created.
     physical_data <- physical_comparison_data()
     
-    # Keep only the rows containing height measurements.
+    # Keep only the height measurements.
     height_data <- physical_data |>
-      filter(Measurement == "Height")
+      dplyr::filter(Measurement == "Height")
     
-    # Create the horizontal range visualization.
-    plot_ly(
-      data = height_data,
+    # Give each breed a consistent color.
+    breed_colors <- c("#398A93", "#D58A63")
+    
+    # Start with an empty Plotly graph.
+    p <- plot_ly()
+    
+    # Add one horizontal range for each breed.
+    for (i in seq_len(nrow(height_data))) {
       
-      # The minimum height determines where each line begins.
-      x = ~Minimum,
+      # Extract this breed's information.
+      breed <- height_data$Breed[i]
+      min_height <- height_data$Minimum[i]
+      max_height <- height_data$Maximum[i]
       
-      # Display the breed names on the vertical axis.
-      y = ~Breed,
+      # Create a label showing the full height range.
+      hover_label <- paste0(
+        breed, "<br>",
+        "Height: ", min_height, "–", max_height, " inches"
+      )
       
-      # Each line extends from the minimum to maximum height.
-      error_x = list(
-        type = "data",
-        array = height_data$Maximum - height_data$Minimum,
-        arrayminus = 0,
-        symmetric = FALSE
-      ),
-      
-      # Display markers at the minimum values.
-      type = "scatter",
-      mode = "markers",
-      
-      # Make the markers easy to see.
-      marker = list(size = 12, color = "#398A93")
-    ) |>
-      
-      # Customize the graph's appearance.
+      # Add a horizontal line connecting the minimum and maximum.
+      p <- p |>
+        add_trace(
+          x = c(min_height, max_height),
+          y = c(breed, breed),
+          
+          type = "scatter",
+          mode = "lines+markers",
+          
+          # Match the color of the line and endpoint markers.
+          line = list(
+            color = breed_colors[i],
+            width = 5
+          ),
+          
+          marker = list(
+            color = breed_colors[i],
+            size = 11
+          ),
+          
+          # Show the full range when hovering.
+          text = c(hover_label, hover_label),
+          hoverinfo = "text",
+          
+          # Avoid duplicate legend entries.
+          showlegend = FALSE
+        )
+    }
+    
+    # Format the completed chart.
+    p |>
       layout(
-        
-        # Label the horizontal axis.
         xaxis = list(
           title = "Height (inches)",
-          rangemode = "tozero"
+          rangemode = "tozero",
+          zeroline = FALSE
         ),
         
-        # Breed names already identify the two rows.
-        yaxis = list(title = ""),
+        yaxis = list(
+          title = "",
+          categoryorder = "array",
+          categoryarray = rev(height_data$Breed)
+        ),
         
-        # No separate legend is needed.
         showlegend = FALSE,
         
-        # Keep the graph background transparent.
+        # Transparent backgrounds match the existing box.
         paper_bgcolor = "rgba(0,0,0,0)",
-        plot_bgcolor = "rgba(0,0,0,0)"
+        plot_bgcolor = "rgba(0,0,0,0)",
+        
+        margin = list(l = 110, r = 30, t = 20, b = 50)
       )
-    
   })
+  
   
   # BREED CARD TITLES -------------------------------------------------
   
