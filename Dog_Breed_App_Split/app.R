@@ -114,6 +114,8 @@ ui <- dashboardPage(
   
   dashboardBody(
     
+    #Stylizing our website!
+    
     tags$head(
       tags$style(HTML("
 
