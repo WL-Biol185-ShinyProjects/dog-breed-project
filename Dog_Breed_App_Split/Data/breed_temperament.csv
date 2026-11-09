@@ -1,4 +1,4 @@
-id,Name,Breed Group,Bred For,Minimum Life Span,Maximum Life Span,Minimum Height,Maximum Height,Minimum Weight,Maximum Weight,Temperament,Image
+﻿id,Name,Breed Group,Bred For,Minimum Life Span,Maximum Life Span,Minimum Height,Maximum Height,Minimum Weight,Maximum Weight,Temperament,Image
 1,Affenpinscher,Toy,"Small rodent hunting, lapdog",10,12,9,12,6,13,"Stubborn, Curious, Playful, Adventurous, Active, Fun-loving",https://cdn2.thedogapi.com/images/0LJiOVlxp.jpg
 2,Afghan Hound,Hound,Coursing and hunting,10,13,25,27,50,60,"Aloof, Clownish, Dignified, Independent, Happy",https://cdn2.thedogapi.com/images/tChrH8dDJ.jpg
 3,Airedale Terrier,Terrier,"Badger, otter hunting",10,13,21,23,40,65,"Outgoing, Friendly, Alert, Confident, Intelligent, Courageous",https://cdn2.thedogapi.com/images/PG8UPLSVU.jpg
@@ -104,3 +104,105 @@ id,Name,Breed Group,Bred For,Minimum Life Span,Maximum Life Span,Minimum Height,
 103,Whippet,Hound,"Coursing, racing",12,15,18,22,25,35,"Friendly, Affectionate, Lively, Gentle, Intelligent, Quiet",https://cdn2.thedogapi.com/images/Hyv-ne94m_1280.jpg
 104,Wirehaired Pointing Griffon,Sporting,"Gundog, ""swamp-tromping"", Flushing, pointing, and retrieving water fowl & game birds",12,14,20,24,45,70,"Loyal, Gentle, Vigilant, Trainable, Proud",https://cdn2.thedogapi.com/images/Bkam2l9Vm_1280.jpg
 105,Yorkshire Terrier,Toy,Small vermin hunting,12,16,8,9,4,7,"Bold, Independent, Confident, Intelligent, Courageous",https://cdn2.thedogapi.com/images/B12BnxcVQ_1280.jpg
+106,American English Coonhound,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Maddie%20%288416820450%29.jpg
+107,American Hairless Terrier,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/American%20Hairless%20Terrier%20Adelor.jpg
+108,American Staffordshire Terrier,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/AMERICAN%20STAFFORDSHIRE%20TERRIER%2C%20Zican%E2%80%99s%20Bz%20Ez%20Dragon%20%2824208348891%29.2.jpg
+109,Australian Cattle Dog,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/ACD-blue-spud.jpg
+110,Australian Terrier,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Australian%20Terrier%20002%20U.jpg
+111,Barbet,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Chien%20de%20race%20Barbet.jpg
+112,Basset Hound,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Basset%20Hound%20600.jpg
+113,Bearded Collie,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Bearded%20Collie.jpg
+114,Belgian Sheepdog,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Belgian%20Shepherd%20Groenendael%20portrait.jpg
+115,Bergamasco Sheepdog,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Bergamasco%20600.jpg
+116,Berger Picard,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Owczarek%20pikardyjski%2063.jpg
+117,Bichon Frise,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Bichon%20Fris%C3%A9%20-%20studdogbichon.jpg
+118,Black Russian Terrier,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Malahovkaja%20Serenada.jpg
+119,Border Collie,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Border%20Collie%20600.jpg
+120,Borzoi,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Borzoi%20female.jpg
+121,Brussels Griffon,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Monkey%20Bizniz%20Drama%20Queen.jpg
+122,Bull Terrier,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Bullterier%20089%20LM.jpg
+123,Bulldog,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Racib%C3%B3rz%202007%20082.jpg
+124,Canaan Dog,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/CanaanDogChakede1.jpg
+125,Cesky Terrier,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Cesky-Terier.jpg
+126,Chesapeake Bay Retriever,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Chesapeake%20Bay%20Retriever1.jpg
+127,Chihuahua,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Chihuahuas-%20Holly%2C%20Nina%2C%20Doralice.jpg
+128,Chinese Shar-Pei,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Shar%20pei.jpg
+129,Cirneco dellâ€šÃ„Ã´Etna,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Cirneco%20dell%20Etna%20611.jpg
+130,Cocker Spaniel,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/AmericanCockerSpaniel%20wb.jpg
+131,Collie,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/AmericanCollie2.jpg
+132,Curly-Coated Retriever,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Curley%20coated%20retriever5.jpg
+133,Dachshund,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/MiniDachshund1%20wb.jpg
+134,Dandie Dinmont Terrier,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Dandie%20Dinmont%20Terrier%20600.jpg
+135,Doberman Pinscher,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Dobermann%20Father-and-son.jpg
+136,Dogue de Bordeaux,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/DJT%200086.jpg
+137,English Cocker Spaniel,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/%22Bill%22%20-%20Cocker%20spaniel%20anglais%201.jpg
+138,English Foxhound,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/English%20Foxhound.jpg
+139,English Setter,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/English%20setter.jpg
+140,English Toy Spaniel,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/King%20Charles%20Spaniel%20200.jpg
+141,Entlebucher Mountain Dog,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Entlebucher.jpg
+142,Finnish Spitz,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Finnish%20Spitz%20600.jpg
+143,Flat-Coated Retriever,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Flat%20Coated%20Retriever.jpg
+144,French Bulldog,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/%D0%A4%D1%80%D0%B0%D0%BD%D1%86%D1%83%D0%B7%D1%81%D0%BA%D0%B8%D0%B5%20%D0%B1%D1%83%D0%BB%D1%8C%D0%B4%D0%BE%D0%B3%D0%B8%202013-09-02%2011-36.JPG
+145,German Longhaired Pointer,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/DeutschLanghaarneu.jpg
+146,Grand Basset Griffon Vendeen,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/G%20Basset%20Griffon%20Vendeen%20600.jpg
+147,Greater Swiss Mountain Dog,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Swissy-2009-11-02.jpg
+148,Ibizan Hound,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/AdemasAout2021.ret.jpg
+149,Icelandic Sheepdog,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Ulfur.jpg
+150,Irish Red and White Setter,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Irish%20Red%20And%20White%20Setter%202005.jpg
+151,Irish Terrier,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Irish%20Terrier%20P1060074.jpg
+152,Irish Water Spaniel,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Irlandzki%20spaniel%20wodny%20676.jpg
+153,Kerry Blue Terrier,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Kerry%20Blue%20Terrier.jpg
+154,Lakeland Terrier,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Lakeland%20Terrier.jpg
+155,Lowchen,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/LowchenFemale.jpg
+156,Manchester Terrier,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Manchesterterrier.jpg
+157,Mastiff,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Mastif%20angielski%20pregowany%20nn.jpg
+158,Miniature American Shepherd,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Miniature-american-shepherd-energies.jpg
+159,Miniature Bull Terrier,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Bull%20Terrier%20Miniature.jpg
+160,Miniature Pinscher,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Grupp%202%20DV%C3%84RGPINCHER%2C%20Pincerella%E2%80%99s%20Rinaldo%20Rosso%20%2824260846206%29.jpg
+161,Neapolitan Mastiff,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Mastino%20sylwetka.jpg
+162,Nederlandse Kooikerhondje,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Kooiker03.jpg
+163,Norwegian Buhund,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Norwegian%20Buhund%20600.jpg
+164,Norwegian Elkhound,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Norwegian%20Elkhound.jpg
+165,Norwegian Lundehund,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Lundehund-2003.jpg
+166,Norwich Terrier,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Norwichterrier.jpg
+167,Nova Scotia Duck Tolling Retriever,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Duck%20Toller.jpg
+168,Old English Sheepdog,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Bobtail.JPG
+169,Otterhound,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Two%20otterhounds.jpg
+170,Parson Russell Terrier,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Parson%20Russell%20Terrier.jpg
+171,Pekingese,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/1AKC%20Pekingese%20Dog%20Show%202011.jpg
+172,Petits Bassets Griffons Vendeen,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/P%20Basset%20Griffon%20Vendeen%20600.jpg
+173,Pointer,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/English%20pointer.jpg
+174,Polish Lowland Sheepdog,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Polski%20owczarek%20nizinny.jpg
+175,Pomeranian,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Pomeranian%20dog.jpg
+176,Poodle (Standard),,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/AKC%20Helena%20Fall%20Dog%20Show%202011%20%286187041897%29.jpg
+177,Portuguese Podengo Pequeno,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Smooth%20Coat%20Portuguese%20Podengo%20Pequeno.jpg
+178,Portuguese Water Dog,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/C%C3%A3o%20de%20agua%20Portugu%C3%AAs%202.jpg
+179,Puli,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Puli%20600.jpg
+180,Pumi,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Hungarianpumi.JPG
+181,Pyrenean Shepherd,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Berger-des-Pyrenees%20Adeux%200302x0214.jpg
+182,Rat Terrier,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/AmRatTerr11%20fx%20wb.jpg
+183,Russell Terrier,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Jack-Russell%20Terrier.jpg
+184,Saint Bernard,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Rey%20nieve.jpg
+185,Saluki,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Red%20Smooth%20Saluki.jpg
+186,Scottish Terrier,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Scotish%20terrier%20burleska%202005.jpg
+187,Sealyham Terrier,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/SealyhamTerrier01.jpg
+188,Shetland Sheepdog,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/ShetlandShpdogBlue2%20wb.jpg
+189,Shiba Inu,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Shiba%20inu%20taiki.jpg
+190,Siberian Husky,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Siberian%20Husky%20-%20Mika.jpg
+191,Skye Terrier,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Skye%20terrier%20800.jpg
+192,Sloughi,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Sloughi.jpg
+193,Smooth Fox Terrier,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Smoothfoxterrier.jpg
+194,Spinone Italiano,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Spinone%20italiano%20Daisy.JPG
+195,Staffordshire Bull Terrier,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Staffie.jpg
+196,Standard Schnauzer,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Emppumenossa.jpg
+197,Sussex Spaniel,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Sussex%20spaniel%20t43.jpg
+198,Swedish Vallhund,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/SwedishVallhundAgility%20wb.jpg
+199,Tibetan Mastiff,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/2013%20Westminster%20Kennel%20Club%20Dog%20Show-%20Tibetan%20Mastiff%20GCH%20Sierras%27Sasha-Yakone%20Nanuk%20%288469240739%29%20%28cropped%29.jpg
+200,Tibetan Spaniel,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Tibetansk%20spaniel.jpg
+201,Tibetan Terrier,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Tibetan%20Terrier%20Image%20001.jpg
+202,Toy Fox Terrier,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Toy%20Fox%20Terrier%202.jpg
+203,Treeing Walker Coonhound,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Treeing-walker-coonhound-standing.jpg
+204,Welsh Terrier,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Welshterrier.jpg
+205,Wire Fox Terrier,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Elias1%C4%8Derven2006.jpg
+206,Wirehaired Vizsla,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/Anka%20vom%20Rudolfsforst.jpg
+207,Xoloitzcuintli,,,,,,,,,,https://commons.wikimedia.org/wiki/Special:FilePath/XoloLarge1.jpg
