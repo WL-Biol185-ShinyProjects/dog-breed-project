@@ -3,10 +3,11 @@
         
     
           
-          h1("About"),
+          h1("About this Project"),
           
           fluidRow(
             
+            h2(About the Creators)
             column(
               width = 6,
               h3("Brenna Luczak"),
@@ -21,9 +22,9 @@
             
             column(
               width = 6,
-              h3("Author 2"),
+              h3("Lydia Harvey"),
               img(
-                src = "author2.jpg",
+                src = "authors/Lydia.jpeg",
                 height = "200px",
                 width = "200px",
                 style = "border-radius: 50%; object-fit: cover;"
@@ -32,9 +33,9 @@
             ),
             column(
               width = 6,
-              h3("Author 2"),
+              h3("Loren Hertzler"),
               img(
-                src = "author2.jpg",
+                src = "authors/Loren.jpeg",
                 height = "200px",
                 width = "200px",
                 style = "border-radius: 50%; object-fit: cover;"
@@ -43,9 +44,9 @@
             ),
             column(
               width = 6,
-              h3("Author 2"),
+              h3("Daniel Volodarsky"),
               img(
-                src = "author2.jpg",
+                src = "authors/Danny.JPG",
                 height = "200px",
                 width = "200px",
                 style = "border-radius: 50%; object-fit: cover;"
