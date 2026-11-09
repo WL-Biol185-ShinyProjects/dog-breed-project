@@ -216,7 +216,7 @@
           # It connects to output$trait_comparison in the server.
           plotlyOutput(
             outputId = "trait_comparison",
-            height = "420px"
+            height = "500px"
           )
           
         )
