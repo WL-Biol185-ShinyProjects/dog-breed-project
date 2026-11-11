@@ -295,7 +295,11 @@ tags$style(HTML(paste0(
       
       # ABOUT -------------------------------------------------------------
       
-      source("ui/about.R", local = TRUE)$value
+      source("ui/about.R", local = TRUE)$value,
+      
+      # References -------------------------------------------------------------
+      
+      source("ui/references.R", local = TRUE)$value
       
       # Close tabItems()
     )
@@ -325,6 +329,7 @@ server <- function(input, output, session) {
   source("server/compare.R", local = TRUE)
   source("server/soul_dog.R", local = TRUE)
   source("server/find_breed.R", local = TRUE)
+  source("server/references.R", local = TRUE)
 }
 
 
