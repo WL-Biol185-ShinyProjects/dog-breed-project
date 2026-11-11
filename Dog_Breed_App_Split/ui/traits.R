@@ -28,6 +28,7 @@
           country = toupper(trimws(country)),
           country = recode(country,
                            "GREAT BRITAIN"       = "UNITED KINGDOM",
+                           "ENGLAND"             = "UNITED KINGDOM",
                            "THE NETHERLANDS"     = "NETHERLANDS",
                            "RUSSIAN FEDERATION"  = "RUSSIA",
                            "CZECHOSLOVAKIA"      = "CZECHIA",
