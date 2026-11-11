@@ -231,50 +231,79 @@
       nrow(lifespan) == 2
     )
     
-    # HELPER FUNCTION ------------------------------------------
-    # Compare the midpoint of each breed's typical range.
-    # Midpoint = (minimum + maximum) / 2.
-    #
-    # This is a simple summary of the ranges, NOT an estimate
-    # of the average dog within each breed.
+    # HELPER FUNCTION: COMPARE TWO BREED RANGES --------------------
     
     compare_ranges <- function(measurement_data, label) {
       
-      # Find the midpoint for each breed.
-      midpoint_1 <- mean(c(
-        measurement_data$Minimum[1],
-        measurement_data$Maximum[1]
-      ))
+      # Extract the minimum and maximum for each breed.
+      min1 <- measurement_data$Minimum[1]
+      max1 <- measurement_data$Maximum[1]
       
-      midpoint_2 <- mean(c(
-        measurement_data$Minimum[2],
-        measurement_data$Maximum[2]
-      ))
+      min2 <- measurement_data$Minimum[2]
+      max2 <- measurement_data$Maximum[2]
       
-      # Check whether the data are missing.
-      if (any(is.na(c(midpoint_1, midpoint_2)))) {
-        return(paste("Insufficient data to compare", label))
-      }
+      # Get the names of the selected breeds.
+      breed1 <- measurement_data$Breed[1]
+      breed2 <- measurement_data$Breed[2]
       
-      # If the midpoints match, describe them as similar.
-      if (midpoint_1 == midpoint_2) {
+      # Check for missing or invalid measurements.
+      values <- c(min1, max1, min2, max2)
+      
+      if (any(is.na(values)) ||
+          any(!is.finite(values)) ||
+          min1 > max1 || min2 > max2) {
+        
         return(paste(
-          "Both breeds have the same midpoint for", label,
-          "in this dataset."
+          "Insufficient data to compare", label
         ))
       }
       
-      # Identify which breed has the larger midpoint.
-      larger_breed <- if (midpoint_1 > midpoint_2) {
-        measurement_data$Breed[1]
-      } else {
-        measurement_data$Breed[2]
+      # CASE 1: The ranges are exactly the same.
+      if (min1 == min2 && max1 == max2) {
+        
+        return("Both breeds have identical typical ranges.")
+        
       }
       
+      # CASE 2: Breed 1's entire range is above Breed 2's.
+      if (min1 > max2) {
+        
+        return(paste(
+          breed1,
+          "has a higher typical range than",
+          breed2, "for", label, "."
+        ))
+        
+      }
+      
+      # CASE 3: Breed 2's entire range is above Breed 1's.
+      if (min2 > max1) {
+        
+        return(paste(
+          breed2,
+          "has a higher typical range than",
+          breed1, "for", label, "."
+        ))
+        
+      }
+      
+      # CASE 4: The ranges overlap.
+      # Compare their midpoints to describe the general direction.
+      midpoint1 <- (min1 + max1) / 2
+      midpoint2 <- (min2 + max2) / 2
+      
+      if (midpoint1 == midpoint2) {
+        
+        return("The breeds have overlapping ranges with equal midpoints.")
+        
+      }
+      
+      higher_breed <- if (midpoint1 > midpoint2) breed1 else breed2
+      
       paste(
-        larger_breed,
-        "has the higher midpoint for", label,
-        "in this dataset."
+        "The typical ranges overlap, but",
+        higher_breed,
+        "has the higher range midpoint for", label, "."
       )
     }
     
