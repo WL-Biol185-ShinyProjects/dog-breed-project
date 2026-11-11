@@ -210,16 +210,17 @@
           ),
           
           
-          # INTERACTIVE GRAPH ---------------------------------------------
+          # INTERACTIVE TRAIT COMPARISON GRAPH --------------------------
           
-          # This creates the space where our Plotly graph will appear.
-          # It connects to output$trait_comparison in the server.
           plotlyOutput(
             outputId = "trait_comparison",
             height = "500px"
-        
-            
-          )
+          ),
+          
+          # KEY DIFFERENCE SUMMARY -------------------------------------
+          # Displays a short takeaway below the graph.
+          # The text will update when either breed or category changes.
+          uiOutput("trait_difference_summary")
           
         )
       )

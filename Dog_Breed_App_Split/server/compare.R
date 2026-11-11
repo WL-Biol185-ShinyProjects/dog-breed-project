@@ -589,4 +589,63 @@
     
   })
   
+  # KEY TRAIT DIFFERENCE SUMMARY --------------------------------
   
+  output$trait_difference_summary <- renderUI({
+    
+    # Use the same data as the Trait Showdown graph.
+    # This updates automatically with the breed selections
+    # and the selected trait category.
+    data <- comparison_traits()
+    
+    # Calculate the absolute difference in ratings (0 to 4).
+    data$Difference <- abs(data$Breed1 - data$Breed2)
+    
+    # Ignore traits with missing ratings.
+    data <- data[!is.na(data$Difference), ]
+    
+    # If there are no usable ratings, show nothing.
+    if (nrow(data) == 0) {
+      return(NULL)
+    }
+    
+    # Find the trait with the largest rating difference.
+    biggest <- data[which.max(data$Difference), ]
+    
+    # Don't show a summary if every rating is identical.
+    if (biggest$Difference == 0) {
+      message <- "These breeds have identical ratings in this category."
+      
+    } else {
+      
+      # Identify which breed has the higher rating.
+      higher_breed <- if (biggest$Breed1 > biggest$Breed2) {
+        input$compare_breed_1
+      } else {
+        input$compare_breed_2
+      }
+      
+      # Build a concise sentence using the actual ratings.
+      message <- paste0(
+        "Biggest difference: ",
+        biggest$Trait,
+        " — ",
+        higher_breed,
+        " scores ",
+        biggest$Difference,
+        " point(s) higher."
+      )
+    }
+    
+    # Display one compact takeaway below the chart.
+    tags$p(
+      style = paste(
+        "font-size: 14px;",
+        "color: #555;",
+        "margin: 0 10px 12px 10px;",
+        "line-height: 1.5;"
+      ),
+      message
+    )
+    
+  })
