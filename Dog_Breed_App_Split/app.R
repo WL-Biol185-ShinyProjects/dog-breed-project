@@ -30,7 +30,20 @@ source("R/data_setup.R", local = TRUE)
 
 # USER INTERFACE (UI) ---------------------------------------------
 
-# USER INTERFACE ----------------------------------------------------------
+# GLOBAL PAW CURSOR --------------------------------------
+
+# GLOBAL PAW CURSOR
+paw_svg <- r"(<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 32 32'><g fill='%2375462F' stroke='white' stroke-width='1'><ellipse cx='16' cy='21' rx='8' ry='6.5'/><circle cx='6' cy='13' r='3.2'/><circle cx='12' cy='7' r='3.4'/><circle cx='20' cy='7' r='3.4'/><circle cx='26' cy='13' r='3.2'/></g></svg>)"
+
+paw_css <- paste0(
+  "html, body, body *:not(input):not(textarea), ",
+  ".leaflet-container, .leaflet-container * {",
+  "cursor: url(\"data:image/svg+xml;utf8,",
+  paw_svg,
+  "\") 12 12, auto !important;",
+  "}"
+)
+
 
 ui <- dashboardPage(
   
@@ -223,13 +236,29 @@ h3, h4, h5 {
 /* PARAGRAPHS */
 p {
   font-family: 'Lato', sans-serif;
-  font-size: 15px;
+  font-size: 20px;
   line-height: 1.7;
     }
 
-  "))
-    ),
+  ")),
     
+# Additional global cursor styling
+tags$style(HTML(paste0(
+  "html, body, body *:not(input):not(textarea), ",
+  ".leaflet-container, .leaflet-container * {",
+  "cursor: url('data:image/svg+xml;utf8,",
+  paw_svg,
+  "') 12 12, auto !important;}"
+)))
+
+    ),
+
+    
+# Apply the paw cursor to the entire website
+
+  tags$head(
+  tags$style(HTML(paw_css))
+    ),
     tabItems(
       
       # HOME PAGE

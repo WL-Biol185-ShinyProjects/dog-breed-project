@@ -78,16 +78,7 @@
           popupOptions = popupOptions(maxWidth = 320)                              
         )
       
-      # code for cursor 
-      paw_svg <- r"(<svg xmlns='http://www.w3.org/2000/svg' width='25' height='25' viewBox='0 0 32 32'><g fill='%2375462F' stroke='white' stroke-width='1'><ellipse cx='16' cy='21' rx='8' ry='6.5'/><circle cx='6' cy='13' r='3.2'/><circle cx='12' cy='7' r='3.4'/><circle cx='20' cy='7' r='3.4'/><circle cx='26' cy='13' r='3.2'/></g></svg>)"
-      
-      paw_css <- paste0(
-        ".leaflet-container, .leaflet-grab, .leaflet-dragging .leaflet-grab, ",
-        ".leaflet-interactive, .leaflet-marker-icon, .leaflet-control a {",
-        "cursor: url(\"data:image/svg+xml;utf8,", paw_svg, "\") 12 12, auto !important;}"
-      )
-      
-      dog_map <- dog_map %>% prependContent(tags$style(HTML(paw_css)))
+      dog_map <- dog_map %>% prependContent()
       
       # TRAITS & TRENDS PAGE -------------------------
       
