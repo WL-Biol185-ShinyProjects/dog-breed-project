@@ -215,142 +215,63 @@
   
   output$physical_comparison_summary <- renderUI({
     
-    # Retrieve the data for the two selected breeds.
-    # This automatically updates whenever a dropdown changes.
+    # Get the physical measurements for both selected breeds.
     data <- physical_comparison_data()
     
-    # Separate the three physical measurements.
-    height <- data[data$Measurement == "Height", ]
-    weight <- data[data$Measurement == "Weight", ]
-    lifespan <- data[data$Measurement == "Lifespan", ]
+    # Helper function: compare the typical ranges of two breeds.
+    # Returns the name of the breed with the entirely higher range,
+    # or NA if the ranges overlap or are identical.
+    higher_range <- function(measurement) {
+      
+      # Select the two rows for this measurement.
+      values <- data[data$Measurement == measurement, ]
+      
+      # Check that both breeds have valid measurements.
+      if (nrow(values) != 2 ||
+          any(!is.finite(values$Minimum)) ||
+          any(!is.finite(values$Maximum))) {
+        return(NA_character_)
+      }
+      
+      # Identify a higher range only when there is no overlap.
+      if (values$Minimum[1] > values$Maximum[2]) {
+        return(as.character(values$Breed[1]))
+      }
+      
+      if (values$Minimum[2] > values$Maximum[1]) {
+        return(as.character(values$Breed[2]))
+      }
+      
+      # Overlapping or identical ranges: no clear winner.
+      return(NA_character_)
+    }
     
-    # Make sure we have two breeds for each measurement.
-    req(
-      nrow(height) == 2,
-      nrow(weight) == 2,
-      nrow(lifespan) == 2
-    )
+    # Compare height and weight.
+    taller <- higher_range("Height")
+    heavier <- higher_range("Weight")
     
-    # HELPER FUNCTION: COMPARE TWO BREED RANGES --------------------
-    
-    compare_ranges <- function(measurement_data, label) {
+    # Build one short takeaway.
+    if (!is.na(taller) && !is.na(heavier) && taller == heavier) {
       
-      # Extract the minimum and maximum for each breed.
-      min1 <- measurement_data$Minimum[1]
-      max1 <- measurement_data$Maximum[1]
+      summary <- paste(
+        taller,
+        "is typically taller and heavier."
+      )
       
-      min2 <- measurement_data$Minimum[2]
-      max2 <- measurement_data$Maximum[2]
+    } else {
       
-      # Get the names of the selected breeds.
-      breed1 <- measurement_data$Breed[1]
-      breed2 <- measurement_data$Breed[2]
-      
-      # Check for missing or invalid measurements.
-      values <- c(min1, max1, min2, max2)
-      
-      if (any(is.na(values)) ||
-          any(!is.finite(values)) ||
-          min1 > max1 || min2 > max2) {
-        
-        return(paste(
-          "Insufficient data to compare", label
-        ))
-      }
-      
-      # CASE 1: The ranges are exactly the same.
-      if (min1 == min2 && max1 == max2) {
-        
-        return("Both breeds have identical typical ranges.")
-        
-      }
-      
-      # CASE 2: Breed 1's entire range is above Breed 2's.
-      if (min1 > max2) {
-        
-        return(paste(
-          breed1,
-          "has a higher typical range than",
-          breed2, "for", label, "."
-        ))
-        
-      }
-      
-      # CASE 3: Breed 2's entire range is above Breed 1's.
-      if (min2 > max1) {
-        
-        return(paste(
-          breed2,
-          "has a higher typical range than",
-          breed1, "for", label, "."
-        ))
-        
-      }
-      
-      # CASE 4: The ranges overlap.
-      # Compare their midpoints to describe the general direction.
-      midpoint1 <- (min1 + max1) / 2
-      midpoint2 <- (min2 + max2) / 2
-      
-      if (midpoint1 == midpoint2) {
-        
-        return("The breeds have overlapping ranges with equal midpoints.")
-        
-      }
-      
-      higher_breed <- if (midpoint1 > midpoint2) breed1 else breed2
-      
-      paste(
-        "The typical ranges overlap, but",
-        higher_breed,
-        "has the higher range midpoint for", label, "."
+      # Avoid claiming a clear difference when ranges overlap.
+      summary <- paste(
+        "Compare the ranges to see how these breeds differ",
+        "in size and lifespan."
       )
     }
     
-    # GENERATE THE SUMMARY -------------------------------------
-    
-    tagList(
-      
-      # Height comparison
-      tags$p(
-        tags$strong("Height: "),
-        compare_ranges(height, "height")
-      ),
-      
-      # Weight comparison
-      tags$p(
-        tags$strong("Weight: "),
-        compare_ranges(weight, "weight")
-      ),
-      
-      # Lifespan comparison
-      tags$p(
-        tags$strong("Lifespan: "),
-        compare_ranges(lifespan, "lifespan")
-      )
-      
+    # Display the takeaway without additional paragraphs.
+    tags$p(
+      style = "font-size: 14px; line-height: 1.5; margin-top: 8px;",
+      summary
     )
-    
-  })
-  
-  # BREED CARD TITLES -------------------------------------------------
-  
-  
-  # renderText() creates text that can be sent to a textOutput()
-  # element in the UI.
-  output$compare_name_1 <- renderText({
-    
-    # Display whatever breed is currently selected
-    # in the first dropdown.
-    input$compare_breed_1
-    
-  })
-  
-  
-  # Do the same thing for Breed 2.
-  output$compare_name_2 <- renderText({
-    
-    input$compare_breed_2
     
   })
   
