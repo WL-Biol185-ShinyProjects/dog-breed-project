@@ -211,6 +211,18 @@
     
   })
   
+  # PHYSICAL COMPARISON SUMMARY ---------------------------------
+  
+  output$physical_comparison_summary <- renderUI({
+    
+    # Temporary placeholder to confirm that the UI and server
+    # are connected correctly.
+    tags$p(
+      "A summary of the selected breeds will appear here."
+    )
+    
+  })
+  
   # BREED CARD TITLES -------------------------------------------------
   
   

@@ -296,7 +296,7 @@
           ), # End first fluidRow()
           
           
-          # Second row: Lifespan uses the full width.
+          # Second row: Lifespan and summary
           fluidRow(
             
             column(
@@ -316,7 +316,25 @@
                 outputId = "lifespan_comparison",
                 height = "170px"
               )
-            )
+            ),
+            
+            # RIGHT COLUMN: AT A GLANCE
+            column(
+              width = 6,
+              
+              tags$h4(
+                style = "font-size: 16px; font-weight: 600;",
+                "At a Glance"
+              ),
+              
+              # Connects to the summary generated in server/compare.R
+              uiOutput("physical_comparison_summary")
+              
+            ) # Closes summary column
+            
+          ) # Closes fluidRow()
+            
+            
           )
           
         )
