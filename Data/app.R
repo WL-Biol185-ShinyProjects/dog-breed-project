@@ -163,7 +163,7 @@ ui <- dashboardPage(
       
       # ABOUT
       menuItem(
-        "About",
+        "About Us",
         tabName = "about",
         icon = icon("circle-info")
       )
