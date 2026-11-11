@@ -31,6 +31,7 @@
                            "THE NETHERLANDS"     = "NETHERLANDS",
                            "RUSSIAN FEDERATION"  = "RUSSIA",
                            "CZECHOSLOVAKIA"      = "CZECHIA",
+                           "CZECH REPUBLIC"      = "CZECHIA",
                            "CENTRAL AFRICA"      = "CENTRAL AFRICAN REPUBLIC",
                            "TIBET (CHINA)"       = "CHINA",
                            "KOREA (REPUBLIC OF)" = "SOUTH KOREA"),
