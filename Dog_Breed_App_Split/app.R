@@ -101,6 +101,13 @@ ui <- dashboardPage(
         "About Us",
         tabName = "about",
         icon = icon("circle-info")
+      ),
+      
+      #References
+      menuItem(
+        "References",
+        tabName = "references",
+        icon = icon("book")
       )
       
     )
