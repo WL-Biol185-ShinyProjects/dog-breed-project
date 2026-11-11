@@ -215,10 +215,91 @@
   
   output$physical_comparison_summary <- renderUI({
     
-    # Temporary placeholder to confirm that the UI and server
-    # are connected correctly.
-    tags$p(
-      "A summary of the selected breeds will appear here."
+    # Retrieve the data for the two selected breeds.
+    # This automatically updates whenever a dropdown changes.
+    data <- physical_comparison_data()
+    
+    # Separate the three physical measurements.
+    height <- data[data$Measurement == "Height", ]
+    weight <- data[data$Measurement == "Weight", ]
+    lifespan <- data[data$Measurement == "Lifespan", ]
+    
+    # Make sure we have two breeds for each measurement.
+    req(
+      nrow(height) == 2,
+      nrow(weight) == 2,
+      nrow(lifespan) == 2
+    )
+    
+    # HELPER FUNCTION ------------------------------------------
+    # Compare the midpoint of each breed's typical range.
+    # Midpoint = (minimum + maximum) / 2.
+    #
+    # This is a simple summary of the ranges, NOT an estimate
+    # of the average dog within each breed.
+    
+    compare_ranges <- function(measurement_data, label) {
+      
+      # Find the midpoint for each breed.
+      midpoint_1 <- mean(c(
+        measurement_data$Minimum[1],
+        measurement_data$Maximum[1]
+      ))
+      
+      midpoint_2 <- mean(c(
+        measurement_data$Minimum[2],
+        measurement_data$Maximum[2]
+      ))
+      
+      # Check whether the data are missing.
+      if (any(is.na(c(midpoint_1, midpoint_2)))) {
+        return(paste("Insufficient data to compare", label))
+      }
+      
+      # If the midpoints match, describe them as similar.
+      if (midpoint_1 == midpoint_2) {
+        return(paste(
+          "Both breeds have the same midpoint for", label,
+          "in this dataset."
+        ))
+      }
+      
+      # Identify which breed has the larger midpoint.
+      larger_breed <- if (midpoint_1 > midpoint_2) {
+        measurement_data$Breed[1]
+      } else {
+        measurement_data$Breed[2]
+      }
+      
+      paste(
+        larger_breed,
+        "has the higher midpoint for", label,
+        "in this dataset."
+      )
+    }
+    
+    # GENERATE THE SUMMARY -------------------------------------
+    
+    tagList(
+      
+      # Height comparison
+      tags$p(
+        tags$strong("Height: "),
+        compare_ranges(height, "height")
+      ),
+      
+      # Weight comparison
+      tags$p(
+        tags$strong("Weight: "),
+        compare_ranges(weight, "weight")
+      ),
+      
+      # Lifespan comparison
+      tags$p(
+        tags$strong("Lifespan: "),
+        compare_ranges(lifespan, "lifespan")
+      )
+      
     )
     
   })
