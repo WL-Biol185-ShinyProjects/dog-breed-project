@@ -143,16 +143,27 @@
     # Apply consistent formatting to every chart.
     p |>
       plotly::layout(
+        # HORIZONTAL AXIS -------------------------------------------
         xaxis = list(
-          title = axis_label,
-          rangemode = "tozero",
-          zeroline = FALSE
+          title = "",                # Units are already in the heading
+          rangemode = "tozero",      # Include zero on the axis
+          zeroline = FALSE,          # Remove the prominent zero line
+          showgrid = TRUE,           # Keep subtle reference lines
+          gridcolor = "#F0F0F0",     # Light gray gridlines
+          tickfont = list(size = 11) # Smaller numerical labels
         ),
         
+        # VERTICAL AXIS ---------------------------------------------
         yaxis = list(
           title = "",
+          
+          # Keep breed names in their existing order
           categoryorder = "array",
-          categoryarray = rev(plot_data$Breed)
+          categoryarray = rev(plot_data$Breed),
+          
+          showgrid = FALSE,          # Remove horizontal gridlines
+          zeroline = FALSE,
+          tickfont = list(size = 11)
         ),
         
         showlegend = FALSE,
