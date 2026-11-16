@@ -57,7 +57,8 @@
                 width = "200px",
                 style = "border-radius: 50%; object-fit: cover;"
               ),
-              p("Write Author 2's biography here.")
+              p("From Staten Island, New York, I am a Biology and Music double major on the pre-med track. 
+                I love dogs and would love to have a Labrador Retriever!")
             )
             
           )
