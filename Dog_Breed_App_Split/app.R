@@ -138,8 +138,13 @@ ui <- dashboardPage(
   
   dashboardBody(
     
-    # Load our universal CSS stylesheet.
-    # Shiny will apply these styles to every page.
+    # -------------------------------------------------------
+    # GLOBAL STYLESHEET
+    # -------------------------------------------------------
+    # Load our custom CSS file.
+    # This controls colors, fonts, backgrounds, and spacing
+    # across all pages of our app.
+    
     tags$head(
       tags$link(
         rel = "stylesheet",
@@ -148,65 +153,64 @@ ui <- dashboardPage(
       )
     ),
     
-# Additional global cursor styling
-tags$style(HTML(paste0(
-  "html, body, body *:not(input):not(textarea), ",
-  ".leaflet-container, .leaflet-container * {",
-  "cursor: url('data:image/svg+xml;utf8,",
-  paw_svg,
-  "') 12 12, auto !important;}"
-)))
-
-    ),
-
+    # -------------------------------------------------------
+    # PAW CURSOR
+    # -------------------------------------------------------
+    # Apply our custom paw-shaped cursor throughout the app.
+    # paw_css was already defined earlier in app.R.
+    # We only need to apply it once here.
     
-# Apply the paw cursor to the entire website
-
-  tags$head(
-  tags$style(HTML(paw_css))
+    tags$head(
+      tags$style(HTML(paw_css))
     ),
+    
+    # -------------------------------------------------------
+    # WEBSITE PAGES
+    # -------------------------------------------------------
+    # Each source() loads the UI for one page.
+    # All pages must be inside tabItems(), which itself
+    # must be inside dashboardBody().
+    
     tabItems(
       
-      # HOME PAGE
+      # Home page
       source("ui/home.R", local = TRUE)$value,
       
-      # EXPLORE PAGE
+      # Breed Explorer
       source("ui/breed_explorer.R", local = TRUE)$value,
       
-      # TRAITS & TRENDS ---------------------------------------------------
-      
+      # Traits & Trends
       source("ui/traits.R", local = TRUE)$value,
       
-      
-      # COMPARE BREEDS ----------------------------------------------------
-      
-      # tabItem() creates the page that appears when the user
-      # selects "Compare Breeds" from the sidebar
+      # Compare Breeds
       source("ui/compare.R", local = TRUE)$value,
       
-      # FIND A BREED ------------------------------------------------------
-      
+      # Find a Breed
       source("ui/find_breed.R", local = TRUE)$value,
       
-      
-      # SOUL DOG QUESTIONNAIRE
+      # Soul Dog questionnaire
       source("ui/soul_dog.R", local = TRUE)$value,
       
-      # ABOUT -------------------------------------------------------------
-      
+      # About Us
       source("ui/about.R", local = TRUE)$value,
       
-      # References -------------------------------------------------------------
-      
+      # References
       source("ui/references.R", local = TRUE)$value
       
-      # Close tabItems()
-    )
+    ) # End tabItems()
     
-    # Close dashboardBody()
-  )
+  ), # End dashboardBody()
   
-  # Close dashboardPage()
+  # -------------------------------------------------------
+  # DASHBOARD THEME
+  # -------------------------------------------------------
+  # shinydashboard requires one of its built-in skins.
+  # Our custom CSS will override these default colors.
+  
+  skin = "green"
+  
+) # End dashboardPage()
+ 
 
 # SERVER ----------------------------------------------------------
 
