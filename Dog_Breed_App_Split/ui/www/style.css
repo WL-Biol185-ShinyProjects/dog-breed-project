@@ -169,3 +169,52 @@ h1, h2, h3, h4 {
 .sidebar-menu > li > a > .fa {
   margin-right: 8px;
 }
+
+
+/* ==========================================================
+   6. MAIN CONTENT LAYOUT
+   ========================================================== */
+
+
+/* Give every page consistent spacing from the edges */
+
+.content-wrapper .content {
+  padding: 24px 28px;
+}
+
+
+/* Prevent the main content area from creating
+   horizontal overflow */
+
+.content-wrapper {
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+
+/* Make images responsive so they don't extend
+   beyond their containers */
+
+.content img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* Prevent very wide charts from stretching the page */
+
+.content .plotly,
+.content .shiny-plot-output {
+  max-width: 100%;
+}
+
+
+/* Reduce spacing on smaller screens */
+
+@media (max-width: 768px) {
+
+  .content-wrapper .content {
+    padding: 16px;
+  }
+
+}
