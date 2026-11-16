@@ -144,7 +144,6 @@ tabItem(
   ),
   
   # STARCH DIGESTION SECTION
-  h2("How Dogs Adapted to Their Diet"),
   
   p(
     class = "home-text",
@@ -167,31 +166,28 @@ tabItem(
   ),
   
   # PHOTO CAROUSEL / HORIZONTAL GALLERY
-  h2("Meet the Many Different Breeds"),
   
-  p(
-    class = "home-text",
-    "Explore the incredible diversity of dogs and the unique
-    characteristics that make each breed special."
-  ),
   
   div(
     class = "gallery",
     
     div(
       class = "gallery-card",
-      tags$img(src = "home/huntdog.jpg", 
-               alt = "Jomon"),
-      p(class = "gallery-caption",
-        "The Jōmon Inhabited the Japanese archipelago from 16000-2400. 
-        Above is a hunt reconstructed by the Niigata Prefectural Museum of 
-        History. Archaeologists have discovered dog bone burials dated to around 
-        9000BP here, with the remains surrounded in the same shells which 
-        surrounded human burials from this time. Further, grave goods, 
-        such as shell bracelets and deer antlers were also found in 
-        these dog burials! ")
-    ),
+      tags$img(
+        src = "home/huntdog.jpg",
+        alt = "Jomon"
+      ),
+      p(
+        class = "gallery-caption",
+        "The Jōmon inhabited the Japanese archipelago from 16000–2400 BP.
+        Above is a hunt reconstructed by the Niigata Prefectural Museum of
+        History. Archaeologists have discovered dog bone burials dated to
+        around 9000 BP, with the remains surrounded by shells similar to
+        those found in human burials."
+      )
+    )
     
+  ),
   
   # CLOSING
   p(
@@ -199,5 +195,3 @@ tabItem(
     "We hope that you enjoy exploring our website!"
   )
 )
-)
-
