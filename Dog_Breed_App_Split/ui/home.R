@@ -167,11 +167,6 @@ tabItem(
   
   # PHOTO CAROUSEL / HORIZONTAL GALLERY
   
-  p(
-    class = "home-text",
-    "Explore the incredible diversity of dogs and the unique
-    characteristics that make each breed special."
-  ),
   
   div(
     class = "gallery",
