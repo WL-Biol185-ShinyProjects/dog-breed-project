@@ -32,7 +32,8 @@
                 width = "200px",
                 style = "border-radius: 50%; object-fit: cover;"
               ),
-              p("Write Author 2's biography here.")
+              p("Originally from Indiana, I'm a biology major with a poverty and human capability minor 
+                on the pre-med track. At home, I have a golden retriever named Arlo!")
             ),
             
             column(
