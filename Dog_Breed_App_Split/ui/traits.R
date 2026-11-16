@@ -1,18 +1,35 @@
-      #DOG BREED WORLD MAP -----------------
+#DOG BREED WORLD MAP -----------------
       
-      # Packages used for map 
-      library(leaflet)
-      library(dplyr)
-      library(tidyr)
-      library(readr)
-      library(sf)
-      library(rnaturalearth)
-      # Packages for pawprint cursor
-      library(htmlwidgets)
-      library(htmltools)
+# Packages used for map 
+library(leaflet)
+library(dplyr)
+library(tidyr)
+library(readr)
+library(sf)
+library(rnaturalearth)
+# Packages for pawprint cursor
+library(htmlwidgets)
+library(htmltools)
       
       # Code for interactive dog breed world map 
       fci_breeds_clean <- read_csv("Data/fci_breeds_clean.csv")
+      
+      cat(
+        "MAP DATASET ROWS:",
+        nrow(fci_breeds_clean),
+        "\n"
+      )
+      
+      cat(
+        "TOGO RECORDS:",
+        sum(
+          toupper(trimws(fci_breeds_clean$country)) == "TOGO",
+          na.rm = TRUE
+        ),
+        "\n"
+      )
+      
+      
       map_breed_images <- read_csv(
         "Data/breed_images.csv",
         show_col_types = FALSE
@@ -57,6 +74,16 @@
       print(setdiff(breeds_by_country$country, world$join_name))
       
       world_breeds <- left_join(world, breeds_by_country, by = c("join_name" = "country"))
+      
+      # CHECK TOGO IN THE ACTUAL MAP DATA
+      cat("\n--- TOGO MAP DIAGNOSTIC ---\n")
+      
+      print(
+        world_breeds |>
+          sf::st_drop_geometry() |>
+          dplyr::filter(toupper(trimws(admin)) == "TOGO") |>
+          dplyr::select(admin, join_name, n_breeds, breed_list)
+      )
       
         # Map specifications 
       dog_map <- leaflet(world_breeds) %>%

@@ -1,363 +1,496 @@
 breed,group,section,country
-ENGLISH POINTER,Pointing Dogs,British and Irish Pointers and Setters,GREAT BRITAIN
-ENGLISH SETTER,Pointing Dogs,British and Irish Pointers and Setters,GREAT BRITAIN
-KERRY BLUE TERRIER,Terriers,Large and medium sized Terriers,IRELAND
-CAIRN TERRIER,Terriers,Small sized Terriers,GREAT BRITAIN
-ENGLISH COCKER SPANIEL,Retrievers,Flushing Dogs,GREAT BRITAIN
-GORDON SETTER,Pointing Dogs,British and Irish Pointers and Setters,GREAT BRITAIN
-AIREDALE TERRIER,Terriers,Large and medium sized Terriers,GREAT BRITAIN
-AUSTRALIAN TERRIER,Terriers,Small sized Terriers,AUSTRALIA
-BEDLINGTON TERRIER,Terriers,Large and medium sized Terriers,GREAT BRITAIN
-BORDER TERRIER,Terriers,Large and medium sized Terriers,GREAT BRITAIN
-BULL TERRIER,Terriers,Bull type Terriers,GREAT BRITAIN
-FOX TERRIER (SMOOTH),Terriers,Large and medium sized Terriers,GREAT BRITAIN
-ENGLISH TOY TERRIER (BLACK &TAN),Terriers,Toy Terriers,GREAT BRITAIN
-SWEDISH VALLHUND,Spitz and primitive types,Nordic Watchdogs and Herders,SWEDEN
-BELGIAN SHEPHERD DOG,Sheepdogs and Cattledogs,Sheepdogs,BELGIUM
-OLD ENGLISH SHEEPDOG,Sheepdogs and Cattledogs,Sheepdogs,GREAT BRITAIN
-GRIFFON NIVERNAIS,Scent hounds and related breeds,Scent hounds,FRANCE
-BRIQUET GRIFFON VENDEEN,Scent hounds and related breeds,Scent hounds,FRANCE
-ARIEGEOIS,Scent hounds and related breeds,Scent hounds,FRANCE
-GASCON SAINTONGEOIS,Scent hounds and related breeds,Scent hounds,FRANCE
-GREAT GASCONY BLUE,Scent hounds and related breeds,Scent hounds,FRANCE
-POITEVIN,Scent hounds and related breeds,Scent hounds,FRANCE
-BILLY,Scent hounds and related breeds,Scent hounds,FRANCE
-ARTOIS HOUND,Scent hounds and related breeds,Scent hounds,FRANCE
-PORCELAINE,Scent hounds and related breeds,Scent hounds,FRANCE
-SMALL BLUE GASCONY,Scent hounds and related breeds,Scent hounds,FRANCE
-BLUE GASCONY GRIFFON,Scent hounds and related breeds,Scent hounds,FRANCE
-GRAND BASSET GRIFFON VENDEEN,Scent hounds and related breeds,Scent hounds,FRANCE
-NORMAN ARTESIEN BASSET,Scent hounds and related breeds,Scent hounds,FRANCE
-BLUE GASCONY BASSET,Scent hounds and related breeds,Scent hounds,FRANCE
-BASSET FAUVE DE BRETAGNE,Scent hounds and related breeds,Scent hounds,FRANCE
-PORTUGUESE WATER DOG,Retrievers,Water Dogs,PORTUGAL
-WELSH CORGI (CARDIGAN),Sheepdogs and Cattledogs,Cattledogs (except Swiss Cattledogs),GREAT BRITAIN
-WELSH CORGI (PEMBROKE),Sheepdogs and Cattledogs,Cattledogs (except Swiss Cattledogs),GREAT BRITAIN
-IRISH SOFT COATED WHEATEN TERRIER,Terriers,Large and medium sized Terriers,IRELAND
-YUGOSLAVIAN SHEPHERD DOG - SHARPLANINA,Pinscher and Schnauzer,Molossian type,"NORTH MACEDONIA, SERBIA"
-JÄMTHUND,Spitz and primitive types,Nordic Hunting Dogs,SWEDEN
-BASENJI,Spitz and primitive types,Primitive type,CENTRAL AFRICA
-BEAUCE SHEEPDOG,Sheepdogs and Cattledogs,Sheepdogs,FRANCE
-BERNESE MOUNTAIN DOG,Pinscher and Schnauzer,Swiss Mountain- and Cattledogs,SWITZERLAND
-APPENZELL CATTLE DOG,Pinscher and Schnauzer,Swiss Mountain- and Cattledogs,SWITZERLAND
-ENTLEBUCH CATTLE DOG,Pinscher and Schnauzer,Swiss Mountain- and Cattledogs,SWITZERLAND
-KARELIAN BEAR DOG,Spitz and primitive types,Nordic Hunting Dogs,FINLAND
-FINNISH SPITZ,Spitz and primitive types,Nordic Hunting Dogs,FINLAND
-NEWFOUNDLAND,Pinscher and Schnauzer,Molossian type,CANADA
-FINNISH HOUND,Scent hounds and related breeds,Scent hounds,FINLAND
-POLISH HOUND,Scent hounds and related breeds,Scent hounds,POLAND
-KOMONDOR,Sheepdogs and Cattledogs,Sheepdogs,HUNGARY
-KUVASZ,Sheepdogs and Cattledogs,Sheepdogs,HUNGARY
-PULI,Sheepdogs and Cattledogs,Sheepdogs,HUNGARY
-PUMI,Sheepdogs and Cattledogs,Sheepdogs,HUNGARY
-HUNGARIAN SHORT-HAIRED POINTER (VIZSLA),Pointing Dogs,Continental Pointing Dogs,HUNGARY
-GREAT SWISS MOUNTAIN DOG,Pinscher and Schnauzer,Swiss Mountain- and Cattledogs,SWITZERLAND
-SWISS HOUND,Scent hounds and related breeds,Scent hounds,SWITZERLAND
-SMALL SWISS HOUND,Scent hounds and related breeds,Scent hounds,SWITZERLAND
-ST. BERNARD,Pinscher and Schnauzer,Molossian type,SWITZERLAND
-COARSE-HAIRED STYRIAN HOUND,Scent hounds and related breeds,Scent hounds,AUSTRIA
-AUSTRIAN BLACK AND TAN HOUND,Scent hounds and related breeds,Scent hounds,AUSTRIA
-AUSTRIAN  PINSCHER,Pinscher and Schnauzer,Pinscher and Schnauzer type,AUSTRIA
-MALTESE,Companion and Toy Dogs,Bichons and related breeds,CENTRAL MEDITERRANEAN BASIN
-FAWN BRITTANY GRIFFON,Scent hounds and related breeds,Scent hounds,FRANCE
-PETIT BASSET GRIFFON VENDEEN,Scent hounds and related breeds,Scent hounds,FRANCE
-TYROLEAN HOUND,Scent hounds and related breeds,Scent hounds,AUSTRIA
-LAKELAND TERRIER,Terriers,Large and medium sized Terriers,GREAT BRITAIN
-MANCHESTER TERRIER,Terriers,Large and medium sized Terriers,GREAT BRITAIN
-NORWICH TERRIER,Terriers,Small sized Terriers,GREAT BRITAIN
-SCOTTISH TERRIER,Terriers,Small sized Terriers,GREAT BRITAIN
-SEALYHAM TERRIER,Terriers,Small sized Terriers,GREAT BRITAIN
-SKYE TERRIER,Terriers,Small sized Terriers,GREAT BRITAIN
-STAFFORDSHIRE BULL TERRIER,Terriers,Bull type Terriers,GREAT BRITAIN
-CONTINENTAL TOY SPANIEL,Companion and Toy Dogs,Continental Toy Spaniel and others,"BELGIUM, FRANCE"
-WELSH TERRIER,Terriers,Large and medium sized Terriers,GREAT BRITAIN
-GRIFFON BRUXELLOIS,Companion and Toy Dogs,Small Belgian Dogs,BELGIUM
-GRIFFON BELGE,Companion and Toy Dogs,Small Belgian Dogs,BELGIUM
-PETIT BRABANÇON,Companion and Toy Dogs,Small Belgian Dogs,BELGIUM
-SCHIPPERKE,Sheepdogs and Cattledogs,Sheepdogs,BELGIUM
-BLOODHOUND,Scent hounds and related breeds,Scent hounds,BELGIUM
-WEST HIGHLAND WHITE TERRIER,Terriers,Small sized Terriers,GREAT BRITAIN
-YORKSHIRE TERRIER,Terriers,Toy Terriers,GREAT BRITAIN
-CATALAN SHEEPDOG,Sheepdogs and Cattledogs,Sheepdogs,SPAIN
-SHETLAND SHEEPDOG,Sheepdogs and Cattledogs,Sheepdogs,GREAT BRITAIN
-IBIZAN PODENCO,Spitz and primitive types,Primitive type - Hunting Dogs,SPAIN
-BURGOS POINTING DOG,Pointing Dogs,Continental Pointing Dogs,SPAIN
-SPANISH MASTIFF,Pinscher and Schnauzer,Molossian type,SPAIN
-PYRENEAN MASTIFF,Pinscher and Schnauzer,Molossian type,SPAIN
-PORTUGUESE SHEEPDOG,Sheepdogs and Cattledogs,Sheepdogs,PORTUGAL
-PORTUGUESE WARREN HOUND-PORTUGUESE PODENGO,Spitz and primitive types,Primitive type - Hunting Dogs,PORTUGAL
-BRITTANY SPANIEL,Pointing Dogs,Continental Pointing Dogs,FRANCE
-RAFEIRO OF ALENTEJO,Pinscher and Schnauzer,Molossian type,PORTUGAL
-GERMAN SPITZ,Spitz and primitive types,European Spitz,GERMANY
-GERMAN WIRE- HAIRED POINTING DOG,Pointing Dogs,Continental Pointing Dogs,GERMANY
-WEIMARANER,Pointing Dogs,Continental Pointing Dogs,GERMANY
-WESTPHALIAN DACHSBRACKE,Scent hounds and related breeds,Scent hounds,GERMANY
-FRENCH BULLDOG,Companion and Toy Dogs,Small Molossian type Dogs,FRANCE
-KLEINER MÜNSTERLÄNDER,Pointing Dogs,Continental Pointing Dogs,GERMANY
-GERMAN HUNTING TERRIER,Terriers,Large and medium sized Terriers,GERMANY
-GERMAN SPANIEL,Retrievers,Flushing Dogs,GERMANY
-FRENCH WATER DOG,Retrievers,Water Dogs,FRANCE
-BLUE PICARDY SPANIEL,Pointing Dogs,Continental Pointing Dogs,FRANCE
-WIRE-HAIRED POINTING GRIFFON KORTHALS,Pointing Dogs,Continental Pointing Dogs,FRANCE
-PICARDY SPANIEL,Pointing Dogs,Continental Pointing Dogs,FRANCE
-CLUMBER SPANIEL,Retrievers,Flushing Dogs,GREAT BRITAIN
-CURLY COATED RETRIEVER,Retrievers,Retrievers,GREAT BRITAIN
-GOLDEN RETRIEVER,Retrievers,Retrievers,GREAT BRITAIN
-BRIARD,Sheepdogs and Cattledogs,Sheepdogs,FRANCE
-PONT-AUDEMER SPANIEL,Pointing Dogs,Continental Pointing Dogs,FRANCE
-SAINT GERMAIN POINTER,Pointing Dogs,Continental Pointing Dogs,FRANCE
-DOGUE DE BORDEAUX,Pinscher and Schnauzer,Molossian type,FRANCE
-DEUTSCH LANGHAAR,Pointing Dogs,Continental Pointing Dogs,GERMANY
-LARGE MUNSTERLANDER,Pointing Dogs,Continental Pointing Dogs,GERMANY
-GERMAN SHORT- HAIRED POINTING DOG,Pointing Dogs,Continental Pointing Dogs,GERMANY
-IRISH RED SETTER,Pointing Dogs,British and Irish Pointers and Setters,IRELAND
-FLAT COATED RETRIEVER,Retrievers,Retrievers,GREAT BRITAIN
-LABRADOR RETRIEVER,Retrievers,Retrievers,GREAT BRITAIN
-FIELD SPANIEL,Retrievers,Flushing Dogs,GREAT BRITAIN
-IRISH WATER SPANIEL,Retrievers,Water Dogs,IRELAND
-ENGLISH SPRINGER SPANIEL,Retrievers,Flushing Dogs,GREAT BRITAIN
-WELSH SPRINGER SPANIEL,Retrievers,Flushing Dogs,GREAT BRITAIN
-SUSSEX SPANIEL,Retrievers,Flushing Dogs,GREAT BRITAIN
-KING CHARLES SPANIEL,Companion and Toy Dogs,English Toy Spaniels,GREAT BRITAIN
-SMÅLANDSSTÖVARE,Scent hounds and related breeds,Scent hounds,SWEDEN
-DREVER,Scent hounds and related breeds,Scent hounds,SWEDEN
-SCHILLERSTÖVARE,Scent hounds and related breeds,Scent hounds,SWEDEN
-HAMILTONSTÖVARE,Scent hounds and related breeds,Scent hounds,SWEDEN
-FRENCH POINTING DOG - GASCOGNE TYPE,Pointing Dogs,Continental Pointing Dogs,FRANCE
-FRENCH POINTING DOG - PYRENEAN TYPE,Pointing Dogs,Continental Pointing Dogs,FRANCE
-SWEDISH LAPPHUND,Spitz and primitive types,Nordic Watchdogs and Herders,SWEDEN
-CAVALIER KING CHARLES SPANIEL,Companion and Toy Dogs,English Toy Spaniels,GREAT BRITAIN
-PYRENEAN MOUNTAIN DOG,Pinscher and Schnauzer,Molossian type,FRANCE
-PYRENEAN SHEEPDOG - SMOOTH FACED,Sheepdogs and Cattledogs,Sheepdogs,FRANCE
-IRISH TERRIER,Terriers,Large and medium sized Terriers,IRELAND
-BOSTON TERRIER,Companion and Toy Dogs,Small Molossian type Dogs,UNITED STATES OF AMERICA
-LONG-HAIRED PYRENEAN SHEEPDOG,Sheepdogs and Cattledogs,Sheepdogs,FRANCE
-SLOVAKIAN CHUVACH,Sheepdogs and Cattledogs,Sheepdogs,SLOVAKIA
-DOBERMANN,Pinscher and Schnauzer,Pinscher and Schnauzer type,GERMANY
-BOXER,Pinscher and Schnauzer,Molossian type,GERMANY
-LEONBERGER,Pinscher and Schnauzer,Molossian type,GERMANY
-RHODESIAN RIDGEBACK,Scent hounds and related breeds,Related breeds,SOUTH AFRICA
-ROTTWEILER,Pinscher and Schnauzer,Molossian type,GERMANY
-DACHSHUND,Dachshunds,,GERMANY
-BULLDOG,Pinscher and Schnauzer,Molossian type,GREAT BRITAIN
-SERBIAN HOUND,Scent hounds and related breeds,Scent hounds,SERBIA
-ISTRIAN SHORT-HAIRED HOUND,Scent hounds and related breeds,Scent hounds,CROATIA
-ISTRIAN WIRE-HAIRED HOUND,Scent hounds and related breeds,Scent hounds,CROATIA
-DALMATIAN,Scent hounds and related breeds,Related breeds,CROATIA
-POSAVATZ HOUND,Scent hounds and related breeds,Scent hounds,CROATIA
-BOSNIAN BROKEN-HAIRED HOUND - CALLED BARAK,Scent hounds and related breeds,Scent hounds,BOSNIA AND HERZEGOVINA
-COLLIE ROUGH,Sheepdogs and Cattledogs,Sheepdogs,GREAT BRITAIN
-BULLMASTIFF,Pinscher and Schnauzer,Molossian type,GREAT BRITAIN
-GREYHOUND,Sighthounds,Short-haired Sighthounds,GREAT BRITAIN
-ENGLISH FOXHOUND,Scent hounds and related breeds,Scent hounds,GREAT BRITAIN
-IRISH WOLFHOUND,Sighthounds,Rough-haired Sighthounds,IRELAND
-BEAGLE,Scent hounds and related breeds,Scent hounds,GREAT BRITAIN
-WHIPPET,Sighthounds,Short-haired Sighthounds,GREAT BRITAIN
-BASSET HOUND,Scent hounds and related breeds,Scent hounds,GREAT BRITAIN
-DEERHOUND,Sighthounds,Rough-haired Sighthounds,GREAT BRITAIN
-ITALIAN SPINONE,Pointing Dogs,Continental Pointing Dogs,ITALY
-GERMAN SHEPHERD DOG,Sheepdogs and Cattledogs,Sheepdogs,GERMANY
-AMERICAN COCKER SPANIEL,Retrievers,Flushing Dogs,UNITED STATES OF AMERICA
-DANDIE DINMONT TERRIER,Terriers,Small sized Terriers,GREAT BRITAIN
-FOX TERRIER (WIRE),Terriers,Large and medium sized Terriers,GREAT BRITAIN
-CASTRO LABOREIRO DOG,Pinscher and Schnauzer,Molossian type,PORTUGAL
-BOUVIER DES ARDENNES,Sheepdogs and Cattledogs,Cattledogs (except Swiss Cattledogs),BELGIUM
-POODLE,Companion and Toy Dogs,Poodle,FRANCE
-ESTRELA MOUNTAIN DOG,Pinscher and Schnauzer,Molossian type,PORTUGAL
-FRENCH SPANIEL,Pointing Dogs,Continental Pointing Dogs,FRANCE
-PICARDY SHEEPDOG,Sheepdogs and Cattledogs,Sheepdogs,FRANCE
-ARIEGE POINTING DOG,Pointing Dogs,Continental Pointing Dogs,FRANCE
-BOURBONNAIS POINTING DOG,Pointing Dogs,Continental Pointing Dogs,FRANCE
-AUVERGNE POINTER,Pointing Dogs,Continental Pointing Dogs,FRANCE
-GIANT SCHNAUZER,Pinscher and Schnauzer,Pinscher and Schnauzer type,GERMANY
-SCHNAUZER,Pinscher and Schnauzer,Pinscher and Schnauzer type,GERMANY
-MINIATURE SCHNAUZER,Pinscher and Schnauzer,Pinscher and Schnauzer type,GERMANY
-GERMAN PINSCHER,Pinscher and Schnauzer,Pinscher and Schnauzer type,GERMANY
-MINIATURE PINSCHER,Pinscher and Schnauzer,Pinscher and Schnauzer type,GERMANY
-AFFENPINSCHER,Pinscher and Schnauzer,Pinscher and Schnauzer type,GERMANY
-PORTUGUESE POINTING DOG,Pointing Dogs,Continental Pointing Dogs,PORTUGAL
-SLOUGHI,Sighthounds,Short-haired Sighthounds,MOROCCO
-FINNISH LAPPONIAN DOG,Spitz and primitive types,Nordic Watchdogs and Herders,FINLAND
-HOVAWART,Pinscher and Schnauzer,Molossian type,GERMANY
-BOUVIER DES FLANDRES,Sheepdogs and Cattledogs,Cattledogs (except Swiss Cattledogs),"BELGIUM, FRANCE"
-KROMFOHRLÄNDER,Companion and Toy Dogs,Kromfohrländer,GERMANY
-BORZOI - RUSSIAN HUNTING SIGHTHOUND,Sighthounds,Long-haired or fringed Sighthounds,RUSSIAN FEDERATION
-BERGAMASCO SHEPHERD DOG,Sheepdogs and Cattledogs,Sheepdogs,ITALY
-ITALIAN VOLPINO,Spitz and primitive types,European Spitz,ITALY
-BOLOGNESE,Companion and Toy Dogs,Bichons and related breeds,ITALY
-NEAPOLITAN MASTIFF,Pinscher and Schnauzer,Molossian type,ITALY
-ITALIAN ROUGH-HAIRED SEGUGIO,Scent hounds and related breeds,Scent hounds,ITALY
-CIRNECO DELL'ETNA,Spitz and primitive types,Primitive type - Hunting Dogs,ITALY
-ITALIAN SIGHTHOUND,Sighthounds,Short-haired Sighthounds,ITALY
-MAREMMA AND THE ABRUZZES SHEEPDOG,Sheepdogs and Cattledogs,Sheepdogs,ITALY
-ITALIAN POINTING DOG,Pointing Dogs,Continental Pointing Dogs,ITALY
-NORWEGIAN HOUND,Scent hounds and related breeds,Scent hounds,NORWAY
-SPANISH HOUND,Scent hounds and related breeds,Scent hounds,SPAIN
-CHOW CHOW,Spitz and primitive types,Asian Spitz and related breeds,CHINA
-JAPANESE CHIN,Companion and Toy Dogs,Japan Chin and Pekingese,JAPAN
-PEKINGESE,Companion and Toy Dogs,Japan Chin and Pekingese,CHINA
-SHIH TZU,Companion and Toy Dogs,Tibetan breeds,Tibet (China)
-TIBETAN TERRIER,Companion and Toy Dogs,Tibetan breeds,Tibet (China)
-CANADIAN ESKIMO DOG,Spitz and primitive types,Nordic Sledge Dogs,CANADA
-SAMOYED,Spitz and primitive types,Nordic Sledge Dogs,"NORTHERN RUSSIA, SIBERIA"
-HANOVERIAN SCENT HOUND,Scent hounds and related breeds,Leash (scent) Hounds,GERMANY
-HELLENIC HOUND,Scent hounds and related breeds,Scent hounds,GREECE
-BICHON FRISE,Companion and Toy Dogs,Bichons and related breeds,"BELGIUM, FRANCE"
-PUDELPOINTER,Pointing Dogs,Continental Pointing Dogs,GERMANY
-BAVARIAN MOUNTAIN SCENT HOUND,Scent hounds and related breeds,Leash (scent) Hounds,GERMANY
-CHIHUAHUA,Companion and Toy Dogs,Chihuahueno,MEXICO
-FRENCH TRICOLOUR HOUND,Scent hounds and related breeds,Scent hounds,FRANCE
-FRENCH WHITE & BLACK HOUND,Scent hounds and related breeds,Scent hounds,FRANCE
-WETTERHOUN,Retrievers,Water Dogs,THE NETHERLANDS
-STABIJHOUN,Pointing Dogs,Continental Pointing Dogs,THE NETHERLANDS
-DUTCH SHEPHERD DOG,Sheepdogs and Cattledogs,Sheepdogs,THE NETHERLANDS
-DRENTSCHE PARTRIDGE DOG,Pointing Dogs,Continental Pointing Dogs,THE NETHERLANDS
-FILA BRASILEIRO,Pinscher and Schnauzer,Molossian type,BRAZIL
-LANDSEER (EUROPEAN CONTINENTAL TYPE),Pinscher and Schnauzer,Molossian type,"GERMANY, SWITZERLAND"
-LHASA APSO,Companion and Toy Dogs,Tibetan breeds,Tibet (China)
-AFGHAN HOUND,Sighthounds,Long-haired or fringed Sighthounds,AFGHANISTAN
-SERBIAN TRICOLOUR HOUND,Scent hounds and related breeds,Scent hounds,SERBIA
-TIBETAN MASTIFF,Pinscher and Schnauzer,Molossian type,Tibet (China)
-TIBETAN SPANIEL,Companion and Toy Dogs,Tibetan breeds,Tibet (China)
-DEUTSCH STICHELHAAR,Pointing Dogs,Continental Pointing Dogs,GERMANY
-LITTLE LION DOG,Companion and Toy Dogs,Bichons and related breeds,FRANCE
-XOLOITZCUINTLE,Spitz and primitive types,Primitive type,MEXICO
-GREAT DANE,Pinscher and Schnauzer,Molossian type,GERMANY
-AUSTRALIAN SILKY TERRIER,Terriers,Toy Terriers,AUSTRALIA
-NORWEGIAN BUHUND,Spitz and primitive types,Nordic Watchdogs and Herders,NORWAY
-MUDI,Sheepdogs and Cattledogs,Sheepdogs,HUNGARY
-HUNGARIAN WIRE-HAIRED POINTER,Pointing Dogs,Continental Pointing Dogs,HUNGARY
-HUNGARIAN GREYHOUND,Sighthounds,Short-haired Sighthounds,HUNGARY
-HUNGARIAN HOUND - TRANSYLVANIAN SCENT HOUND,Scent hounds and related breeds,Scent hounds,HUNGARY
-NORWEGIAN ELKHOUND GREY,Spitz and primitive types,Nordic Hunting Dogs,NORWAY
-ALASKAN MALAMUTE,Spitz and primitive types,Nordic Sledge Dogs,UNITED STATES OF AMERICA
-SLOVAKIAN HOUND,Scent hounds and related breeds,Scent hounds,SLOVAKIA
-BOHEMIAN WIRE-HAIRED POINTING GRIFFON,Pointing Dogs,Continental Pointing Dogs,CZECH REPUBLIC
-CESKY TERRIER,Terriers,Small sized Terriers,CZECH REPUBLIC
-ATLAS MOUNTAIN DOG (AIDI),Pinscher and Schnauzer,Molossian type,MOROCCO
-PHARAOH HOUND,Spitz and primitive types,Primitive type,MALTA
-MAJORCA MASTIFF,Pinscher and Schnauzer,Molossian type,SPAIN
-HAVANESE,Companion and Toy Dogs,Bichons and related breeds,CUBA
-POLISH LOWLAND SHEEPDOG,Sheepdogs and Cattledogs,Sheepdogs,POLAND
-POLISH TATRA SHEPHERD,Sheepdogs and Cattledogs,Sheepdogs,POLAND
-PUG,Companion and Toy Dogs,Small Molossian type Dogs,CHINA
-ALPINE DACHSBRACKE,Scent hounds and related breeds,Leash (scent) Hounds,AUSTRIA
-AKITA,Spitz and primitive types,Asian Spitz and related breeds,JAPAN
-SHIBA,Spitz and primitive types,Asian Spitz and related breeds,JAPAN
-JAPANESE TERRIER,Terriers,Small sized Terriers,JAPAN
-TOSA,Pinscher and Schnauzer,Molossian type,JAPAN
-HOKKAIDO,Spitz and primitive types,Asian Spitz and related breeds,JAPAN
-JAPANESE SPITZ,Spitz and primitive types,Asian Spitz and related breeds,JAPAN
-CHESAPEAKE BAY RETRIEVER,Retrievers,Retrievers,UNITED STATES OF AMERICA
-MASTIFF,Pinscher and Schnauzer,Molossian type,GREAT BRITAIN
-NORWEGIAN LUNDEHUND,Spitz and primitive types,Nordic Hunting Dogs,NORWAY
-HYGEN HOUND,Scent hounds and related breeds,Scent hounds,NORWAY
-HALDEN HOUND,Scent hounds and related breeds,Scent hounds,NORWAY
-NORWEGIAN ELKHOUND BLACK,Spitz and primitive types,Nordic Hunting Dogs,NORWAY
-SALUKI,Sighthounds,Long-haired or fringed Sighthounds,MIDDLE EAST
-SIBERIAN HUSKY,Spitz and primitive types,Nordic Sledge Dogs,UNITED STATES OF AMERICA
-BEARDED COLLIE,Sheepdogs and Cattledogs,Sheepdogs,GREAT BRITAIN
-NORFOLK TERRIER,Terriers,Small sized Terriers,GREAT BRITAIN
-CANAAN DOG,Spitz and primitive types,Primitive type,ISRAEL
-GREENLAND DOG,Spitz and primitive types,Nordic Sledge Dogs,GREENLAND
-BRAZILIAN TRACKER,Scent hounds and related breeds,Scent hounds,BRAZIL
-NORRBOTTENSPITZ,Spitz and primitive types,Nordic Hunting Dogs,SWEDEN
-CROATIAN SHEPHERD DOG,Sheepdogs and Cattledogs,Sheepdogs,CROATIA
-KARST SHEPHERD DOG,Pinscher and Schnauzer,Molossian type,SLOVENIA
-MONTENEGRIN MOUNTAIN HOUND,Scent hounds and related breeds,Scent hounds,MONTENEGRO
-OLD DANISH POINTING DOG,Pointing Dogs,Continental Pointing Dogs,DENMARK
-GRAND GRIFFON VENDEEN,Scent hounds and related breeds,Scent hounds,FRANCE
-COTON DE TULEAR,Companion and Toy Dogs,Bichons and related breeds,MADAGASCAR
-LAPPONIAN HERDER,Spitz and primitive types,Nordic Watchdogs and Herders,FINLAND
-SPANISH GREYHOUND,Sighthounds,Short-haired Sighthounds,SPAIN
-AMERICAN STAFFORDSHIRE TERRIER,Terriers,Bull type Terriers,UNITED STATES OF AMERICA
-AUSTRALIAN CATTLE DOG,Sheepdogs and Cattledogs,Cattledogs (except Swiss Cattledogs),AUSTRALIA
-CHINESE CRESTED DOG,Companion and Toy Dogs,Hairless Dogs,CHINA
-ICELANDIC SHEEPDOG,Spitz and primitive types,Nordic Watchdogs and Herders,ICELAND
-BEAGLE HARRIER,Scent hounds and related breeds,Scent hounds,FRANCE
-EURASIAN,Spitz and primitive types,Asian Spitz and related breeds,GERMANY
-DOGO ARGENTINO,Pinscher and Schnauzer,Molossian type,ARGENTINA
-AUSTRALIAN KELPIE,Sheepdogs and Cattledogs,Sheepdogs,AUSTRALIA
-OTTERHOUND,Scent hounds and related breeds,Scent hounds,GREAT BRITAIN
-HARRIER,Scent hounds and related breeds,Scent hounds,GREAT BRITAIN
-COLLIE SMOOTH,Sheepdogs and Cattledogs,Sheepdogs,GREAT BRITAIN
-BORDER COLLIE,Sheepdogs and Cattledogs,Sheepdogs,GREAT BRITAIN
-ROMAGNA WATER DOG,Retrievers,Water Dogs,ITALY
-GERMAN HOUND,Scent hounds and related breeds,Scent hounds,GERMANY
-BLACK AND TAN COONHOUND,Scent hounds and related breeds,Scent hounds,UNITED STATES OF AMERICA
-AMERICAN WATER SPANIEL,Retrievers,Water Dogs,UNITED STATES OF AMERICA
-IRISH GLEN OF IMAAL TERRIER,Terriers,Large and medium sized Terriers,IRELAND
-AMERICAN FOXHOUND,Scent hounds and related breeds,Scent hounds,UNITED STATES OF AMERICA
-RUSSIAN-EUROPEAN LAIKA,Spitz and primitive types,Nordic Hunting Dogs,RUSSIAN FEDERATION
-EAST SIBERIAN LAIKA,Spitz and primitive types,Nordic Hunting Dogs,RUSSIAN FEDERATION
-WEST SIBERIAN LAIKA,Spitz and primitive types,Nordic Hunting Dogs,RUSSIAN FEDERATION
-AZAWAKH,Sighthounds,Short-haired Sighthounds,MALI
-DUTCH SMOUSHOND,Pinscher and Schnauzer,Pinscher and Schnauzer type,THE NETHERLANDS
-SHAR PEI,Pinscher and Schnauzer,Molossian type,CHINA
-PERUVIAN HAIRLESS DOG,Spitz and primitive types,Primitive type,PERU
-SAARLOOS WOLFHOND,Sheepdogs and Cattledogs,Sheepdogs,THE NETHERLANDS
-NOVA SCOTIA DUCK TOLLING RETRIEVER,Retrievers,Retrievers,CANADA
-DUTCH SCHAPENDOES,Sheepdogs and Cattledogs,Sheepdogs,THE NETHERLANDS
-NEDERLANDSE KOOIKERHONDJE,Retrievers,Flushing Dogs,THE NETHERLANDS
-BROHOLMER,Pinscher and Schnauzer,Molossian type,DENMARK
-FRENCH WHITE AND ORANGE HOUND,Scent hounds and related breeds,Scent hounds,FRANCE
-KAI,Spitz and primitive types,Asian Spitz and related breeds,JAPAN
-KISHU,Spitz and primitive types,Asian Spitz and related breeds,JAPAN
-SHIKOKU,Spitz and primitive types,Asian Spitz and related breeds,JAPAN
-WIREHAIRED SLOVAKIAN POINTER,Pointing Dogs,Continental Pointing Dogs,SLOVAKIA
-MAJORCA SHEPHERD DOG,Sheepdogs and Cattledogs,Sheepdogs,SPAIN
-GREAT ANGLO-FRENCH TRICOLOUR HOUND,Scent hounds and related breeds,Scent hounds,FRANCE
-GREAT ANGLO-FRENCH WHITE AND BLACK HOUND,Scent hounds and related breeds,Scent hounds,FRANCE
-GREAT ANGLO-FRENCH WHITE & ORANGE HOUND,Scent hounds and related breeds,Scent hounds,FRANCE
-MEDIUM-SIZED ANGLO-FRENCH HOUND,Scent hounds and related breeds,Scent hounds,FRANCE
-SOUTH RUSSIAN SHEPHERD DOG,Sheepdogs and Cattledogs,Sheepdogs,RUSSIAN FEDERATION
-RUSSIAN BLACK TERRIER,Pinscher and Schnauzer,Pinscher and Schnauzer type,RUSSIAN FEDERATION
-CAUCASIAN SHEPHERD DOG,Pinscher and Schnauzer,Molossian type,RUSSIAN FEDERATION
-CANARIAN WARREN HOUND,Spitz and primitive types,Primitive type - Hunting Dogs,SPAIN
-IRISH RED AND WHITE SETTER,Pointing Dogs,British and Irish Pointers and Setters,IRELAND
-KANGAL SHEPHERD DOG,Pinscher and Schnauzer,Molossian type,TURKEY
-CZECHOSLOVAKIAN WOLFDOG,Sheepdogs and Cattledogs,Sheepdogs,CZECHOSLOVAKIA
-POLISH GREYHOUND,Sighthounds,Short-haired Sighthounds,POLAND
-KOREA JINDO DOG,Spitz and primitive types,Asian Spitz and related breeds,KOREA (REPUBLIC OF)
-CENTRAL ASIA SHEPHERD DOG,Pinscher and Schnauzer,Molossian type,RUSSIAN FEDERATION
-SPANISH WATER DOG,Retrievers,Water Dogs,SPAIN
-ITALIAN SHORT-HAIRED SEGUGIO,Scent hounds and related breeds,Scent hounds,ITALY
-THAI RIDGEBACK DOG,Spitz and primitive types,Primitive type - Hunting Dogs,THAILAND
-PARSON RUSSELL TERRIER,Terriers,Large and medium sized Terriers,GREAT BRITAIN
-SAINT MIGUEL CATTLE DOG,Pinscher and Schnauzer,Molossian type,PORTUGAL
-BRAZILIAN TERRIER,Terriers,Large and medium sized Terriers,BRAZIL
-AUSTRALIAN SHEPHERD,Sheepdogs and Cattledogs,Sheepdogs,UNITED STATES OF AMERICA
-ITALIAN CANE CORSO,Pinscher and Schnauzer,Molossian type,ITALY
-AMERICAN AKITA,Spitz and primitive types,Asian Spitz and related breeds,JAPAN
-JACK RUSSELL TERRIER,Terriers,Small sized Terriers,GREAT BRITAIN
-PRESA CANARIO,Pinscher and Schnauzer,Molossian type,SPAIN
-WHITE SWISS SHEPHERD DOG,Sheepdogs and Cattledogs,Sheepdogs,SWITZERLAND
-TAIWAN DOG,Spitz and primitive types,Primitive type - Hunting Dogs,TAIWAN
-ROMANIAN MIORITIC SHEPHERD DOG,Sheepdogs and Cattledogs,Sheepdogs,ROMANIA
-ROMANIAN CARPATHIAN SHEPHERD DOG,Sheepdogs and Cattledogs,Sheepdogs,ROMANIA
-AUSTRALIAN STUMPY TAIL CATTLE DOG,Sheepdogs and Cattledogs,Cattledogs (except Swiss Cattledogs),AUSTRALIA
-RUSSIAN TOY,Companion and Toy Dogs,Continental Toy Spaniel and others,RUSSIAN FEDERATION
-CIMARRÓN URUGUAYO,Pinscher and Schnauzer,Molossian type,URUGUAY
-POLISH HUNTING DOG,Scent hounds and related breeds,Scent hounds,POLAND
-BOSNIAN AND HERZEGOVINIAN,Pinscher and Schnauzer,Molossian type,BOSNIA AND HERZEGOVINA
-CROATIAN SHEPHERD DOG,Pinscher and Schnauzer,Molossian type,CROATIA
-DANISH-SWEDISH FARMDOG,Pinscher and Schnauzer,Pinscher and Schnauzer type,SWEDEN
-DANISH-SWEDISH FARMDOG,Pinscher and Schnauzer,Pinscher and Schnauzer type,DENMARK
-ROMANIAN BUCOVINA SHEPHERD,Pinscher and Schnauzer,Molossian type,ROMANIA
-THAI BANGKAEW DOG,Spitz and primitive types,Asian Spitz and related breeds,THAILAND
-MINIATURE BULL TERRIER,Terriers,Bull type Terriers,GREAT BRITAIN
-LANCASHIRE HEELER,Sheepdogs and Cattledogs,Sheepdogs,ENGLAND
-SEGUGIO MAREMMANO,Scent hounds and related breeds,Scent hounds,ITALY
-KINTAMANI-BALI DOG,Spitz and primitive types,Asian Spitz and related breeds,INDONESIA
-PRAGUE RATTER,Companion and Toy Dogs,Continental Toy Spaniel and others,CZECH REPUBLIC
-BOHEMIAN SHEPHERD DOG,Sheepdogs and Cattledogs,Sheepdogs,CZECH REPUBLIC
-YAKUTIAN LAIKA,Spitz and primitive types,Nordic Sledge Dogs,RUSSIAN FEDERATION
-ESTONIAN HOUND,Scent hounds and related breeds,Scent hounds,ESTONIA
-MINIATURE AMERICAN SHEPHERD,Sheepdogs and Cattledogs,Sheepdogs,UNITED STATES OF AMERICA
-TRANSMONTANO MASTIFF,Pinscher and Schnauzer,Molossian type,PORTUGAL
-CONTINENTAL BULLDOG,Pinscher and Schnauzer,Molossian type,SWITZERLAND
-VALENCIAN TERRIER,Terriers,Large and medium sized Terriers,SPAIN
-"ANDALUSIAN TERRIER, SHERRY TERRIER",Terriers,Large and medium sized Terriers,SPAIN
-KAZAKH TAZY,Sighthounds,Long-haired or fringed Sighthounds,KAZAKHSTAN
-ROMANIAN RAVEN SHEPHERD DOG,Pinscher and Schnauzer,Molossian type,ROMANIA
-BRAZILIAN CAMPEIRO BULLDOG,Pinscher and Schnauzer,Molossian type,BRAZIL
+Affenpinscher,Pinscher and Schnauzer,Pinscher and Schnauzer type,GERMANY
+Afghan Hound,Sighthounds,Long-haired or fringed Sighthounds,AFGHANISTAN
+Africanis,,,BOTSWANA
+Africanis,,,ESWATINI
+Africanis,,,LESOTHO
+Africanis,,,MOZAMBIQUE
+Africanis,,,NAMIBIA
+Africanis,,,ZAMBIA
+Africanis,,,ZIMBABWE
+Aidi,,,ALGERIA
+Airedale Terrier,Terriers,Large and medium sized Terriers,UNITED KINGDOM
+Akbash,,,TURKEY
+Akita,Spitz and primitive types,Asian Spitz and related breeds,JAPAN
+Aksaray Malaklisi,,,TURKEY
+Alano Español,,,SPAIN
+Alapaha Blue Blood Bulldog,,,UNITED STATES OF AMERICA
+Alaskan Husky,,,UNITED STATES OF AMERICA
+Alaskan Klee Kai,,,UNITED STATES OF AMERICA
+Alaskan Malamute,Spitz and primitive types,Nordic Sledge Dogs,UNITED STATES OF AMERICA
+Alopekis,,,GREECE
+Alpine Dachsbracke,Scent hounds and related breeds,Leash (scent) Hounds,AUSTRIA
+American Akita,Spitz and primitive types,Asian Spitz and related breeds,JAPAN
+American Bulldog,,,UNITED STATES OF AMERICA
+American Bully,,,UNITED STATES OF AMERICA
+American Cocker Spaniel,Retrievers,Flushing Dogs,UNITED STATES OF AMERICA
+American English Coonhound,,,UNITED STATES OF AMERICA
+American Eskimo Dog,,,UNITED STATES OF AMERICA
+American Foxhound,Scent hounds and related breeds,Scent hounds,UNITED STATES OF AMERICA
+American Hairless Terrier,,,UNITED STATES OF AMERICA
+American Leopard Hound,,,UNITED STATES OF AMERICA
+American Pit Bull Terrier,,,UNITED STATES OF AMERICA
+American Staffordshire Terrier,Terriers,Bull type Terriers,UNITED STATES OF AMERICA
+American Water Spaniel,Retrievers,Water Dogs,UNITED STATES OF AMERICA
+Anatolian Shepherd Dog,,,TURKEY
+Andalusian Terrier,,,SPAIN
+"Andalusian Terrier, Sherry Terrier",Terriers,Large and medium sized Terriers,SPAIN
+Appenzell Cattle Dog,Pinscher and Schnauzer,Swiss Mountain- and Cattledogs,SWITZERLAND
+Ariege Pointing Dog,Pointing Dogs,Continental Pointing Dogs,FRANCE
+Ariegeois,Scent hounds and related breeds,Scent hounds,FRANCE
+Armant,,,EGYPT
+Armenian Gampr,,,ARMENIA
+Artois Hound,Scent hounds and related breeds,Scent hounds,FRANCE
+Aspin,,,PHILIPPINES
+Atlas Mountain Dog (Aidi),Pinscher and Schnauzer,Molossian type,MOROCCO
+Australian Cattle Dog,Sheepdogs and Cattledogs,Cattledogs (except Swiss Cattledogs),AUSTRALIA
+Australian Kelpie,Sheepdogs and Cattledogs,Sheepdogs,AUSTRALIA
+Australian Shepherd,,,AUSTRALIA
+Australian Shepherd,Sheepdogs and Cattledogs,Sheepdogs,UNITED STATES OF AMERICA
+Australian Silky Terrier,Terriers,Toy Terriers,AUSTRALIA
+Australian Stumpy Tail Cattle Dog,Sheepdogs and Cattledogs,Cattledogs (except Swiss Cattledogs),AUSTRALIA
+Australian Terrier,Terriers,Small sized Terriers,AUSTRALIA
+Austrian Black And Tan Hound,Scent hounds and related breeds,Scent hounds,AUSTRIA
+Austrian Pinscher,Pinscher and Schnauzer,Pinscher and Schnauzer type,AUSTRIA
+Auvergne Pointer,Pointing Dogs,Continental Pointing Dogs,FRANCE
+Avuvi,,,GHANA
+Avuvi,,,TOGO
+Azawakh,,,ALGERIA
+Azawakh,,,BURKINA FASO
+Azawakh,Sighthounds,Short-haired Sighthounds,MALI
+Azawakh,,,NIGER
+Bakharwal,,,INDIA
+Barak Hound,,,BOSNIA AND HERZEGOVINA
+Barbado Da Terceira,,,PORTUGAL
+Basenji,Spitz and primitive types,Primitive type,
+Basenji,,,CAMEROON
+Basenji,,,DEMOCRATIC REPUBLIC OF THE CONGO
+Basenji,,,REPUBLIC OF THE CONGO
+Basset Fauve De Bretagne,Scent hounds and related breeds,Scent hounds,FRANCE
+Basset Hound,Scent hounds and related breeds,Scent hounds,UNITED KINGDOM
+Bavarian Mountain Scent Hound,Scent hounds and related breeds,Leash (scent) Hounds,GERMANY
+Beagle,Scent hounds and related breeds,Scent hounds,UNITED KINGDOM
+Beagle Harrier,Scent hounds and related breeds,Scent hounds,FRANCE
+Bearded Collie,Sheepdogs and Cattledogs,Sheepdogs,UNITED KINGDOM
+Beauce Sheepdog,Sheepdogs and Cattledogs,Sheepdogs,FRANCE
+Bedlington Terrier,Terriers,Large and medium sized Terriers,UNITED KINGDOM
+Belgian Shepherd Dog,Sheepdogs and Cattledogs,Sheepdogs,BELGIUM
+Bergamasco Shepherd Dog,Sheepdogs and Cattledogs,Sheepdogs,ITALY
+Bernese Mountain Dog,Pinscher and Schnauzer,Swiss Mountain- and Cattledogs,SWITZERLAND
+Bichon Frise,Companion and Toy Dogs,Bichons and related breeds,BELGIUM
+Bichon Frise,Companion and Toy Dogs,Bichons and related breeds,FRANCE
+Billy,Scent hounds and related breeds,Scent hounds,FRANCE
+Black And Tan Coonhound,Scent hounds and related breeds,Scent hounds,UNITED STATES OF AMERICA
+Bloodhound,Scent hounds and related breeds,Scent hounds,BELGIUM
+Blue Gascony Basset,Scent hounds and related breeds,Scent hounds,FRANCE
+Blue Gascony Griffon,Scent hounds and related breeds,Scent hounds,FRANCE
+Blue Lacy,,,UNITED STATES OF AMERICA
+Blue Picardy Spaniel,Pointing Dogs,Continental Pointing Dogs,FRANCE
+Bluetick Coonhound,,,UNITED STATES OF AMERICA
+Boerboel,,,SOUTH AFRICA
+Bohemian Shepherd Dog,Sheepdogs and Cattledogs,Sheepdogs,CZECHIA
+Bohemian Wire-Haired Pointing Griffon,Pointing Dogs,Continental Pointing Dogs,CZECHIA
+Bolognese,Companion and Toy Dogs,Bichons and related breeds,ITALY
+Bolonka,,,RUSSIA
+Border Collie,Sheepdogs and Cattledogs,Sheepdogs,UNITED KINGDOM
+Border Terrier,Terriers,Large and medium sized Terriers,UNITED KINGDOM
+Borzoi - Russian Hunting Sighthound,Sighthounds,Long-haired or fringed Sighthounds,RUSSIA
+Bosnian Broken-Haired Hound - Called Barak,Scent hounds and related breeds,Scent hounds,BOSNIA AND HERZEGOVINA
+Boston Terrier,Companion and Toy Dogs,Small Molossian type Dogs,UNITED STATES OF AMERICA
+Bourbonnais Pointing Dog,Pointing Dogs,Continental Pointing Dogs,FRANCE
+Bouvier Des Ardennes,Sheepdogs and Cattledogs,Cattledogs (except Swiss Cattledogs),BELGIUM
+Bouvier Des Flandres,Sheepdogs and Cattledogs,Cattledogs (except Swiss Cattledogs),BELGIUM
+Bouvier Des Flandres,Sheepdogs and Cattledogs,Cattledogs (except Swiss Cattledogs),FRANCE
+Boxer,Pinscher and Schnauzer,Molossian type,GERMANY
+Boykin Spaniel,,,UNITED STATES OF AMERICA
+Brazilian Campeiro Bulldog,Pinscher and Schnauzer,Molossian type,BRAZIL
+Brazilian Terrier,Terriers,Large and medium sized Terriers,BRAZIL
+Brazilian Tracker,Scent hounds and related breeds,Scent hounds,BRAZIL
+Briard,Sheepdogs and Cattledogs,Sheepdogs,FRANCE
+Briquet Griffon Vendeen,Scent hounds and related breeds,Scent hounds,FRANCE
+Brittany Spaniel,Pointing Dogs,Continental Pointing Dogs,FRANCE
+Broholmer,Pinscher and Schnauzer,Molossian type,DENMARK
+Bulgarian Hound,,,BULGARIA
+Bulgarian Scenthound,,,BULGARIA
+Bull Arab,,,AUSTRALIA
+Bull Terrier,Terriers,Bull type Terriers,UNITED KINGDOM
+Bulldog,Pinscher and Schnauzer,Molossian type,UNITED KINGDOM
+Bullmastiff,Pinscher and Schnauzer,Molossian type,UNITED KINGDOM
+Bully Kutta,,,PAKISTAN
+Burgos Pointing Dog,Pointing Dogs,Continental Pointing Dogs,SPAIN
+Bắc Hà,,,VIETNAM
+Cairn Terrier,Terriers,Small sized Terriers,UNITED KINGDOM
+Cambodian Razorback Dog,,,CAMBODIA
+Canaan Dog,Spitz and primitive types,Primitive type,ISRAEL
+Canaan Dog,,,PALESTINE
+Canadian Eskimo Dog,Spitz and primitive types,Nordic Sledge Dogs,CANADA
+Canarian Warren Hound,Spitz and primitive types,Primitive type - Hunting Dogs,SPAIN
+Castro Laboreiro Dog,Pinscher and Schnauzer,Molossian type,PORTUGAL
+Catahoula Leopard Dog,,,UNITED STATES OF AMERICA
+Catalan Sheepdog,Sheepdogs and Cattledogs,Sheepdogs,SPAIN
+Caucasian Shepherd Dog,Pinscher and Schnauzer,Molossian type,RUSSIA
+Cavalier King Charles Spaniel,Companion and Toy Dogs,English Toy Spaniels,UNITED KINGDOM
+Central Asia Shepherd Dog,Pinscher and Schnauzer,Molossian type,RUSSIA
+Central Asian Shepherd Dog,,,AFGHANISTAN
+Central Asian Shepherd Dog,,,KAZAKHSTAN
+Central Asian Shepherd Dog,,,KYRGYZSTAN
+Central Asian Shepherd Dog,,,TAJIKISTAN
+Central Asian Shepherd Dog,,,TURKMENISTAN
+Central Asian Shepherd Dog,,,UZBEKISTAN
+Cesky Terrier,Terriers,Small sized Terriers,CZECHIA
+Chesapeake Bay Retriever,Retrievers,Retrievers,UNITED STATES OF AMERICA
+Chihuahua,Companion and Toy Dogs,Chihuahueno,MEXICO
+Chilean Terrier,,,CHILE
+Chinese Crested Dog,Companion and Toy Dogs,Hairless Dogs,CHINA
+Chinook,,,UNITED STATES OF AMERICA
+Chortai,,,UKRAINE
+Chow Chow,Spitz and primitive types,Asian Spitz and related breeds,CHINA
+Cimarrón Uruguayo,Pinscher and Schnauzer,Molossian type,URUGUAY
+Cirneco Dell'Etna,Spitz and primitive types,Primitive type - Hunting Dogs,ITALY
+Clumber Spaniel,Retrievers,Flushing Dogs,UNITED KINGDOM
+Coarse-Haired Styrian Hound,Scent hounds and related breeds,Scent hounds,AUSTRIA
+Collie Rough,Sheepdogs and Cattledogs,Sheepdogs,UNITED KINGDOM
+Collie Smooth,Sheepdogs and Cattledogs,Sheepdogs,UNITED KINGDOM
+Colombian Fino Hound,,,COLOMBIA
+Continental Bulldog,Pinscher and Schnauzer,Molossian type,SWITZERLAND
+Continental Toy Spaniel,Companion and Toy Dogs,Continental Toy Spaniel and others,BELGIUM
+Continental Toy Spaniel,Companion and Toy Dogs,Continental Toy Spaniel and others,FRANCE
+Coton De Tulear,Companion and Toy Dogs,Bichons and related breeds,MADAGASCAR
+Croatian Shepherd Dog,Sheepdogs and Cattledogs,Sheepdogs,CROATIA
+Curly Coated Retriever,Retrievers,Retrievers,UNITED KINGDOM
+Cyprus Hound,,,CYPRUS
+Cyprus Hound,,,NORTHERN CYPRUS
+Czechoslovakian Wolfdog,Sheepdogs and Cattledogs,Sheepdogs,CZECHIA
+Czechoslovakian Wolfdog,Sheepdogs and Cattledogs,Sheepdogs,SLOVAKIA
+Dachshund,Dachshunds,,GERMANY
+Dalmatian,Scent hounds and related breeds,Related breeds,CROATIA
+Dandie Dinmont Terrier,Terriers,Small sized Terriers,UNITED KINGDOM
+Danish-Swedish Farmdog,Pinscher and Schnauzer,Pinscher and Schnauzer type,DENMARK
+Danish-Swedish Farmdog,Pinscher and Schnauzer,Pinscher and Schnauzer type,SWEDEN
+Deerhound,Sighthounds,Rough-haired Sighthounds,UNITED KINGDOM
+Deltari Ilir,,,ALBANIA
+Deutsch Langhaar,Pointing Dogs,Continental Pointing Dogs,GERMANY
+Deutsch Stichelhaar,Pointing Dogs,Continental Pointing Dogs,GERMANY
+Dobermann,Pinscher and Schnauzer,Pinscher and Schnauzer type,GERMANY
+Dogo Argentino,Pinscher and Schnauzer,Molossian type,ARGENTINA
+Dogue De Bordeaux,Pinscher and Schnauzer,Molossian type,FRANCE
+Drentsche Partridge Dog,Pointing Dogs,Continental Pointing Dogs,NETHERLANDS
+Drever,Scent hounds and related breeds,Scent hounds,SWEDEN
+Dutch Schapendoes,Sheepdogs and Cattledogs,Sheepdogs,NETHERLANDS
+Dutch Shepherd Dog,Sheepdogs and Cattledogs,Sheepdogs,NETHERLANDS
+Dutch Smoushond,Pinscher and Schnauzer,Pinscher and Schnauzer type,NETHERLANDS
+East African Village Dog,,,KENYA
+East African Village Dog,,,TANZANIA
+East Siberian Laika,Spitz and primitive types,Nordic Hunting Dogs,RUSSIA
+Ecuadorian Hairless Dog,,,ECUADOR
+English Cocker Spaniel,Retrievers,Flushing Dogs,UNITED KINGDOM
+English Foxhound,Scent hounds and related breeds,Scent hounds,UNITED KINGDOM
+English Pointer,Pointing Dogs,British and Irish Pointers and Setters,UNITED KINGDOM
+English Setter,Pointing Dogs,British and Irish Pointers and Setters,UNITED KINGDOM
+English Shepherd,,,UNITED STATES OF AMERICA
+English Springer Spaniel,Retrievers,Flushing Dogs,UNITED KINGDOM
+English Toy Terrier (Black &Tan),Terriers,Toy Terriers,UNITED KINGDOM
+Entlebuch Cattle Dog,Pinscher and Schnauzer,Swiss Mountain- and Cattledogs,SWITZERLAND
+Estonian Hound,Scent hounds and related breeds,Scent hounds,ESTONIA
+Estrela Mountain Dog,Pinscher and Schnauzer,Molossian type,PORTUGAL
+Eurasian,Spitz and primitive types,Asian Spitz and related breeds,GERMANY
+Fawn Brittany Griffon,Scent hounds and related breeds,Scent hounds,FRANCE
+Field Spaniel,Retrievers,Flushing Dogs,UNITED KINGDOM
+Fila Brasileiro,Pinscher and Schnauzer,Molossian type,BRAZIL
+Finnish Hound,Scent hounds and related breeds,Scent hounds,FINLAND
+Finnish Lapponian Dog,Spitz and primitive types,Nordic Watchdogs and Herders,FINLAND
+Finnish Spitz,Spitz and primitive types,Nordic Hunting Dogs,FINLAND
+Flat Coated Retriever,Retrievers,Retrievers,UNITED KINGDOM
+Fox Terrier (Smooth),Terriers,Large and medium sized Terriers,UNITED KINGDOM
+Fox Terrier (Wire),Terriers,Large and medium sized Terriers,UNITED KINGDOM
+French Bulldog,Companion and Toy Dogs,Small Molossian type Dogs,FRANCE
+French Pointing Dog - Gascogne Type,Pointing Dogs,Continental Pointing Dogs,FRANCE
+French Pointing Dog - Pyrenean Type,Pointing Dogs,Continental Pointing Dogs,FRANCE
+French Spaniel,Pointing Dogs,Continental Pointing Dogs,FRANCE
+French Tricolour Hound,Scent hounds and related breeds,Scent hounds,FRANCE
+French Water Dog,Retrievers,Water Dogs,FRANCE
+French White & Black Hound,Scent hounds and related breeds,Scent hounds,FRANCE
+French White And Orange Hound,Scent hounds and related breeds,Scent hounds,FRANCE
+Gascon Saintongeois,Scent hounds and related breeds,Scent hounds,FRANCE
+Georgian Shepherd,,,GEORGIA
+German Hound,Scent hounds and related breeds,Scent hounds,GERMANY
+German Hunting Terrier,Terriers,Large and medium sized Terriers,GERMANY
+German Pinscher,Pinscher and Schnauzer,Pinscher and Schnauzer type,GERMANY
+German Shepherd Dog,Sheepdogs and Cattledogs,Sheepdogs,GERMANY
+German Short- Haired Pointing Dog,Pointing Dogs,Continental Pointing Dogs,GERMANY
+German Spaniel,Retrievers,Flushing Dogs,GERMANY
+German Spitz,Spitz and primitive types,European Spitz,GERMANY
+German Wire- Haired Pointing Dog,Pointing Dogs,Continental Pointing Dogs,GERMANY
+Giant Schnauzer,Pinscher and Schnauzer,Pinscher and Schnauzer type,GERMANY
+Golden Retriever,Retrievers,Retrievers,UNITED KINGDOM
+Gordon Setter,Pointing Dogs,British and Irish Pointers and Setters,UNITED KINGDOM
+Grand Basset Griffon Vendeen,Scent hounds and related breeds,Scent hounds,FRANCE
+Grand Griffon Vendeen,Scent hounds and related breeds,Scent hounds,FRANCE
+Great Anglo-French Tricolour Hound,Scent hounds and related breeds,Scent hounds,FRANCE
+Great Anglo-French White & Orange Hound,Scent hounds and related breeds,Scent hounds,FRANCE
+Great Anglo-French White And Black Hound,Scent hounds and related breeds,Scent hounds,FRANCE
+Great Dane,Pinscher and Schnauzer,Molossian type,GERMANY
+Great Gascony Blue,Scent hounds and related breeds,Scent hounds,FRANCE
+Great Swiss Mountain Dog,Pinscher and Schnauzer,Swiss Mountain- and Cattledogs,SWITZERLAND
+Greenland Dog,Spitz and primitive types,Nordic Sledge Dogs,GREENLAND
+Greyhound,Sighthounds,Short-haired Sighthounds,UNITED KINGDOM
+Griffon Belge,Companion and Toy Dogs,Small Belgian Dogs,BELGIUM
+Griffon Bruxellois,Companion and Toy Dogs,Small Belgian Dogs,BELGIUM
+Griffon Nivernais,Scent hounds and related breeds,Scent hounds,FRANCE
+Guatemalan Dogo,,,GUATEMALA
+Halden Hound,Scent hounds and related breeds,Scent hounds,NORWAY
+Hamiltonstövare,Scent hounds and related breeds,Scent hounds,SWEDEN
+Hanoverian Scent Hound,Scent hounds and related breeds,Leash (scent) Hounds,GERMANY
+Harrier,Scent hounds and related breeds,Scent hounds,UNITED KINGDOM
+Havanese,Companion and Toy Dogs,Bichons and related breeds,CUBA
+Hellenic Hound,Scent hounds and related breeds,Scent hounds,GREECE
+Himalayan Sheepdog,,,BHUTAN
+Himalayan Sheepdog,,,NEPAL
+Hmong Bobtail,,,LAOS
+Hokkaido,Spitz and primitive types,Asian Spitz and related breeds,JAPAN
+Hovawart,Pinscher and Schnauzer,Molossian type,GERMANY
+Hungarian Greyhound,Sighthounds,Short-haired Sighthounds,HUNGARY
+Hungarian Hound - Transylvanian Scent Hound,Scent hounds and related breeds,Scent hounds,HUNGARY
+Hungarian Short-Haired Pointer (Vizsla),Pointing Dogs,Continental Pointing Dogs,HUNGARY
+Hungarian Wire-Haired Pointer,Pointing Dogs,Continental Pointing Dogs,HUNGARY
+Huntaway,,,NEW ZEALAND
+Hygen Hound,Scent hounds and related breeds,Scent hounds,NORWAY
+Ibizan Podenco,Spitz and primitive types,Primitive type - Hunting Dogs,SPAIN
+Icelandic Sheepdog,Spitz and primitive types,Nordic Watchdogs and Herders,ICELAND
+Irish Glen Of Imaal Terrier,Terriers,Large and medium sized Terriers,IRELAND
+Irish Red And White Setter,Pointing Dogs,British and Irish Pointers and Setters,IRELAND
+Irish Red Setter,Pointing Dogs,British and Irish Pointers and Setters,IRELAND
+Irish Soft Coated Wheaten Terrier,Terriers,Large and medium sized Terriers,IRELAND
+Irish Terrier,Terriers,Large and medium sized Terriers,IRELAND
+Irish Water Spaniel,Retrievers,Water Dogs,IRELAND
+Irish Wolfhound,Sighthounds,Rough-haired Sighthounds,IRELAND
+Istrian Short-Haired Hound,Scent hounds and related breeds,Scent hounds,CROATIA
+Istrian Wire-Haired Hound,Scent hounds and related breeds,Scent hounds,CROATIA
+Italian Cane Corso,Pinscher and Schnauzer,Molossian type,ITALY
+Italian Pointing Dog,Pointing Dogs,Continental Pointing Dogs,ITALY
+Italian Rough-Haired Segugio,Scent hounds and related breeds,Scent hounds,ITALY
+Italian Short-Haired Segugio,Scent hounds and related breeds,Scent hounds,ITALY
+Italian Sighthound,Sighthounds,Short-haired Sighthounds,ITALY
+Italian Spinone,Pointing Dogs,Continental Pointing Dogs,ITALY
+Italian Volpino,Spitz and primitive types,European Spitz,ITALY
+Jack Russell Terrier,Terriers,Small sized Terriers,UNITED KINGDOM
+Japanese Chin,Companion and Toy Dogs,Japan Chin and Pekingese,JAPAN
+Japanese Spitz,Spitz and primitive types,Asian Spitz and related breeds,JAPAN
+Japanese Terrier,Terriers,Small sized Terriers,JAPAN
+Jämthund,Spitz and primitive types,Nordic Hunting Dogs,SWEDEN
+Kai,Spitz and primitive types,Asian Spitz and related breeds,JAPAN
+Kangal Shepherd Dog,Pinscher and Schnauzer,Molossian type,TURKEY
+Karelian Bear Dog,Spitz and primitive types,Nordic Hunting Dogs,FINLAND
+Karst Shepherd Dog,Pinscher and Schnauzer,Molossian type,SLOVENIA
+Kazakh Tazy,Sighthounds,Long-haired or fringed Sighthounds,KAZAKHSTAN
+Kerry Blue Terrier,Terriers,Large and medium sized Terriers,IRELAND
+Khala,,,BOLIVIA
+King Charles Spaniel,Companion and Toy Dogs,English Toy Spaniels,UNITED KINGDOM
+Kintamani-Bali Dog,Spitz and primitive types,Asian Spitz and related breeds,INDONESIA
+Kishu,Spitz and primitive types,Asian Spitz and related breeds,JAPAN
+Kleiner Münsterländer,Pointing Dogs,Continental Pointing Dogs,GERMANY
+Komondor,Sheepdogs and Cattledogs,Sheepdogs,HUNGARY
+Korea Jindo Dog,Spitz and primitive types,Asian Spitz and related breeds,SOUTH KOREA
+Kromfohrländer,Companion and Toy Dogs,Kromfohrländer,GERMANY
+Kuvasz,Sheepdogs and Cattledogs,Sheepdogs,HUNGARY
+Labrador Retriever,Retrievers,Retrievers,UNITED KINGDOM
+Lakeland Terrier,Terriers,Large and medium sized Terriers,UNITED KINGDOM
+Lancashire Heeler,Sheepdogs and Cattledogs,Sheepdogs,UNITED KINGDOM
+Landseer (European Continental Type),Pinscher and Schnauzer,Molossian type,GERMANY
+Landseer (European Continental Type),Pinscher and Schnauzer,Molossian type,SWITZERLAND
+Lapponian Herder,Spitz and primitive types,Nordic Watchdogs and Herders,FINLAND
+Large Munsterlander,Pointing Dogs,Continental Pointing Dogs,GERMANY
+Latvian Hound,,,LATVIA
+Leonberger,Pinscher and Schnauzer,Molossian type,GERMANY
+Lhasa Apso,Companion and Toy Dogs,Tibetan breeds,CHINA
+Lithuanian Hound,,,LITHUANIA
+Little Lion Dog,Companion and Toy Dogs,Bichons and related breeds,FRANCE
+Long-Haired Pyrenean Sheepdog,Sheepdogs and Cattledogs,Sheepdogs,FRANCE
+Majorca Mastiff,Pinscher and Schnauzer,Molossian type,SPAIN
+Majorca Shepherd Dog,Sheepdogs and Cattledogs,Sheepdogs,SPAIN
+Maltese,Companion and Toy Dogs,Bichons and related breeds,
+Manchester Terrier,Terriers,Large and medium sized Terriers,UNITED KINGDOM
+Maremma And The Abruzzes Sheepdog,Sheepdogs and Cattledogs,Sheepdogs,ITALY
+Mastiff,Pinscher and Schnauzer,Molossian type,UNITED KINGDOM
+Medium-Sized Anglo-French Hound,Scent hounds and related breeds,Scent hounds,FRANCE
+Melanesian Village Dog,,,VANUATU
+Miniature American Shepherd,Sheepdogs and Cattledogs,Sheepdogs,UNITED STATES OF AMERICA
+Miniature Bull Terrier,Terriers,Bull type Terriers,UNITED KINGDOM
+Miniature Pinscher,Pinscher and Schnauzer,Pinscher and Schnauzer type,GERMANY
+Miniature Schnauzer,Pinscher and Schnauzer,Pinscher and Schnauzer type,GERMANY
+Mongolian Bankhar,,,MONGOLIA
+Montenegrin Mountain Hound,Scent hounds and related breeds,Scent hounds,MONTENEGRO
+Mucuchies,,,VENEZUELA
+Mudi,Sheepdogs and Cattledogs,Sheepdogs,HUNGARY
+Neapolitan Mastiff,Pinscher and Schnauzer,Molossian type,ITALY
+Nederlandse Kooikerhondje,Retrievers,Flushing Dogs,NETHERLANDS
+New Guinea Singing Dog,,,PAPUA NEW GUINEA
+Newfoundland,Pinscher and Schnauzer,Molossian type,CANADA
+Nigerian Village Dog,,,NIGERIA
+Norfolk Terrier,Terriers,Small sized Terriers,UNITED KINGDOM
+Norman Artesien Basset,Scent hounds and related breeds,Scent hounds,FRANCE
+Norrbottenspitz,Spitz and primitive types,Nordic Hunting Dogs,SWEDEN
+Norwegian Buhund,Spitz and primitive types,Nordic Watchdogs and Herders,NORWAY
+Norwegian Elkhound Black,Spitz and primitive types,Nordic Hunting Dogs,NORWAY
+Norwegian Elkhound Grey,Spitz and primitive types,Nordic Hunting Dogs,NORWAY
+Norwegian Hound,Scent hounds and related breeds,Scent hounds,NORWAY
+Norwegian Lundehund,Spitz and primitive types,Nordic Hunting Dogs,NORWAY
+Norwich Terrier,Terriers,Small sized Terriers,UNITED KINGDOM
+Nova Scotia Duck Tolling Retriever,Retrievers,Retrievers,CANADA
+Old Danish Pointing Dog,Pointing Dogs,Continental Pointing Dogs,DENMARK
+Old English Sheepdog,Sheepdogs and Cattledogs,Sheepdogs,UNITED KINGDOM
+Otterhound,Scent hounds and related breeds,Scent hounds,UNITED KINGDOM
+Parson Russell Terrier,Terriers,Large and medium sized Terriers,UNITED KINGDOM
+Pekingese,Companion and Toy Dogs,Japan Chin and Pekingese,CHINA
+Peruvian Hairless Dog,Spitz and primitive types,Primitive type,PERU
+Petit Basset Griffon Vendeen,Scent hounds and related breeds,Scent hounds,FRANCE
+Petit Brabançon,Companion and Toy Dogs,Small Belgian Dogs,BELGIUM
+Pharaoh Hound,Spitz and primitive types,Primitive type,MALTA
+Picardy Sheepdog,Sheepdogs and Cattledogs,Sheepdogs,FRANCE
+Picardy Spaniel,Pointing Dogs,Continental Pointing Dogs,FRANCE
+Poitevin,Scent hounds and related breeds,Scent hounds,FRANCE
+Polish Greyhound,Sighthounds,Short-haired Sighthounds,POLAND
+Polish Hound,Scent hounds and related breeds,Scent hounds,POLAND
+Polish Hunting Dog,Scent hounds and related breeds,Scent hounds,POLAND
+Polish Lowland Sheepdog,Sheepdogs and Cattledogs,Sheepdogs,POLAND
+Polish Tatra Shepherd,Sheepdogs and Cattledogs,Sheepdogs,POLAND
+Pont-Audemer Spaniel,Pointing Dogs,Continental Pointing Dogs,FRANCE
+Poodle,Companion and Toy Dogs,Poodle,FRANCE
+Porcelaine,Scent hounds and related breeds,Scent hounds,FRANCE
+Portuguese Pointing Dog,Pointing Dogs,Continental Pointing Dogs,PORTUGAL
+Portuguese Sheepdog,Sheepdogs and Cattledogs,Sheepdogs,PORTUGAL
+Portuguese Warren Hound-Portuguese Podengo,Spitz and primitive types,Primitive type - Hunting Dogs,PORTUGAL
+Portuguese Water Dog,Retrievers,Water Dogs,PORTUGAL
+Posavatz Hound,Scent hounds and related breeds,Scent hounds,CROATIA
+Potcake Dog,,,BAHAMAS
+Potcake Dog,,,BERMUDA
+Potcake Dog,,,CURACAO
+Potcake Dog,,,DOMINICAN REPUBLIC
+Potcake Dog,,,HAITI
+Potcake Dog,,,JAMAICA
+Potcake Dog,,,PUERTO RICO
+Potcake Dog,,,TURKS AND CAICOS ISLANDS
+Prague Ratter,Companion and Toy Dogs,Continental Toy Spaniel and others,CZECHIA
+Presa Canario,Pinscher and Schnauzer,Molossian type,SPAIN
+Pudelpointer,Pointing Dogs,Continental Pointing Dogs,GERMANY
+Pug,Companion and Toy Dogs,Small Molossian type Dogs,CHINA
+Puli,Sheepdogs and Cattledogs,Sheepdogs,HUNGARY
+Pumi,Sheepdogs and Cattledogs,Sheepdogs,HUNGARY
+Pungsan,,,NORTH KOREA
+Pyrenean Mastiff,Pinscher and Schnauzer,Molossian type,SPAIN
+Pyrenean Mountain Dog,Pinscher and Schnauzer,Molossian type,FRANCE
+Pyrenean Sheepdog - Smooth Faced,Sheepdogs and Cattledogs,Sheepdogs,FRANCE
+Qurdbasar,,,AZERBAIJAN
+Rafeiro Of Alentejo,Pinscher and Schnauzer,Molossian type,PORTUGAL
+Rat Terrier,,,UNITED STATES OF AMERICA
+Redbone Coonhound,,,UNITED STATES OF AMERICA
+Rhodesian Ridgeback,Scent hounds and related breeds,Related breeds,SOUTH AFRICA
+Rhodesian Ridgeback,,,ZIMBABWE
+Romagna Water Dog,Retrievers,Water Dogs,ITALY
+Romanian Bucovina Shepherd,Pinscher and Schnauzer,Molossian type,ROMANIA
+Romanian Carpathian Shepherd Dog,Sheepdogs and Cattledogs,Sheepdogs,ROMANIA
+Romanian Mioritic Shepherd Dog,Sheepdogs and Cattledogs,Sheepdogs,ROMANIA
+Romanian Raven Shepherd Dog,Pinscher and Schnauzer,Molossian type,ROMANIA
+Rottweiler,Pinscher and Schnauzer,Molossian type,GERMANY
+Russian Black Terrier,Pinscher and Schnauzer,Pinscher and Schnauzer type,RUSSIA
+Russian Toy,Companion and Toy Dogs,Continental Toy Spaniel and others,RUSSIA
+Russian-European Laika,Spitz and primitive types,Nordic Hunting Dogs,RUSSIA
+Saarloos Wolfhond,Sheepdogs and Cattledogs,Sheepdogs,NETHERLANDS
+Saint Germain Pointer,Pointing Dogs,Continental Pointing Dogs,FRANCE
+Saint Miguel Cattle Dog,Pinscher and Schnauzer,Molossian type,PORTUGAL
+Saluki,Sighthounds,Long-haired or fringed Sighthounds,
+Saluki,,,BAHRAIN
+Saluki,,,EGYPT
+Saluki,,,IRAN
+Saluki,,,IRAQ
+Saluki,,,ISRAEL
+Saluki,,,JORDAN
+Saluki,,,KUWAIT
+Saluki,,,LEBANON
+Saluki,,,OMAN
+Saluki,,,PALESTINE
+Saluki,,,QATAR
+Saluki,,,SAUDI ARABIA
+Saluki,,,SYRIA
+Saluki,,,TURKEY
+Saluki,,,TURKMENISTAN
+Saluki,,,UNITED ARAB EMIRATES
+Saluki,,,YEMEN
+Samoyed,Spitz and primitive types,Nordic Sledge Dogs,RUSSIA
+Sarabi,,,IRAN
+Sarail Hound,,,BANGLADESH
+Schillerstövare,Scent hounds and related breeds,Scent hounds,SWEDEN
+Schipperke,Sheepdogs and Cattledogs,Sheepdogs,BELGIUM
+Schnauzer,Pinscher and Schnauzer,Pinscher and Schnauzer type,GERMANY
+Scottish Terrier,Terriers,Small sized Terriers,UNITED KINGDOM
+Sealyham Terrier,Terriers,Small sized Terriers,UNITED KINGDOM
+Segugio Maremmano,Scent hounds and related breeds,Scent hounds,ITALY
+Serbian Hound,Scent hounds and related breeds,Scent hounds,SERBIA
+Serbian Tricolour Hound,Scent hounds and related breeds,Scent hounds,SERBIA
+Shar Pei,Pinscher and Schnauzer,Molossian type,CHINA
+Shetland Sheepdog,Sheepdogs and Cattledogs,Sheepdogs,UNITED KINGDOM
+Shiba,Spitz and primitive types,Asian Spitz and related breeds,JAPAN
+Shih Tzu,Companion and Toy Dogs,Tibetan breeds,CHINA
+Shikoku,Spitz and primitive types,Asian Spitz and related breeds,JAPAN
+Siberian Husky,Spitz and primitive types,Nordic Sledge Dogs,UNITED STATES OF AMERICA
+Sinhala Hound,,,SRI LANKA
+Skye Terrier,Terriers,Small sized Terriers,UNITED KINGDOM
+Sloughi,,,ALGERIA
+Sloughi,,,LIBYA
+Sloughi,Sighthounds,Short-haired Sighthounds,MOROCCO
+Sloughi,,,TUNISIA
+Sloughi,,,WESTERN SAHARA
+Slovakian Chuvach,Sheepdogs and Cattledogs,Sheepdogs,SLOVAKIA
+Slovakian Hound,Scent hounds and related breeds,Scent hounds,SLOVAKIA
+Small Blue Gascony,Scent hounds and related breeds,Scent hounds,FRANCE
+Small Swiss Hound,Scent hounds and related breeds,Scent hounds,SWITZERLAND
+Smålandsstövare,Scent hounds and related breeds,Scent hounds,SWEDEN
+Solomon Islander Village Dog,,,SOLOMON ISLANDS
+South Russian Shepherd Dog,Sheepdogs and Cattledogs,Sheepdogs,RUSSIA
+Spanish Greyhound,Sighthounds,Short-haired Sighthounds,SPAIN
+Spanish Hound,Scent hounds and related breeds,Scent hounds,SPAIN
+Spanish Mastiff,Pinscher and Schnauzer,Molossian type,SPAIN
+Spanish Water Dog,Retrievers,Water Dogs,SPAIN
+St. Bernard,Pinscher and Schnauzer,Molossian type,SWITZERLAND
+Stabijhoun,Pointing Dogs,Continental Pointing Dogs,NETHERLANDS
+Staffordshire Bull Terrier,Terriers,Bull type Terriers,UNITED KINGDOM
+Sussex Spaniel,Retrievers,Flushing Dogs,UNITED KINGDOM
+Swedish Lapphund,Spitz and primitive types,Nordic Watchdogs and Herders,SWEDEN
+Swedish Vallhund,Spitz and primitive types,Nordic Watchdogs and Herders,SWEDEN
+Swiss Hound,Scent hounds and related breeds,Scent hounds,SWITZERLAND
+Taigan,,,KYRGYZSTAN
+Taiwan Dog,Spitz and primitive types,Primitive type - Hunting Dogs,CHINA
+Telomian,,,MALAYSIA
+Thai Bangkaew Dog,Spitz and primitive types,Asian Spitz and related breeds,THAILAND
+Thai Ridgeback Dog,Spitz and primitive types,Primitive type - Hunting Dogs,THAILAND
+Tibetan Mastiff,Pinscher and Schnauzer,Molossian type,CHINA
+Tibetan Spaniel,Companion and Toy Dogs,Tibetan breeds,CHINA
+Tibetan Terrier,Companion and Toy Dogs,Tibetan breeds,CHINA
+Tornjak,Pinscher and Schnauzer,Molossian type,BOSNIA AND HERZEGOVINA
+Tornjak,Pinscher and Schnauzer,Molossian type,CROATIA
+Tosa,Pinscher and Schnauzer,Molossian type,JAPAN
+Toy Fox Terrier,,,UNITED STATES OF AMERICA
+Transmontano Mastiff,Pinscher and Schnauzer,Molossian type,PORTUGAL
+Treeing Walker Coonhound,,,UNITED STATES OF AMERICA
+Tyrolean Hound,Scent hounds and related breeds,Scent hounds,AUSTRIA
+Valencian Terrier,Terriers,Large and medium sized Terriers,SPAIN
+Weimaraner,Pointing Dogs,Continental Pointing Dogs,GERMANY
+Welsh Corgi (Cardigan),Sheepdogs and Cattledogs,Cattledogs (except Swiss Cattledogs),UNITED KINGDOM
+Welsh Corgi (Pembroke),Sheepdogs and Cattledogs,Cattledogs (except Swiss Cattledogs),UNITED KINGDOM
+Welsh Springer Spaniel,Retrievers,Flushing Dogs,UNITED KINGDOM
+Welsh Terrier,Terriers,Large and medium sized Terriers,UNITED KINGDOM
+West Highland White Terrier,Terriers,Small sized Terriers,UNITED KINGDOM
+West Siberian Laika,Spitz and primitive types,Nordic Hunting Dogs,RUSSIA
+Westphalian Dachsbracke,Scent hounds and related breeds,Scent hounds,GERMANY
+Wetterhoun,Retrievers,Water Dogs,NETHERLANDS
+Whippet,Sighthounds,Short-haired Sighthounds,UNITED KINGDOM
+White Swiss Shepherd Dog,Sheepdogs and Cattledogs,Sheepdogs,SWITZERLAND
+Wire-Haired Pointing Griffon Korthals,Pointing Dogs,Continental Pointing Dogs,FRANCE
+Wirehaired Slovakian Pointer,Pointing Dogs,Continental Pointing Dogs,SLOVAKIA
+Xoloitzcuintle,Spitz and primitive types,Primitive type,MEXICO
+Yakutian Laika,Spitz and primitive types,Nordic Sledge Dogs,RUSSIA
+Yorkshire Terrier,Terriers,Toy Terriers,UNITED KINGDOM
+Yugoslavian Shepherd Dog - Sharplanina,Pinscher and Schnauzer,Molossian type,NORTH MACEDONIA
+Yugoslavian Shepherd Dog - Sharplanina,Pinscher and Schnauzer,Molossian type,SERBIA
+Šarplaninac,,,ALBANIA
+Šarplaninac,,,KOSOVO
