@@ -3,6 +3,7 @@ h2("References"),
 tags$ul(
   tags$li(tags$a(
     href = "https://comptes-rendus.academie-sciences.fr/biologies/articles/en/10.1016/j.crvi.2010.12.011/",
+    target="_blank"
     "Dog Evolution Research"
   )),
   
