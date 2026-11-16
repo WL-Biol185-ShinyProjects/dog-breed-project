@@ -180,7 +180,8 @@ tabItem(
     
     div(
       class = "gallery-card",
-      tags$img(src = "home/huntdog.jpg"),
+      tags$img(src = "home/huntdog.jpg", 
+               alt = "Jomon"),
       p(class = "gallery-caption",
         "The Jōmon Inhabited the Japanese archipelago from 16000-2400. 
         Above is a hunt reconstructed by the Niigata Prefectural Museum of 
