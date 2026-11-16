@@ -144,7 +144,6 @@ tabItem(
   ),
   
   # STARCH DIGESTION SECTION
-  h2("How Dogs Adapted to Their Diet"),
   
   p(
     class = "home-text",
@@ -167,7 +166,6 @@ tabItem(
   ),
   
   # PHOTO CAROUSEL / HORIZONTAL GALLERY
-  h2("Meet the Many Different Breeds"),
   
   p(
     class = "home-text",
