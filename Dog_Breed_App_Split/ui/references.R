@@ -3,8 +3,12 @@ tabItem(
 
 h2("References:"),
 
+#creates bulletted list
 tags$ul(
-  tags$li(tags$a(
+  #creates individual list item
+  tags$li
+  #creates clickable link
+  (tags$a(
     #hyperlink
     href = "https://comptes-rendus.academie-sciences.fr/biologies/articles/en/10.1016/j.crvi.2010.12.011/",
     #make open in new tab instead of our website link
@@ -54,9 +58,11 @@ tags$ul(
 
 h2("Data Used:"),
 
+tags$ul(tags$li(
 tags$a(
   href = "https://datacommons.morrisanimalfoundation.org/",
   target="_blank",
   "Morris Animal Foundation Data Commons"
   )
+)
 )
