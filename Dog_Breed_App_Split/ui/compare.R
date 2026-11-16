@@ -14,86 +14,70 @@
         br(),
         
         
-        # BREED SELECTION -------------------------------------------------
+        # ==========================================================
+        # BREED SELECTION
+        # ==========================================================
         
-        # fluidRow() creates a horizontal row.
-        # Shiny divides each row into 12 columns.
-        fluidRow(
+        
+        div(
+          class = "breed-selection-card",
           
+          # Bootstrap divides each row into 12 columns.
+          # Each dropdown receives 6 columns (half the row).
           
-          # FIRST BREED DROPDOWN
-          
-          # Give the first dropdown 5 of the 12 available columns
-          column(
-            width = 5,
+          fluidRow(
             
-            # selectInput() creates a dropdown menu
-            selectInput(
+            # FIRST BREED SELECTOR
+            column(
+              width = 6,
               
-              # This ID allows us to access the user's selection
-              # in the server using input$compare_breed_1
-              inputId = "compare_breed_1",
+              selectInput(
+                inputId = "compare_breed_1",
+                label = "First Breed",
+                
+                # Alphabetize all available breeds
+                choices = sort(dog_data_clean$name),
+                
+                # Default to the first breed
+                selected = sort(dog_data_clean$name)[1],
+                
+                # Fill the available column width
+                width = "100%"
+              )
+            ),
+            
+            # SECOND BREED SELECTOR
+            column(
+              width = 6,
               
-              # Label displayed above the dropdown
-              label = "First Breed",
-              
-              # Use every breed name in our dataset as an option.
-              # sort() puts the breed names in alphabetical order.
-              choices = sort(dog_data_clean$name),
-              
-              # Automatically select the first breed alphabetically
-              # when the app first loads
-              selected = sort(dog_data_clean$name)[1]
+              selectInput(
+                inputId = "compare_breed_2",
+                label = "Second Breed",
+                
+                choices = sort(dog_data_clean$name),
+                
+                # Default to the second breed
+                selected = sort(dog_data_clean$name)[2],
+                
+                width = "100%"
+              )
             )
           ),
           
-          
-          # VS LABEL
-          
-          # Use the middle 2 columns for the VS text
-          column(
-            width = 2,
+          # VS INDICATOR
+          # This is decorative and does not affect the selections.
+          div(
+            class = "breed-vs-container",
             
-            # div() creates an HTML container that we can style
             div(
-              
-              # Center VS and move it down so it lines up
-              # more closely with the dropdown menus
-              style = "text-align: center; padding-top: 25px;",
-              
-              # h3() displays VS as a heading
-              h3("VS")
-            )
-          ),
-          
-          
-          # SECOND BREED DROPDOWN
-          
-          # Give the second dropdown the final 5 columns
-          column(
-            width = 5,
-            
-            selectInput(
-              
-              # We access this selection in the server using
-              # input$compare_breed_2
-              inputId = "compare_breed_2",
-              
-              label = "Second Breed",
-              
-              # Use the same alphabetical breed list
-              choices = sort(dog_data_clean$name),
-              
-              # Start with the second breed alphabetically so that
-              # the app initially compares two different breeds
-              selected = sort(dog_data_clean$name)[2]
+              class = "breed-vs-badge",
+              "VS"
             )
           )
           
         ),
         
-        
-        # Add some space before the breed summary cards
+        # Add space before the breed summary cards
         br(),
         
         
@@ -105,43 +89,39 @@
           
           # FIRST BREED SUMMARY
           
-          # box() creates a shinydashboard content card
           box(
-            
-            # Give this card half of the 12-column row
             width = 6,
             
-            # textOutput() tells Shiny that the server will dynamically
-            # provide the title using output$compare_name_1
-            title = textOutput("compare_name_1"),
+            # Assign a class so we can style these cards separately
+            class = "breed-summary-card",
             
-            # "primary" gives the box the dashboard's primary accent color
-            status = "primary",
+            # Dynamic breed name displayed inside the card
+            div(
+              class = "breed-card-heading",
+              h3(textOutput("compare_name_1", inline = TRUE))
+            ),
             
-            # TRUE fills the header with the accent color
-            solidHeader = TRUE,
             
-            # uiOutput() creates a space where the server can insert
-            # several pieces of HTML/text about Breed 1
+            # Dynamic breed information from our server
             uiOutput("compare_info_1")
           ),
-          
           
           # SECOND BREED SUMMARY
           
           box(
             width = 6,
             
-            # This connects to output$compare_name_2 in the server
-            title = textOutput("compare_name_2"),
+            class = "breed-summary-card",
             
-            status = "primary",
-            solidHeader = TRUE,
+            div(
+              class = "breed-card-heading",
+              h3(
+                textOutput("compare_name_2", inline = TRUE)
+              )
+            ),
             
-            # This connects to output$compare_info_2 in the server
             uiOutput("compare_info_2")
           )
-          
         ),
         
         

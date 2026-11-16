@@ -1,0 +1,564 @@
+/* ==========================================================
+   DOG BREED EXPLORER - GLOBAL STYLES
+   ==========================================================
+
+
+/* ----------------------------------------------------------
+   1. UNIVERSAL COLOR PALETTE
+   ----------------------------------------------------------
+
+   :root defines variables that can be used anywhere
+   in our CSS.
+
+   To use a color, write: var(--color-name)
+
+   This makes changing our theme much easier later.
+   ---------------------------------------------------------- */
+
+:root {
+
+  /* Primary brand colors */
+  --forest: #30483C;
+  --sage: #647B68;
+
+  /* Background colors */
+  --background: #F7F6F2;
+  --surface: #FFFFFF;
+
+  /* Borders and decorative accents */
+  --stone: #E8E5DD;
+  --tan: #C49A6C;
+
+  /* Text colors */
+  --text-primary: #29332D;
+  --text-secondary: #66716A;
+
+}
+
+
+/* ----------------------------------------------------------
+   2. GLOBAL PAGE BACKGROUND
+   ----------------------------------------------------------
+
+   .content-wrapper is the main content area in
+   shinydashboard.
+
+   We use the same background on every page.
+   ---------------------------------------------------------- */
+
+.content-wrapper,
+.right-side {
+  background-color: var(--background);
+}
+
+
+/* ----------------------------------------------------------
+   3. DEFAULT TEXT
+   ----------------------------------------------------------
+
+   Set a consistent text color and size.
+
+   15px is more suitable for a data-focused website
+   than the 20px currently used for paragraphs.
+   ---------------------------------------------------------- */
+
+body {
+  color: var(--text-primary);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+
+/* ----------------------------------------------------------
+   4. GLOBAL HEADINGS
+   ----------------------------------------------------------
+
+   Use forest green for major headings.
+
+   Individual pages can still choose different heading
+   sizes, but the color will stay consistent.
+   ---------------------------------------------------------- */
+
+h1, h2, h3, h4 {
+  color: var(--forest);
+}
+
+
+/* ----------------------------------------------------------
+   TOP HEADER
+   ----------------------------------------------------------
+
+   .main-header .navbar controls the long horizontal
+   bar across the top of the website.
+   ---------------------------------------------------------- */
+
+.skin-green .main-header .navbar {
+  background-color: var(--forest);
+}
+
+
+/* The logo area containing "Dog Breed Explorer" */
+
+.skin-green .main-header .logo {
+  background-color: var(--forest);
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+
+/* Keep the logo the same color when hovered */
+
+.skin-green .main-header .logo:hover {
+  background-color: var(--forest);
+}
+
+
+/* Sidebar toggle button (three horizontal lines) */
+
+.skin-green .main-header .navbar .sidebar-toggle:hover {
+  background-color: var(--sage);
+}
+
+
+/* ----------------------------------------------------------
+   SIDEBAR
+   ----------------------------------------------------------
+
+   Give the sidebar a softer green rather than the
+   default nearly-black dashboard appearance.
+   ---------------------------------------------------------- */
+
+.skin-green .main-sidebar {
+  background-color: #3E5748;
+}
+
+
+/* Sidebar navigation links */
+
+.skin-green .sidebar-menu > li > a {
+  color: #F7F6F2;
+  font-size: 14px;
+  padding: 15px 18px;
+  border-left: 3px solid transparent;
+  transition: background-color 0.2s ease;
+}
+
+
+/* Change the background when hovering over a menu item */
+
+.skin-green .sidebar-menu > li:hover > a {
+  background-color: #506B59;
+  color: white;
+}
+
+
+/* Highlight the currently selected page */
+
+.skin-green .sidebar-menu > li.active > a {
+  background-color: #30483C;
+  color: white;
+  border-left: 3px solid var(--tan);
+  font-weight: 600;
+}
+
+
+/* Give icons some space from their labels */
+
+.sidebar-menu > li > a > .fa {
+  margin-right: 8px;
+}
+
+
+/* ==========================================================
+   6. MAIN CONTENT LAYOUT
+   ========================================================== */
+
+
+/* Give every page consistent spacing from the edges */
+
+.content-wrapper .content {
+  padding: 24px 28px;
+}
+
+
+/* Prevent the main content area from creating
+   horizontal overflow */
+
+.content-wrapper {
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+
+/* Make images responsive so they don't extend
+   beyond their containers */
+
+.content img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* Prevent very wide charts from stretching the page */
+
+.content .plotly,
+.content .shiny-plot-output {
+  max-width: 100%;
+}
+
+
+/* Reduce spacing on smaller screens */
+
+@media (max-width: 768px) {
+
+  .content-wrapper .content {
+    padding: 16px;
+  }
+
+}
+
+/* ==========================================================
+   7. COMPARISON PAGE - CARD STYLING
+   ==========================================================
+
+   shinydashboard uses .box for its content panels.
+
+   These rules give boxes a clean, modern appearance
+   instead of the default blue dashboard styling.
+   ========================================================== */
+
+
+/* ----------------------------------------------------------
+   MAIN BOX CONTAINERS
+   ---------------------------------------------------------- */
+
+.content-wrapper .box {
+
+  /* White card against our warm ivory background */
+  background-color: var(--surface);
+
+  /* Remove the default colored top border */
+  border-top: none;
+
+  /* Add a subtle border around the card */
+  border: 1px solid var(--stone);
+
+  /* Round the corners */
+  border-radius: 12px;
+
+  /* Add a very subtle shadow for depth */
+  box-shadow: 0 3px 14px rgba(35, 50, 40, 0.05);
+
+  /* Prevent content from extending beyond corners */
+  overflow: hidden;
+}
+
+
+/* ----------------------------------------------------------
+   REMOVE DEFAULT BLUE BOX STYLING
+   ----------------------------------------------------------
+
+   status="primary" in shinydashboard normally
+   creates a blue box.
+
+   We override that styling here.
+   ---------------------------------------------------------- */
+
+.content-wrapper .box.box-primary {
+  border-top: none;
+  border-color: var(--stone);
+}
+
+
+/* ----------------------------------------------------------
+   BOX HEADERS
+   ----------------------------------------------------------
+
+   Some boxes use solid colored headers.
+   We replace these with white headers and a
+   subtle divider.
+   ---------------------------------------------------------- */
+
+.content-wrapper .box.box-solid > .box-header {
+
+  background-color: var(--surface);
+  color: var(--forest);
+
+  border-bottom: 1px solid var(--stone);
+
+  padding: 16px 20px;
+}
+
+
+/* Override the default text color in box titles */
+
+.content-wrapper .box .box-title {
+  color: var(--forest);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+
+/* ----------------------------------------------------------
+   BOX CONTENT
+   ---------------------------------------------------------- */
+
+.content-wrapper .box .box-body {
+  padding: 20px;
+  color: var(--text-primary);
+}
+
+
+/* ----------------------------------------------------------
+   DROPDOWN INPUTS
+   ----------------------------------------------------------
+
+   Make breed selectors match our website palette.
+   ---------------------------------------------------------- */
+
+.content-wrapper .form-control {
+
+  background-color: white;
+  border: 1px solid var(--stone);
+
+  border-radius: 7px;
+  color: var(--text-primary);
+
+  min-height: 38px;
+  box-shadow: none;
+}
+
+
+/* Green focus outline when an input is selected */
+
+.content-wrapper .form-control:focus {
+  border-color: var(--sage);
+
+  box-shadow: 0 0 0 3px rgba(100, 123, 104, 0.12);
+}
+
+
+/* Labels above dropdowns */
+
+.content-wrapper .control-label {
+  color: var(--forest);
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+/* ==========================================================
+   8. PAGE SPACING AND RESPONSIVENESS
+   ========================================================== */
+
+
+/* Prevent Bootstrap columns from overflowing */
+.content-wrapper .row {
+  max-width: 100%;
+  min-width: 0;
+}
+
+
+/* Make sure cards fit within their columns */
+.content-wrapper .box {
+  max-width: 100%;
+}
+
+
+/* Make charts fit their containers */
+.content-wrapper .shiny-plot-output,
+.content-wrapper .plotly {
+  max-width: 100%;
+}
+
+
+/* On smaller screens, reduce card padding */
+@media (max-width: 768px) {
+
+  .content-wrapper .box .box-body {
+    padding: 14px;
+  }
+
+  .content-wrapper .box.box-solid > .box-header {
+    padding: 12px 14px;
+  }
+
+}
+
+/* ==========================================================
+   9. COMPARE BREEDS - SELECTION CARD
+   ========================================================== */
+
+
+/* The white card surrounding both breed dropdowns */
+
+.breed-selection-card {
+
+  background-color: var(--surface);
+
+  /* Match the borders used on our other cards */
+  border: 1px solid var(--stone);
+
+  /* Rounded corners */
+  border-radius: 12px;
+
+  /* Consistent internal spacing */
+  padding: 24px 28px 12px;
+
+  /* Subtle shadow for depth */
+  box-shadow: 0 3px 14px rgba(35, 50, 40, 0.05);
+
+  /* Space below the card */
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+
+/* Remove excess bottom space below the dropdowns */
+
+.breed-selection-card .form-group {
+  margin-bottom: 8px;
+}
+
+
+/* Center the VS indicator */
+
+.breed-vs-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+
+/* Create a small circular VS badge */
+
+.breed-vs-badge {
+
+  background-color: var(--forest);
+  color: white;
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  /* Center the text horizontally and vertically */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+
+/* Reduce padding on smaller screens */
+
+@media (max-width: 768px) {
+
+  .breed-selection-card {
+    padding: 18px;
+  }
+
+}
+
+/* ==========================================================
+   10. BREED SUMMARY CARDS
+   ========================================================== */
+
+
+/* Keep the two summary cards visually consistent */
+
+.breed-summary-card {
+  background: var(--surface);
+}
+
+
+/* Remove extra spacing inside the card body */
+
+.breed-summary-card .box-body {
+  padding: 0 !important;
+}
+
+
+/* Dynamic breed name at the top of each card */
+
+.breed-card-heading {
+  background-color: #F0F3EE;
+  padding: 18px 22px;
+
+  border-bottom: 1px solid var(--stone);
+
+  color: var(--forest);
+  font-size: 23px;
+  font-weight: 600;
+}
+
+
+/* The Shiny text output inherits our heading styling */
+
+.breed-card-heading .shiny-text-output {
+  margin: 0;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+
+/* Add padding around the breed details */
+
+.breed-summary-card .shiny-html-output {
+  padding: 20px 22px;
+}
+
+
+/* Improve spacing between information sections */
+
+.breed-summary-card .shiny-html-output p {
+  margin-bottom: 8px;
+}
+
+
+/* Make card headings slightly smaller on mobile */
+
+@media (max-width: 768px) {
+
+  .breed-card-heading {
+    font-size: 20px;
+    padding: 15px 18px;
+  }
+
+  .breed-summary-card .shiny-html-output {
+    padding: 16px 18px;
+  }
+
+}
+
+/* ==========================================================
+   FIX BREED CARD HEADINGS
+   ========================================================== */
+
+/* Style the heading element itself */
+
+.breed-card-heading h3 {
+  color: var(--forest);
+  font-size: 22px;
+  font-weight: 600;
+
+  /* Remove default heading margins */
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Ensure the dynamic Shiny text inherits the heading style */
+
+.breed-card-heading .shiny-text-output {
+  display: inline;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+

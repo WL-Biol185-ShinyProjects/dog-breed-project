@@ -1,9 +1,6 @@
 # ================================================================
 # DOG MATCHING SHINY APP
 # ================================================================
-#   1. UI = what the user sees
-#   2. Server = what the app does behind the scenes
-# ================================================================
 
 
 # PACKAGES --------------------------------------------------------
@@ -23,6 +20,19 @@ library(plotly)
 #Make pictures show in our about section
 shiny::addResourcePath(
   prefix = "authors",
+  directoryPath = normalizePath("ui/www")
+)
+
+# Make our custom CSS file accessible to Shiny.
+shiny::addResourcePath(
+  prefix = "styles",
+  directoryPath = normalizePath("ui/www")
+)
+
+
+# Make pictures show on homepage
+shiny::addResourcePath(
+  prefix = "home",
   directoryPath = normalizePath("ui/www")
 )
 
@@ -134,182 +144,79 @@ ui <- dashboardPage(
   
   dashboardBody(
     
-    #Stylizing our website!
+    # -------------------------------------------------------
+    # GLOBAL STYLESHEET
+    # -------------------------------------------------------
+    # Load our custom CSS file.
+    # This controls colors, fonts, backgrounds, and spacing
+    # across all pages of our app.
     
     tags$head(
-      tags$style(HTML("
-
-    /* GENERAL BACKGROUND */
-    .content-wrapper, .right-side {
-      background-color: #F5F3ED;
-    }
-
-    /* TOP HEADER */
-    .main-header .logo {
-      background-color: #354A3C;
-      color: white;
-      font-weight: bold;
-    }
-
-    .main-header .navbar {
-      background-color: #526B52;
-    }
-
-    /* SIDEBAR */
-    .main-sidebar {
-      background-color: #354A3C;
-    }
-
-    .sidebar-menu > li > a {
-      color: #FFFFFF;
-      font-size: 15px;
-    }
-
-    .sidebar-menu > li.active > a {
-      background-color: #526B52;
-      border-left-color: #D8C7A3;
-      color: white;
-    }
-
-    /* HEADINGS */
-    h1, h2, h3, h4 {
-      color: #354A3C;
-      font-weight: bold;
-    }
-
-    /* BUTTONS */
-    .btn-primary {
-      background-color: #526B52;
-      border-color: #526B52;
-    }
-
-    .btn-primary:hover {
-      background-color: #354A3C;
-    }
-
-    /* PANELS */
-    .box {
-      border-radius: 8px;
-      border-top: 3px solid #526B52;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.08);
-    }
-      
-      /* IMPORT FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
-
-/* GENERAL TEXT */
-body {
-  font-family: 'Lato', sans-serif;
-  color: #333333;
-  font-size: 15px;
-  line-height: 1.6;
-}
-
-/* MAIN HEADINGS */
-h1, h2 {
-  font-family: 'Playfair Display', serif;
-  color: #354A3C;
-  font-weight: 700;
-}
-
-/* SUBHEADINGS */
-h3, h4, h5 {
-  font-family: 'Lato', sans-serif;
-  color: #526B52;
-  font-weight: 700;
-}
-
-/* SIDEBAR NAVIGATION */
-.sidebar-menu > li > a {
-  font-family: 'Lato', sans-serif;
-  font-size: 15px;
-  font-weight: 600;
-}
-
-/* APP TITLE */
-.main-header .logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 19px;
-  font-weight: 700;
-}
-
-/* BUTTONS */
-.btn {
-  font-family: 'Lato', sans-serif;
-  font-weight: 600;
-  letter-spacing: 0.2px;
-}
-
-/* PARAGRAPHS */
-p {
-  font-family: 'Lato', sans-serif;
-  font-size: 20px;
-  line-height: 1.7;
-    }
-
-  ")),
-    
-# Additional global cursor styling
-tags$style(HTML(paste0(
-  "html, body, body *:not(input):not(textarea), ",
-  ".leaflet-container, .leaflet-container * {",
-  "cursor: url('data:image/svg+xml;utf8,",
-  paw_svg,
-  "') 12 12, auto !important;}"
-)))
-
+      tags$link(
+        rel = "stylesheet",
+        type = "text/css",
+        href = "styles/style.css"
+      )
     ),
-
     
-# Apply the paw cursor to the entire website
-
-  tags$head(
-  tags$style(HTML(paw_css))
+    # -------------------------------------------------------
+    # PAW CURSOR
+    # -------------------------------------------------------
+    # Apply our custom paw-shaped cursor throughout the app.
+    # paw_css was already defined earlier in app.R.
+    # We only need to apply it once here.
+    
+    tags$head(
+      tags$style(HTML(paw_css))
     ),
+    
+    # -------------------------------------------------------
+    # WEBSITE PAGES
+    # -------------------------------------------------------
+    # Each source() loads the UI for one page.
+    # All pages must be inside tabItems(), which itself
+    # must be inside dashboardBody().
+    
     tabItems(
       
-      # HOME PAGE
+      # Home page
       source("ui/home.R", local = TRUE)$value,
       
-      # EXPLORE PAGE
+      # Breed Explorer
       source("ui/breed_explorer.R", local = TRUE)$value,
       
-      # TRAITS & TRENDS ---------------------------------------------------
-      
+      # Traits & Trends
       source("ui/traits.R", local = TRUE)$value,
       
-      
-      # COMPARE BREEDS ----------------------------------------------------
-      
-      # tabItem() creates the page that appears when the user
-      # selects "Compare Breeds" from the sidebar
+      # Compare Breeds
       source("ui/compare.R", local = TRUE)$value,
       
-      # FIND A BREED ------------------------------------------------------
-      
+      # Find a Breed
       source("ui/find_breed.R", local = TRUE)$value,
       
-      
-      # SOUL DOG QUESTIONNAIRE
+      # Soul Dog questionnaire
       source("ui/soul_dog.R", local = TRUE)$value,
       
-      # ABOUT -------------------------------------------------------------
-      
+      # About Us
       source("ui/about.R", local = TRUE)$value,
       
-      # References -------------------------------------------------------------
-      
+      # References
       source("ui/references.R", local = TRUE)$value
       
-      # Close tabItems()
-    )
+    ) # End tabItems()
     
-    # Close dashboardBody()
-  )
+  ), # End dashboardBody()
   
-  # Close dashboardPage()
-)
-
+  # -------------------------------------------------------
+  # DASHBOARD THEME
+  # -------------------------------------------------------
+  # shinydashboard requires one of its built-in skins.
+  # Our custom CSS will override these default colors.
+  
+  skin = "green"
+  
+) # End dashboardPage()
+ 
 
 # SERVER ----------------------------------------------------------
 
@@ -343,4 +250,9 @@ shinyApp(
   server = server
 )
 # change test
+<<<<<<< HEAD
       
+=======
+
+      
+>>>>>>> 9ec08d9064a0817f1a0c2485b66a2e67ce73c459
