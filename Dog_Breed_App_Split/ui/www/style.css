@@ -1,0 +1,84 @@
+/* ==========================================================
+   DOG BREED EXPLORER - GLOBAL STYLES
+   ==========================================================
+
+
+/* ----------------------------------------------------------
+   1. UNIVERSAL COLOR PALETTE
+   ----------------------------------------------------------
+
+   :root defines variables that can be used anywhere
+   in our CSS.
+
+   To use a color, write: var(--color-name)
+
+   This makes changing our theme much easier later.
+   ---------------------------------------------------------- */
+
+:root {
+
+  /* Primary brand colors */
+  --forest: #30483C;
+  --sage: #647B68;
+
+  /* Background colors */
+  --background: #F7F6F2;
+  --surface: #FFFFFF;
+
+  /* Borders and decorative accents */
+  --stone: #E8E5DD;
+  --tan: #C49A6C;
+
+  /* Text colors */
+  --text-primary: #29332D;
+  --text-secondary: #66716A;
+
+}
+
+
+/* ----------------------------------------------------------
+   2. GLOBAL PAGE BACKGROUND
+   ----------------------------------------------------------
+
+   .content-wrapper is the main content area in
+   shinydashboard.
+
+   We use the same background on every page.
+   ---------------------------------------------------------- */
+
+.content-wrapper,
+.right-side {
+  background-color: var(--background);
+}
+
+
+/* ----------------------------------------------------------
+   3. DEFAULT TEXT
+   ----------------------------------------------------------
+
+   Set a consistent text color and size.
+
+   15px is more suitable for a data-focused website
+   than the 20px currently used for paragraphs.
+   ---------------------------------------------------------- */
+
+body {
+  color: var(--text-primary);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+
+/* ----------------------------------------------------------
+   4. GLOBAL HEADINGS
+   ----------------------------------------------------------
+
+   Use forest green for major headings.
+
+   Individual pages can still choose different heading
+   sizes, but the color will stay consistent.
+   ---------------------------------------------------------- */
+
+h1, h2, h3, h4 {
+  color: var(--forest);
+}
