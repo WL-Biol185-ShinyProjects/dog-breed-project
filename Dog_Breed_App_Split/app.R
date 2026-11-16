@@ -207,8 +207,6 @@ tags$style(HTML(paste0(
   )
   
   # Close dashboardPage()
-)
-
 
 # SERVER ----------------------------------------------------------
 
@@ -242,4 +240,5 @@ shinyApp(
   server = server
 )
 # change test
+
       
