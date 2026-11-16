@@ -32,6 +32,37 @@
     
   })
   
+  # These outputs display the selected breed names at the
+  # top of our comparison cards.
+  #
+  # renderText() creates text that automatically updates
+  # whenever the user changes a breed dropdown.
+  
+  
+  # FIRST BREED NAME
+  output$compare_name_1 <- renderText({
+    
+    # req() waits until the user has a valid selection.
+    req(input$compare_breed_1)
+    
+    # Return the selected breed name.
+    input$compare_breed_1
+    
+  })
+  
+  
+  # SECOND BREED NAME
+  output$compare_name_2 <- renderText({
+    
+    # Wait for the second dropdown to have a selection.
+    req(input$compare_breed_2)
+    
+    # Return the selected breed name.
+    input$compare_breed_2
+    
+  })
+  
+  
   # PHYSICAL CHARACTERISTICS DATA -------------------------------
   
   # reactive() automatically updates this dataset whenever
