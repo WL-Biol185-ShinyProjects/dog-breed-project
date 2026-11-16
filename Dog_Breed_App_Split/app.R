@@ -250,9 +250,3 @@ shinyApp(
   server = server
 )
 # change test
-<<<<<<< HEAD
-      
-=======
-
-      
->>>>>>> 9ec08d9064a0817f1a0c2485b66a2e67ce73c459

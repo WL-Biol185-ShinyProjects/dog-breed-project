@@ -1,6 +1,7 @@
 breed,image_url
 Affenpinscher,https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Affenpinscher.jpg/250px-Affenpinscher.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail
 Afghan Hound,https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e8/Afghan_dog_-_cropped.jpg/250px-Afghan_dog_-_cropped.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail
+African Village Dog,
 Africanis,https://commons.wikimedia.org/wiki/Special:FilePath/Africanis%20%281%29.jpg
 Aidi,https://commons.wikimedia.org/wiki/Special:FilePath/Aidi.jpg
 Airedale Terrier,https://upload.wikimedia.org/wikipedia/commons/5/52/Airedale_Terrier.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled
@@ -46,7 +47,7 @@ Australian Terrier,https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Aust
 Austrian Black And Tan Hound,https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Brandlbracke.JPG/250px-Brandlbracke.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail
 Austrian Pinscher,https://thumb.wikimedia.org/wikipedia/commons/thumb/5/54/Pinczer_austiacki_678.jpg/250px-Pinczer_austiacki_678.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail
 Auvergne Pointer,https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Braque_d_Auvergne.jpg/250px-Braque_d_Auvergne.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail
-Avuvi,
+Avuvi,https://breed-assets.wisdompanel.com/dog/street-dog-ghana/Ghanaian_Street_Dog1.jpg
 Azawakh,https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Bistrita_2015_%2822%29.jpg/250px-Bistrita_2015_%2822%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail
 Bakharwal,https://commons.wikimedia.org/wiki/Special:FilePath/Bakarwal.jpg
 Barak Hound,https://commons.wikimedia.org/wiki/Special:FilePath/BIR%20Grupp%206-%20BOSANSKI%20OSTRODLAKI%20GONIC-BARAK%2C%20Sandy%20%2823866392689%29.jpg
@@ -153,7 +154,7 @@ Drever,https://thumb.wikimedia.org/wikipedia/commons/thumb/3/34/Drever_NUCh_Tanj
 Dutch Schapendoes,https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/Nederlandse-schapendoes-02.jpg/250px-Nederlandse-schapendoes-02.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail
 Dutch Shepherd Dog,https://thumb.wikimedia.org/wikipedia/commons/thumb/e/eb/Luna-orig-modified.Feb_2019.DSC_4339-SharpenAI-Softness.jpg/250px-Luna-orig-modified.Feb_2019.DSC_4339-SharpenAI-Softness.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail
 Dutch Smoushond,https://thumb.wikimedia.org/wikipedia/commons/thumb/7/70/Hollandse_Smoushond_Amsterdam_cropped.jpg/250px-Hollandse_Smoushond_Amsterdam_cropped.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail
-East African Village Dog,
+East African Village Dog,https://commons.wikimedia.org/wiki/Special:FilePath/Child%20with%20a%20dog%2003.jpg
 East Siberian Laika,https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2f/East_Siberian_Laika.jpg/250px-East_Siberian_Laika.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail
 Ecuadorian Hairless Dog,
 English Cocker Spaniel,https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/%22Bill%22_-_Cocker_spaniel_anglais_2.JPG/250px-%22Bill%22_-_Cocker_spaniel_anglais_2.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail
@@ -218,7 +219,6 @@ Harrier,https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b7/Harrier_Hound_-
 Havanese,https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/A_Havanese_judging.jpg/250px-A_Havanese_judging.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail
 Hellenic Hound,https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/Hellinikos_Ichnilatis_%28Georging%29_cropped.jpg/250px-Hellinikos_Ichnilatis_%28Georging%29_cropped.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail
 Himalayan Sheepdog,https://commons.wikimedia.org/wiki/Special:FilePath/Himalayan%20sheepdog2.jpg
-Hmong Bobtail,
 Hokkaido,https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8e/Hokkaidou_inu.jpg/250px-Hokkaidou_inu.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail
 Hovawart,https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Helos_11.jpg/250px-Helos_11.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail
 Hungarian Greyhound,https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Magyar_ag%C3%A1r_male.jpg/250px-Magyar_ag%C3%A1r_male.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail
@@ -284,7 +284,6 @@ Manchester Terrier,https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Manc
 Maremma And The Abruzzes Sheepdog,https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Pastore_Maremmano-Abruzzese%2C_young_dog_%28cropped%29.jpg/250px-Pastore_Maremmano-Abruzzese%2C_young_dog_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail
 Mastiff,https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/The_dog_book_-_a_popular_history_of_the_dog%2C_with_practical_information_as_to_care_and_management_of_house%2C_kennel%2C_and_exhibition_dogs%3B_and_descriptions_of_all_the_important_breeds_%281906%29_%2820800295488%29.jpg/250px-thumbnail.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail
 Medium-Sized Anglo-French Hound,https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/Chien_de_race_Barbet.jpg/250px-Chien_de_race_Barbet.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail
-Melanesian Village Dog,
 Miniature American Shepherd,https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Blue_Merle_Miniature_American_Shepherd_in_Grass.jpg/250px-Blue_Merle_Miniature_American_Shepherd_in_Grass.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail
 Miniature Bull Terrier,https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Minibull_2_Moletai_May_2014.jpg/250px-Minibull_2_Moletai_May_2014.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail
 Miniature Pinscher,https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Miniature_pinscher.jpg/250px-Miniature_pinscher.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail
@@ -387,7 +386,6 @@ Slovakian Hound,https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Go%C5%8
 Small Blue Gascony,https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8a/Wy%C5%BCe%C5%82_Gasko%C5%84ski.jpg/250px-Wy%C5%BCe%C5%82_Gasko%C5%84ski.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail
 Small Swiss Hound,https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c6/08115491_Schwyzer_Niederlaufhund.jpg/250px-08115491_Schwyzer_Niederlaufhund.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail
 Smålandsstövare,https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/Smaland-St%C3%B6vare.jpg/250px-Smaland-St%C3%B6vare.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail
-Solomon Islander Village Dog,
 South Russian Shepherd Dog,https://thumb.wikimedia.org/wikipedia/commons/thumb/2/25/South_Russian_Ovcharka.jpg/250px-South_Russian_Ovcharka.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail
 Spanish Greyhound,https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Galgo_espagnol_006_%28lightened%29.jpg/250px-Galgo_espagnol_006_%28lightened%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail
 Spanish Hound,https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Angoi_de_A_Fonsagrada.JPG/250px-Angoi_de_A_Fonsagrada.JPG?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail
