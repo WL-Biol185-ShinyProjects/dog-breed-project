@@ -23,7 +23,6 @@ shiny::addResourcePath(
   directoryPath = normalizePath("ui/www")
 )
 
-<<<<<<< HEAD
 # Make our custom CSS file accessible to Shiny.
 shiny::addResourcePath(
   prefix = "styles",
@@ -31,14 +30,12 @@ shiny::addResourcePath(
 )
 
 
-=======
 # Make pictures show on homepage
 shiny::addResourcePath(
   prefix = "home",
   directoryPath = normalizePath("ui/www")
 )
 
->>>>>>> 835620a82b67f53d42a25a935ab80b6c53ae7699
 source("R/data_setup.R", local = TRUE)
 
 # USER INTERFACE (UI) ---------------------------------------------
