@@ -385,3 +385,180 @@ h1, h2, h3, h4 {
   }
 
 }
+
+/* ==========================================================
+   9. COMPARE BREEDS - SELECTION CARD
+   ========================================================== */
+
+
+/* The white card surrounding both breed dropdowns */
+
+.breed-selection-card {
+
+  background-color: var(--surface);
+
+  /* Match the borders used on our other cards */
+  border: 1px solid var(--stone);
+
+  /* Rounded corners */
+  border-radius: 12px;
+
+  /* Consistent internal spacing */
+  padding: 24px 28px 12px;
+
+  /* Subtle shadow for depth */
+  box-shadow: 0 3px 14px rgba(35, 50, 40, 0.05);
+
+  /* Space below the card */
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+
+/* Remove excess bottom space below the dropdowns */
+
+.breed-selection-card .form-group {
+  margin-bottom: 8px;
+}
+
+
+/* Center the VS indicator */
+
+.breed-vs-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+
+/* Create a small circular VS badge */
+
+.breed-vs-badge {
+
+  background-color: var(--forest);
+  color: white;
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  /* Center the text horizontally and vertically */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+
+/* Reduce padding on smaller screens */
+
+@media (max-width: 768px) {
+
+  .breed-selection-card {
+    padding: 18px;
+  }
+
+}
+
+/* ==========================================================
+   10. BREED SUMMARY CARDS
+   ========================================================== */
+
+
+/* Keep the two summary cards visually consistent */
+
+.breed-summary-card {
+  background: var(--surface);
+}
+
+
+/* Remove extra spacing inside the card body */
+
+.breed-summary-card .box-body {
+  padding: 0 !important;
+}
+
+
+/* Dynamic breed name at the top of each card */
+
+.breed-card-heading {
+  background-color: #F0F3EE;
+  padding: 18px 22px;
+
+  border-bottom: 1px solid var(--stone);
+
+  color: var(--forest);
+  font-size: 23px;
+  font-weight: 600;
+}
+
+
+/* The Shiny text output inherits our heading styling */
+
+.breed-card-heading .shiny-text-output {
+  margin: 0;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+
+/* Add padding around the breed details */
+
+.breed-summary-card .shiny-html-output {
+  padding: 20px 22px;
+}
+
+
+/* Improve spacing between information sections */
+
+.breed-summary-card .shiny-html-output p {
+  margin-bottom: 8px;
+}
+
+
+/* Make card headings slightly smaller on mobile */
+
+@media (max-width: 768px) {
+
+  .breed-card-heading {
+    font-size: 20px;
+    padding: 15px 18px;
+  }
+
+  .breed-summary-card .shiny-html-output {
+    padding: 16px 18px;
+  }
+
+}
+
+/* ==========================================================
+   FIX BREED CARD HEADINGS
+   ========================================================== */
+
+/* Style the heading element itself */
+
+.breed-card-heading h3 {
+  color: var(--forest);
+  font-size: 22px;
+  font-weight: 600;
+
+  /* Remove default heading margins */
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Ensure the dynamic Shiny text inherits the heading style */
+
+.breed-card-heading .shiny-text-output {
+  display: inline;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+
