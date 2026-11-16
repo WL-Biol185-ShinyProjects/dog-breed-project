@@ -82,3 +82,90 @@ body {
 h1, h2, h3, h4 {
   color: var(--forest);
 }
+
+
+/* ----------------------------------------------------------
+   TOP HEADER
+   ----------------------------------------------------------
+
+   .main-header .navbar controls the long horizontal
+   bar across the top of the website.
+   ---------------------------------------------------------- */
+
+.skin-green .main-header .navbar {
+  background-color: var(--forest);
+}
+
+
+/* The logo area containing "Dog Breed Explorer" */
+
+.skin-green .main-header .logo {
+  background-color: var(--forest);
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+
+/* Keep the logo the same color when hovered */
+
+.skin-green .main-header .logo:hover {
+  background-color: var(--forest);
+}
+
+
+/* Sidebar toggle button (three horizontal lines) */
+
+.skin-green .main-header .navbar .sidebar-toggle:hover {
+  background-color: var(--sage);
+}
+
+
+/* ----------------------------------------------------------
+   SIDEBAR
+   ----------------------------------------------------------
+
+   Give the sidebar a softer green rather than the
+   default nearly-black dashboard appearance.
+   ---------------------------------------------------------- */
+
+.skin-green .main-sidebar {
+  background-color: #3E5748;
+}
+
+
+/* Sidebar navigation links */
+
+.skin-green .sidebar-menu > li > a {
+  color: #F7F6F2;
+  font-size: 14px;
+  padding: 15px 18px;
+  border-left: 3px solid transparent;
+  transition: background-color 0.2s ease;
+}
+
+
+/* Change the background when hovering over a menu item */
+
+.skin-green .sidebar-menu > li:hover > a {
+  background-color: #506B59;
+  color: white;
+}
+
+
+/* Highlight the currently selected page */
+
+.skin-green .sidebar-menu > li.active > a {
+  background-color: #30483C;
+  color: white;
+  border-left: 3px solid var(--tan);
+  font-weight: 600;
+}
+
+
+/* Give icons some space from their labels */
+
+.sidebar-menu > li > a > .fa {
+  margin-right: 8px;
+}
