@@ -1,8 +1,9 @@
 tabItem(
   tabName = "references",
-  p("References: 
-      
-      https://comptes-rendus.academie-sciences.fr/biologies/articles/en/10.1016/j.crvi.2010.12.011/  
+  
+  H2("References"),
+  
+  p("https://comptes-rendus.academie-sciences.fr/biologies/articles/en/10.1016/j.crvi.2010.12.011/  
       
       https://www.nature.com/articles/nature11837  
     
@@ -14,11 +15,9 @@ tabItem(
       
       https://commons.wikimedia.org/wiki/File:Comparison_of_a_wolf_and_a_pug.png  
     
-    https://tenor.com/view/hungry-dog-hungry-dog-crazy-gif-20937509  
-    
-    
-    
-    Data used: 
-      
-      https://datacommons.morrisanimalfoundation.org/" )
+    https://tenor.com/view/hungry-dog-hungry-dog-crazy-gif-20937509"),
+  
+  H2("Data Used:"),
+  
+    p("https://datacommons.morrisanimalfoundation.org/")
   )
