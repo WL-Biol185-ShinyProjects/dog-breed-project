@@ -89,7 +89,7 @@ tabItem(
     column(
       width = 12,
       tags$img(
-        src = "wolfpug.png",
+        src = "home/wolfpug.png",
         class = "hero-image",
         alt = "Dogs"
       )
@@ -128,15 +128,15 @@ tabItem(
     column(
       width = 6,
       tags$img(
-        src = "Amylase.png",
+        src = "home/Amylase.png",
         class = "home-image",
-        alt = "Wolf"
+        alt = "Amylase"
       )
     ),
     column(
       width = 6,
       tags$img(
-        src = "Maltase.png",
+        src = "home/Maltase.png",
         class = "home-image",
         alt = "Domestic dog"
       )
@@ -159,7 +159,7 @@ tabItem(
       width = 8,
       offset = 2,
       tags$img(
-        src = "bowl.gif",
+        src = "home/bowl.gif",
         style = "width:100%; border-radius:12px; margin:15px 0;",
         alt = "Dog animation"
       )
@@ -180,7 +180,7 @@ tabItem(
     
     div(
       class = "gallery-card",
-      tags$img(src = "huntdog"),
+      tags$img(src = "home/huntdog.jpg"),
       p(class = "gallery-caption",
         "The Jōmon Inhabited the Japanese archipelago from 16000-2400. 
         Above is a hunt reconstructed by the Niigata Prefectural Museum of 

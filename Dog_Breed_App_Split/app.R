@@ -23,6 +23,12 @@ shiny::addResourcePath(
   directoryPath = normalizePath("ui/www")
 )
 
+# Make pictures show on homepage
+shiny::addResourcePath(
+  prefix = "home",
+  directoryPath = normalizePath("ui/www")
+)
+
 source("R/data_setup.R", local = TRUE)
 
 # USER INTERFACE (UI) ---------------------------------------------
