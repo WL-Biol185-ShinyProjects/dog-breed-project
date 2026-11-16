@@ -1,3 +1,6 @@
+tabItem(
+  tabName = "references",
+
 h2("References"),
 
 tags$ul(
@@ -43,5 +46,6 @@ h2("Data Used:"),
 tags$a(
   href = "https://datacommons.morrisanimalfoundation.org/",
   "Morris Animal Foundation Data Commons"
+  )
 )
 )
