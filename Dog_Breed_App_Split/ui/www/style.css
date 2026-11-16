@@ -218,3 +218,170 @@ h1, h2, h3, h4 {
   }
 
 }
+
+/* ==========================================================
+   7. COMPARISON PAGE - CARD STYLING
+   ==========================================================
+
+   shinydashboard uses .box for its content panels.
+
+   These rules give boxes a clean, modern appearance
+   instead of the default blue dashboard styling.
+   ========================================================== */
+
+
+/* ----------------------------------------------------------
+   MAIN BOX CONTAINERS
+   ---------------------------------------------------------- */
+
+.content-wrapper .box {
+
+  /* White card against our warm ivory background */
+  background-color: var(--surface);
+
+  /* Remove the default colored top border */
+  border-top: none;
+
+  /* Add a subtle border around the card */
+  border: 1px solid var(--stone);
+
+  /* Round the corners */
+  border-radius: 12px;
+
+  /* Add a very subtle shadow for depth */
+  box-shadow: 0 3px 14px rgba(35, 50, 40, 0.05);
+
+  /* Prevent content from extending beyond corners */
+  overflow: hidden;
+}
+
+
+/* ----------------------------------------------------------
+   REMOVE DEFAULT BLUE BOX STYLING
+   ----------------------------------------------------------
+
+   status="primary" in shinydashboard normally
+   creates a blue box.
+
+   We override that styling here.
+   ---------------------------------------------------------- */
+
+.content-wrapper .box.box-primary {
+  border-top: none;
+  border-color: var(--stone);
+}
+
+
+/* ----------------------------------------------------------
+   BOX HEADERS
+   ----------------------------------------------------------
+
+   Some boxes use solid colored headers.
+   We replace these with white headers and a
+   subtle divider.
+   ---------------------------------------------------------- */
+
+.content-wrapper .box.box-solid > .box-header {
+
+  background-color: var(--surface);
+  color: var(--forest);
+
+  border-bottom: 1px solid var(--stone);
+
+  padding: 16px 20px;
+}
+
+
+/* Override the default text color in box titles */
+
+.content-wrapper .box .box-title {
+  color: var(--forest);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+
+/* ----------------------------------------------------------
+   BOX CONTENT
+   ---------------------------------------------------------- */
+
+.content-wrapper .box .box-body {
+  padding: 20px;
+  color: var(--text-primary);
+}
+
+
+/* ----------------------------------------------------------
+   DROPDOWN INPUTS
+   ----------------------------------------------------------
+
+   Make breed selectors match our website palette.
+   ---------------------------------------------------------- */
+
+.content-wrapper .form-control {
+
+  background-color: white;
+  border: 1px solid var(--stone);
+
+  border-radius: 7px;
+  color: var(--text-primary);
+
+  min-height: 38px;
+  box-shadow: none;
+}
+
+
+/* Green focus outline when an input is selected */
+
+.content-wrapper .form-control:focus {
+  border-color: var(--sage);
+
+  box-shadow: 0 0 0 3px rgba(100, 123, 104, 0.12);
+}
+
+
+/* Labels above dropdowns */
+
+.content-wrapper .control-label {
+  color: var(--forest);
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+/* ==========================================================
+   8. PAGE SPACING AND RESPONSIVENESS
+   ========================================================== */
+
+
+/* Prevent Bootstrap columns from overflowing */
+.content-wrapper .row {
+  max-width: 100%;
+  min-width: 0;
+}
+
+
+/* Make sure cards fit within their columns */
+.content-wrapper .box {
+  max-width: 100%;
+}
+
+
+/* Make charts fit their containers */
+.content-wrapper .shiny-plot-output,
+.content-wrapper .plotly {
+  max-width: 100%;
+}
+
+
+/* On smaller screens, reduce card padding */
+@media (max-width: 768px) {
+
+  .content-wrapper .box .box-body {
+    padding: 14px;
+  }
+
+  .content-wrapper .box.box-solid > .box-header {
+    padding: 12px 14px;
+  }
+
+}
