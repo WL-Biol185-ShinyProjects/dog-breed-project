@@ -35,12 +35,12 @@ tabItem(
     
 .heart-image {
   display: block;
-  height: 300px;
-  width: auto;
-  max-width: 100%;
+  width: 100%;
+  height: 350px;
   object-fit: contain;
   border-radius: 10px;
   margin: 0 auto 15px;
+  background-color: white;
 }
 
     .hero-image {
