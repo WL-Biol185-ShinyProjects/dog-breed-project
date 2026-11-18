@@ -63,7 +63,18 @@ tags$a(
   href = "https://datacommons.morrisanimalfoundation.org/",
   target="_blank",
   "Morris Animal Foundation Data Commons"
-  )
-)
-)
+  )),
+
+tags$li(tags$a(
+  href = "https://github.com/paiv/fci-breeds/blob/main/fci-breeds.csv",
+  target = "_blank",
+  "FCI Breeds dataset"
+)),
+
+tags$li(tags$a(
+  href = "https://github.com/kkakey/dog_traits_AKC/blob/main/data/breed_rank_all.csv",
+  target = "_blank",
+  "American Kennel Club Dog Breed Rank dataset"
+))
+
 )
