@@ -26,8 +26,8 @@ tabItem(
 
     .home-image {
       width: 100%;
-      height: 280px;
-      object-fit: cover;
+      height: 100px;
+      object-fit: contain;
       border-radius: 10px;
       margin-bottom: 15px;
     }
@@ -128,17 +128,17 @@ tabItem(
     column(
       width = 6,
       tags$img(
-        src = "home/Amylase.png",
+        src = "home/am2.png",
         class = "home-image",
-        alt = "Amylase"
+        alt = "am"
       )
     ),
     column(
       width = 6,
       tags$img(
-        src = "home/Maltase.png",
+        src = "home/malt2.png",
         class = "home-image",
-        alt = "Domestic dog"
+        alt = "malt"
       )
     )
   ),
