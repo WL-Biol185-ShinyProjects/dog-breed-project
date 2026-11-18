@@ -242,15 +242,15 @@ library(stringr)
         p(em("Data reflects breeds officially recognized by the Fédération Cynologique Internationale")),
       
       
-      h2("Top 10 Most Popular Dog Breeds Over Time")
+      h2("Top 10 Most Popular Dog Breeds Over Time"),
       
-      p("Use the slider to navigate between years and see how the top 10 most popular dog breeds have shifted over time!")
+      p("Use the slider to navigate between years and see how the top 10 most popular dog breeds have shifted over time!"),
       sliderInput(
         "breed_year", "Year",
         min = min(breed_years), max = max(breed_years), value = min(breed_years),
         step = 1, sep = "", width = "100%",
         animate = animationOptions(interval = 900)   # adds a play button
-      )
+      ),
       plotOutput("breed_plot", height = "800px")
       )
       
