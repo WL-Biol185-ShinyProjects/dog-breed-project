@@ -65,7 +65,7 @@ tabItem(
         style = "border-radius: 50%; object-fit: cover;"
       ),
       p("From Staten Island, New York, I am a biology and music double major on the pre-med track. 
-                I love dogs and would love to have a Labrador Retriever!")
+                I love dogs and would love to have a labrador retriever!")
     )
     
   )
