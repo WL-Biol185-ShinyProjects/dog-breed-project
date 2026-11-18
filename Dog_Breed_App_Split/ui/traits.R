@@ -119,7 +119,7 @@ library(htmltools)
         
         h1("Traits & Trends"),
         
-        p("Explore dog breeds by country of origin."),
+        p("Explore dog breeds by country of origin. Hover the mouse over any highlighted country to view how many dog breeds originate from that country. Click on any highlighted country to see its native dog breeds' names and cute dog photos!"),
         
         dog_map
       )
