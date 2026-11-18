@@ -167,10 +167,10 @@ tabItem(
   
   # PHOTO CAROUSEL / HORIZONTAL GALLERY
   
-  
   div(
     class = "gallery",
     
+    # CARD 1
     div(
       class = "gallery-card",
       tags$img(
@@ -184,51 +184,72 @@ tabItem(
         History. Archaeologists have discovered dog bone burials dated to
         around 9000 BP, with the remains surrounded by shells similar to
         those found in human burials."
-      ),
-      div(
-        class = "gallery-card",
-        tags$img(
-          src = "home/bronzeJhunt.jpg",
-          alt = "Bronze"
-        ),
-        p(
-          class = "gallery-caption",
-          "Bronze bell depicting a Jōmon hunt with dogs 2500 BP. 
-          Located in the Tokyo National Museum"
+      )
     ),
+    
+    # CARD 2
     div(
       class = "gallery-card",
       tags$img(
-        src = "home/renaissance dog.jpg",
-        alt = "paint"
-      ),
-      p(
-        class = "gallery-caption",
-        "Renaissance painting featuring a dog, Diego Vélazquez's Las 
-        Meninas, 1656, 
-        Museo Nacional del Prado, Madrid, Spain"
-  ),
-  div(
-    class = "gallery-card",
-    tags$img(
-      src = "home/dogpull.jpeg",
-      alt = "pull"
-    ),
-    p(
-      class = "gallery-caption",
-      "Antique photo from the early 18th century depicting a dog harnessed for play"
-    ),
-    div(
-      class = "gallery-card",
-      tags$img(
-        src = "home/blonde.jpg",
+        src = "home/bronzeJhunt.jpg",
         alt = "Bronze"
       ),
       p(
         class = "gallery-caption",
-        "Paris Hilton holding a chihuaha in a matching pink sweater in the 2001
-        film, Legally Blonde"
+        "Bronze bell depicting a Jōmon hunt with dogs 2500 BP.
+        Located in the Tokyo National Museum"
+      )
+    ),
+    
+    # CARD 3
+    div(
+      class = "gallery-card",
+      tags$img(
+        src = "home/renaissance dog.jpg",
+        alt = "Painting"
       ),
+      p(
+        class = "gallery-caption",
+        "Renaissance painting featuring a dog, Diego Vélazquez's Las
+        Meninas, 1656, Museo Nacional del Prado, Madrid, Spain"
+      )
+    ),
+    
+    # CARD 4
+    div(
+      class = "gallery-card",
+      tags$img(
+        src = "home/dogpull.jpeg",
+        alt = "Dog pulling"
+      ),
+      p(
+        class = "gallery-caption",
+        "Antique photo from the early 18th century depicting a dog
+        harnessed for play"
+      )
+    ),
+    
+    # CARD 5
+    div(
+      class = "gallery-card",
+      tags$img(
+        src = "home/blonde.jpg",
+        alt = "Chihuahua"
+      ),
+      p(
+        class = "gallery-caption",
+        "Paris Hilton holding a chihuahua in a matching pink sweater
+        in the 2001 film, Legally Blonde"
+      )
+    )
+  ),
+  
+  # CLOSING
+  p(
+    class = "home-closing",
+    "We hope that you enjoy exploring our website!"
+  )
+)
   
   # CLOSING
   p(
