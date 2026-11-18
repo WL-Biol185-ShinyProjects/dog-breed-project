@@ -184,10 +184,51 @@ tabItem(
         History. Archaeologists have discovered dog bone burials dated to
         around 9000 BP, with the remains surrounded by shells similar to
         those found in human burials."
-      )
-    )
-    
+      ),
+      div(
+        class = "gallery-card",
+        tags$img(
+          src = "home/bronzeJhunt.jpg",
+          alt = "Bronze"
+        ),
+        p(
+          class = "gallery-caption",
+          "Bronze bell depicting a Jōmon hunt with dogs 2500 BP. 
+          Located in the Tokyo National Museum"
+    ),
+    div(
+      class = "gallery-card",
+      tags$img(
+        src = "home/renaissance dog.jpg",
+        alt = "paint"
+      ),
+      p(
+        class = "gallery-caption",
+        "Renaissance painting featuring a dog, Diego Vélazquez's Las 
+        Meninas, 1656, 
+        Museo Nacional del Prado, Madrid, Spain"
   ),
+  div(
+    class = "gallery-card",
+    tags$img(
+      src = "home/dogpull.jpeg",
+      alt = "pull"
+    ),
+    p(
+      class = "gallery-caption",
+      "Antique photo from the early 18th century depicting a dog harnessed for play"
+    ),
+    div(
+      class = "gallery-card",
+      tags$img(
+        src = "home/blonde.jpg",
+        alt = "Bronze"
+      ),
+      p(
+        class = "gallery-caption",
+        "Paris Hilton holding a chihuaha in a matching pink sweater in the 2001
+        film, Legally Blonde"
+      ),
   
   # CLOSING
   p(
