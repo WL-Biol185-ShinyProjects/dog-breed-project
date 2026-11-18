@@ -174,8 +174,6 @@ ui <- dashboardPage(
     # WEBSITE PAGES
     # -------------------------------------------------------
     # Each source() loads the UI for one page.
-    # All pages must be inside tabItems(), which itself
-    # must be inside dashboardBody().
     
     tabItems(
       
@@ -221,13 +219,6 @@ ui <- dashboardPage(
 # SERVER ----------------------------------------------------------
 
 # The server controls what the app DOES behind the scenes.
-#
-# Eventually this is where we will:
-#   - Read answers users give us
-#   - Filter the dog dataset
-#   - Calculate dog matches
-#   - Create graphs
-#   - Update information based on user selections
 #
 
 server <- function(input, output, session) {
