@@ -37,10 +37,9 @@ tabItem(
   display: block;
   width: 100%;
   height: 350px;
-  object-fit: contain;
+  object-fit: cover;
   border-radius: 10px;
   margin: 0 auto 15px;
-  background-color: white;
 }
 
     .hero-image {
