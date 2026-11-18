@@ -249,7 +249,7 @@ tabItem(
       p(
         class = "gallery-caption",
         "Paris Hilton holding a chihuahua in a matching pink sweater
-        in the 2001 film, Legally Blonde"
+        in the 2001 film, Legally Blonde."
       )
     )
   ),
