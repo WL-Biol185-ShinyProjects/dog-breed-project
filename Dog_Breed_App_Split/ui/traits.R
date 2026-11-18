@@ -85,6 +85,20 @@ library(htmltools)
           dplyr::select(admin, join_name, n_breeds, breed_list)
       )
       
+      # color code by continent
+      continent_cols <- c(
+        "Africa"        = "#E41A1C",  # red
+        "Europe"        = "#7B3294",  # purple
+        "Asia"          = "#FF7F00",  # orange
+        "North America" = "#1F78B4",  # blue
+        "South America" = "#33A02C",  # green
+        "Oceania"       = "#17BECF"   # teal
+      )
+      
+      continent_pal <- colorFactor(
+        palette = unname(continent_cols),
+        levels  = names(continent_cols)
+      )
         # Map specifications 
       dog_map <- leaflet(world_breeds) %>%
         addTiles() %>%
