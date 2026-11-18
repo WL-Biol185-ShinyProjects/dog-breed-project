@@ -32,6 +32,16 @@ tabItem(
       margin-bottom: 15px;
       background-color: white;
     }
+    
+.heart-image {
+  display: block;
+  height: 300px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+  margin: 0 auto 15px;
+}
 
     .hero-image {
       width: 100%;
@@ -130,7 +140,7 @@ tabItem(
       width = 6,
       tags$img(
         src = "home/am2.png",
-        class = "home-image",
+        class = "heart-image",
         alt = "am"
       )
     ),
@@ -138,7 +148,7 @@ tabItem(
       width = 6,
       tags$img(
         src = "home/malt2.png",
-        class = "home-image",
+        class = "heart-image",
         alt = "malt"
       )
     )
