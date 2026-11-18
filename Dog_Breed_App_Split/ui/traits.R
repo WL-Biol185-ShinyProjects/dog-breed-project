@@ -240,7 +240,7 @@ library(stringr)
         
         dog_map, 
         p(em("Data reflects breeds officially recognized by the Fédération Cynologique Internationale"))
-      )
+      
       
       h2("Top 10 Most Popular Dog Breeds Over Time")
       
@@ -252,6 +252,7 @@ library(stringr)
         animate = animationOptions(interval = 900)   # adds a play button
       )
       plotOutput("breed_plot", height = "800px")
+      )
       
 
       
