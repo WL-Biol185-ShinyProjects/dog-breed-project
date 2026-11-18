@@ -26,8 +26,8 @@ tabItem(
 
     .home-image {
       width: 100%;
-      height: 280px;
-      object-fit: cover;
+      height: 300px;
+      object-fit: contain;
       border-radius: 10px;
       margin-bottom: 15px;
     }
