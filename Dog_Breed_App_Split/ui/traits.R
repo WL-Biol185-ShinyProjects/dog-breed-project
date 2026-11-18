@@ -109,6 +109,9 @@ library(htmltools)
       
       dog_map <- dog_map %>% prependContent()
       
+      # BREED RANK FEATURE
+      # this should be a slider feature showing the top 10 most popular dog breeds each year - x axis shows year, y axis shows breed rank
+      
       # TRAITS & TRENDS PAGE -------------------------
       
       tabItem(
