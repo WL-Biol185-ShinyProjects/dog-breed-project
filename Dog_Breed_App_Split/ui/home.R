@@ -130,7 +130,7 @@ tabItem(
       tags$img(
         src = "home/am2.png",
         class = "home-image",
-        alt = "Amylase"
+        alt = "am"
       )
     ),
     column(
@@ -138,7 +138,7 @@ tabItem(
       tags$img(
         src = "home/malt2.png",
         class = "home-image",
-        alt = "Domestic dog"
+        alt = "malt"
       )
     )
   ),
