@@ -33,13 +33,29 @@ library(htmltools)
       map_breed_images <- read_csv(
         "Data/breed_images.csv",
         show_col_types = FALSE
-      )        
+      )
+
+      # EDITABLE DESCRIPTIONS: change the second column in this CSV whenever needed.
+      # The map still opens if the description CSV has not been added yet.
+      if (file.exists("Data/breed_descriptions.csv")) {
+        breed_descriptions <- read_csv(
+          "Data/breed_descriptions.csv",
+          show_col_types = FALSE
+        ) %>%
+          select(breed, description) %>%
+          distinct(breed, .keep_all = TRUE)
+      } else {
+        breed_descriptions <- tibble::tibble(
+          breed = character(), description = character()
+        )
+      }
       
       breeds_by_country <- fci_breeds_clean %>%
         
       # attach Wikipedia photo links to each country's popup 
         
-        left_join(map_breed_images, by = "breed") %>%                    
+        left_join(map_breed_images, by = "breed") %>%
+        left_join(breed_descriptions, by = "breed") %>%
         separate_rows(country, sep = ",\\s*") %>%
         mutate(
           country = toupper(trimws(country)),
@@ -54,14 +70,32 @@ library(htmltools)
                            "TIBET (CHINA)"       = "CHINA",
                            "KOREA (REPUBLIC OF)" = "SOUTH KOREA"),
           
-          # Show just one photo + name block per breed in the country popup 
+          # One photo, breed name, and EDITABLE description per breed.
+          image_url = dplyr::coalesce(image_url, ""),
+          description = dplyr::coalesce(description, ""),
+          description = ifelse(
+            trimws(description) == "",
+            "Description coming soon.",
+            description
+          ),
           breed_html = paste0(
-            "<div style='display:flex; align-items:center; margin:4px 0;'>",
-            ifelse(is.na(image_url), "",
-                   paste0("<img src='", image_url, "' width='60' height='60' loading='lazy' ",
-                          "style='object-fit:cover; border-radius:6px; margin-right:8px;' ",
-                          "onerror=\"this.style.display='none'\">")),
-            "<span>", breed, "</span></div>")
+            "<div style='display:flex;align-items:flex-start;gap:10px;",
+            "padding:9px 0;border-bottom:1px solid #e8e8e8;'>",
+            ifelse(trimws(image_url) == "", "", paste0(
+              "<img src='", htmltools::htmlEscape(image_url, attribute = TRUE),
+              "' width='72' height='72' loading='lazy' ",
+              "style='width:72px;height:72px;object-fit:cover;",
+              "border-radius:8px;flex-shrink:0;' ",
+              "onerror=\"this.style.display='none'\">"
+            )),
+            "<div style='min-width:0;'>",
+            "<div style='font-size:13px;font-weight:700;margin-bottom:3px;'>",
+            htmltools::htmlEscape(breed), "</div>",
+            "<div style='font-size:12px;color:#4b5563;line-height:1.5;",
+            "overflow-wrap:break-word;'>",
+            htmltools::htmlEscape(description), "</div>",
+            "</div></div>"
+          )
         )                 %>%
         arrange(breed)    %>%                                           
         group_by(country) %>%
@@ -115,19 +149,48 @@ library(htmltools)
                           paste0(name, ": ", n_breeds, ifelse(n_breeds == 1, " breed", " breeds"))),
           popup = ~paste0(
             "<b>", name, "</b><br>",
-            "<div style='max-height:300px; overflow-y:auto; min-width:220px;'>",   
+            "<div style='max-height:340px; overflow-y:auto; min-width:250px; padding-right:4px;'>",   
             ifelse(is.na(breed_list), "No data", breed_list),
             "</div>"),
-          popupOptions = popupOptions(maxWidth = 320)                              
+          popupOptions = popupOptions(maxWidth = 400)                              
         )
       
+      # MAP KEY: uses the same continent_cols and opacity as addPolygons.
+      # Colors represent the CONTINENT of countries with recorded breeds,
+      # not a different breed category. Gray means no breeds recorded.
+      legend_entries <- paste0(
+        "<div style='display:flex;align-items:center;gap:6px;white-space:nowrap;'>",
+        "<span style='display:inline-block;flex:0 0 12px;width:12px;height:12px;",
+        "background:", unname(continent_cols), ";opacity:0.6;",
+        "border:1px solid rgba(0,0,0,.15);border-radius:3px;'></span>",
+        "<span>", names(continent_cols), "</span></div>"
+      )
+      map_key_html <- paste0(
+        "<div style='background:rgba(255,255,255,.97);color:#202124;",
+        "border:1px solid #d1d5db;border-radius:10px;padding:10px 12px;",
+        "box-shadow:0 3px 12px rgba(0,0,0,.18);",
+        "font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:1.35;",
+        "max-width:230px;'>",
+        "<div style='font-weight:700;font-size:14px;margin-bottom:3px;'>Map key</div>",
+        "<div style='font-size:11px;color:#52525b;margin-bottom:8px;'>",
+        "Colored countries have recorded native breeds. Color indicates continent.",
+        "</div>",
+        "<div style='display:grid;grid-template-columns:1fr 1fr;",
+        "column-gap:10px;row-gap:6px;'>",
+        paste(legend_entries, collapse = ""),
+        "</div>",
+        "<div style='border-top:1px solid #e5e7eb;margin-top:8px;",
+        "padding-top:7px;display:flex;align-items:center;gap:6px;'>",
+        "<span style='display:inline-block;width:12px;height:12px;",
+        "background:grey;opacity:0.6;border:1px solid rgba(0,0,0,.15);",
+        "border-radius:3px;'></span>",
+        "<span>No breeds recorded</span></div></div>"
+      )
       dog_map <- dog_map %>%
-        addLegend(
+        addControl(
+          html = htmltools::HTML(map_key_html),
           position = "bottomleft",
-          colors   = c(unname(continent_cols), "grey"),
-          labels   = c(names(continent_cols), "No breeds recorded"),
-          title    = "Continent of origin",
-          opacity  = 0.8
+          className = "dog-breed-map-key"
         )
       
       dog_map <- dog_map %>% prependContent()
@@ -142,7 +205,7 @@ library(htmltools)
         
         h1("Traits & Trends"),
         
-        p("Explore dog breeds by country of origin. Hover the mouse over any highlighted country to view how many dog breeds originate from that country. Click on any highlighted country to see its native dog breeds' names and cute dog photos!"),
+        p("Explore dog breeds by country of origin. Colored countries have recorded breeds; their colors indicate continent (see the map key). Hover over a country to see its breed count, then click to view the breed names, photos, and descriptions."),
         
         dog_map
       )
