@@ -210,4 +210,4 @@ library(htmltools)
         dog_map
       )
       
-      
+      p("Data reflects breeds officially recognized by the Fédération Cynologique Internationale")
