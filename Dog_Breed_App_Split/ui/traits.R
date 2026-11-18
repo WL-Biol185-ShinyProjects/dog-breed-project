@@ -171,7 +171,7 @@ library(htmltools)
         "box-shadow:0 3px 12px rgba(0,0,0,.18);",
         "font-family:Arial,Helvetica,sans-serif;font-size:12px;line-height:1.35;",
         "max-width:230px;'>",
-        "<div style='font-weight:700;font-size:14px;margin-bottom:3px;'>Map key</div>",
+        "<div style='font-weight:700;font-size:14px;margin-bottom:3px;'>Map Key</div>",
         "<div style='font-size:11px;color:#52525b;margin-bottom:8px;'>",
         "Colored countries have recorded native breeds. Color indicates continent.",
         "</div>",
