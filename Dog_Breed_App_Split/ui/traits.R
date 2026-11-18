@@ -214,10 +214,10 @@ library(stringr)
         select(Breed, ends_with("Rank")) %>%
         pivot_longer(-Breed, names_to = "year", values_to = "rank") %>%
         mutate(year = parse_number(year), Breed = clean_rank_breed(Breed)) %>%
+        mutate(Breed = recode(Breed, "German Shepherd Dogs" = "German Shepherd")) %>%   # <- NEW LINE
         filter(!is.na(rank), rank <= 10) %>%
         arrange(Breed, year) %>%
         group_by(Breed) %>%
-        # start a new line segment if a breed leaves the top 10 and comes back
         mutate(run = cumsum(year - lag(year, default = first(year)) > 1)) %>%
         ungroup() %>%
         mutate(grp = paste(Breed, run))
