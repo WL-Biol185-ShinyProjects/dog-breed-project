@@ -250,10 +250,3 @@ tabItem(
     "We hope that you enjoy exploring our website!"
   )
 )
-  
-  # CLOSING
-  p(
-    class = "home-closing",
-    "We hope that you enjoy exploring our website!"
-  )
-)
