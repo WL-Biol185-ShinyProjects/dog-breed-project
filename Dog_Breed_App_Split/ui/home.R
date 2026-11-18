@@ -189,11 +189,11 @@ tabItem(
       ),
       p(
         class = "gallery-caption",
-        "The Jōmon inhabited the Japanese archipelago from 16000–2400 BP.
-        Above is a hunt reconstructed by the Niigata Prefectural Museum of
-        History. Archaeologists have discovered dog bone burials dated to
+        "Above is a Jōmon hunt reconstructed by the Niigata Prefectural Museum of
+        History.The Jōmon inhabited the Japanese archipelago from 16000–2400 BP.
+        Archaeologists have discovered dog bone burials here dated to
         around 9000 BP, with the remains surrounded by shells similar to
-        those found in human burials."
+        those surrounding human burials from the same time and location."
       )
     ),
     
@@ -206,8 +206,8 @@ tabItem(
       ),
       p(
         class = "gallery-caption",
-        "Bronze bell depicting a Jōmon hunt with dogs 2500 BP.
-        Located in the Tokyo National Museum"
+        "Bronze bell depicting a Jōmon hunt with dogs from 2500 BP,
+        located in the Tokyo National Museum."
       )
     ),
     
@@ -220,8 +220,8 @@ tabItem(
       ),
       p(
         class = "gallery-caption",
-        "Renaissance painting featuring a dog, Diego Vélazquez's Las
-        Meninas, 1656, Museo Nacional del Prado, Madrid, Spain"
+        "Diego Vélazquez's 1656 renaissance painting featuring a dog, titled Las
+        Meninas, located in the Museo Nacional del Prado in Madrid, Spain."
       )
     ),
     
@@ -235,7 +235,7 @@ tabItem(
       p(
         class = "gallery-caption",
         "Antique photo from the early 18th century depicting a dog
-        harnessed for play"
+        harnessed for play."
       )
     ),
     
