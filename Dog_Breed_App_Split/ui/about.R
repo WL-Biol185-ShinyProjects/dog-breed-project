@@ -51,7 +51,7 @@ tabItem(
         width = "200px",
         style = "border-radius: 50%; object-fit: cover;"
       ),
-      p("I grew up in Harrisonburg, Virginia and am a Biology major 
+      p("I grew up in Harrisonburg, Virginia and am a biology major 
                 with a minor in education. I have a golden retriever at home named Goose!")
     ),
     
@@ -64,7 +64,7 @@ tabItem(
         width = "200px",
         style = "border-radius: 50%; object-fit: cover;"
       ),
-      p("From Staten Island, New York, I am a Biology and Music double major on the pre-med track. 
+      p("From Staten Island, New York, I am a biology and music double major on the pre-med track. 
                 I love dogs and would love to have a Labrador Retriever!")
     )
     
