@@ -200,12 +200,20 @@ library(stringr)
       
       # BREED RANK FEATURE
       # this should be a slider feature showing the top 10 most popular dog breeds each year - x axis shows year, y axis shows breed rank
+      
       breed_rank_raw <- read_csv("Data/breed_rank_all.csv",
                                  na = c("", "NA"), show_col_types = FALSE)
+      
+      # "Retrievers (Labrador)" -> "Labrador Retriever"
+      clean_rank_breed <- function(x) {
+        m <- str_match(x, "^(.*?)s? \\((.*)\\)$")
+        ifelse(!is.na(m[, 1]), paste(m[, 3], m[, 2]), x)
+      }
+      
       breed_top10 <- breed_rank_raw %>%
         select(Breed, ends_with("Rank")) %>%
         pivot_longer(-Breed, names_to = "year", values_to = "rank") %>%
-        mutate(year = parse_number(year), Breed = breed_rank_all(Breed)) %>%
+        mutate(year = parse_number(year), Breed = clean_rank_breed(Breed)) %>%
         filter(!is.na(rank), rank <= 10) %>%
         arrange(Breed, year) %>%
         group_by(Breed) %>%
