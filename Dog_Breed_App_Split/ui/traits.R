@@ -208,6 +208,6 @@ library(htmltools)
         p("Explore dog breeds by country of origin. Colored countries have recorded breeds; their colors indicate continent (see the map key). Hover over a country to see its breed count, then click to view the breed names, photos, and descriptions."),
         
         dog_map
-      )
       
       p("Data reflects breeds officially recognized by the Fédération Cynologique Internationale")
+      )
