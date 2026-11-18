@@ -128,7 +128,7 @@ tabItem(
     column(
       width = 6,
       tags$img(
-        src = "home/Amylase.png",
+        src = "home/am2.png",
         class = "home-image",
         alt = "Amylase"
       )
@@ -136,7 +136,7 @@ tabItem(
     column(
       width = 6,
       tags$img(
-        src = "home/Maltase.png",
+        src = "home/malt2.png",
         class = "home-image",
         alt = "Domestic dog"
       )
