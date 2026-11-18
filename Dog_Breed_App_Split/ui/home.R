@@ -117,7 +117,7 @@ tabItem(
     physiological and behavioral traits of a species by selectively
     breeding its members. With some archaeological suggestions of
     earlier domestication, a burial dated at 12,000 years before
-    present from the Ain Mallaha site contained a human skeleton
+    present (BP) from the Ain Mallaha site contained a human skeleton
     cuddled with a dog's skeleton. This site was inhabited by a
     hunter-gatherer population that buried their deceased in tombs."
   ),
