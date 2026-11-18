@@ -75,6 +75,12 @@ tags$li(tags$a(
   href = "https://github.com/kkakey/dog_traits_AKC/blob/main/data/breed_rank_all.csv",
   target = "_blank",
   "American Kennel Club Dog Breed Rank dataset"
+)), 
+
+tags$li(tags$a(
+  href = "https://douglasslab.com/wp-content/uploads/2025/08/dog_data.xlsx",
+  target = "_blank",
+  "American Kennel Club Dog Breed Comprehensive Dataset"
 ))
 
 )
