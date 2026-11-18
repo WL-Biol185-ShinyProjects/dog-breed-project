@@ -103,8 +103,8 @@ library(htmltools)
       dog_map <- leaflet(world_breeds) %>%
         addTiles() %>%
         addPolygons(
-          fillColor   = ~ifelse(is.na(breed_list), "grey", "orange"),
-          fillOpacity = 0.5,
+          fillColor   = ~ifelse(is.na(breed_list), "grey", continent_pal(continent)),
+          fillOpacity = 0.6,
           weight      = 1,
           color       = "white",
           highlightOptions = highlightOptions(weight = 3, color = "#75462F",
@@ -119,6 +119,15 @@ library(htmltools)
             ifelse(is.na(breed_list), "No data", breed_list),
             "</div>"),
           popupOptions = popupOptions(maxWidth = 320)                              
+        )
+      
+      dog_map <- dog_map %>%
+        addLegend(
+          position = "bottomleft",
+          colors   = c(unname(continent_cols), "grey"),
+          labels   = c(names(continent_cols), "No breeds recorded"),
+          title    = "Continent of origin",
+          opacity  = 0.8
         )
       
       dog_map <- dog_map %>% prependContent()
