@@ -254,7 +254,7 @@ library(stringr)
         p(em("Data reflects breeds officially recognized by the Fédération Cynologique Internationale"))
       )
       
-      h2("Top 10 Most Popular Dog Breeds Over Time"),
+      h2("Top 10 Most Popular Dog Breeds Over Time")
       
       p("Use the slider to navigate between years and see how the top 10 most popular dog breeds have shifted over time!"),
       sliderInput(
