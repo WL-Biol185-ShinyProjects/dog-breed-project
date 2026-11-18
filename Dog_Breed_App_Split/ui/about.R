@@ -45,7 +45,8 @@
                 width = "200px",
                 style = "border-radius: 50%; object-fit: cover;"
               ),
-              p("From Harrisonburg, Virginia. I am a Biology major with a minor in education. I have a golden retriever at home named Goose!")
+              p("I grew up in Harrisonburg, Virginia and am a Biology major 
+                with a minor in education. I have a golden retriever at home named Goose!")
             ),
             
             column(
