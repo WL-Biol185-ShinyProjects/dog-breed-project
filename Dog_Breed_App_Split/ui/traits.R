@@ -10,6 +10,9 @@ library(rnaturalearth)
 # Packages for pawprint cursor
 library(htmlwidgets)
 library(htmltools)
+#Packages for popularity slider 
+library(ggplot2)
+library(stringr)
       
       # Code for interactive dog breed world map 
       fci_breeds_clean <- read_csv("Data/fci_breeds_clean.csv")
@@ -197,6 +200,46 @@ library(htmltools)
       
       # BREED RANK FEATURE
       # this should be a slider feature showing the top 10 most popular dog breeds each year - x axis shows year, y axis shows breed rank
+      breed_rank_raw <- read_csv("Data/breed_rank_all.csv",
+                                 na = c("", "NA"), show_col_types = FALSE)
+      breed_top10 <- breed_rank_raw %>%
+        select(Breed, ends_with("Rank")) %>%
+        pivot_longer(-Breed, names_to = "year", values_to = "rank") %>%
+        mutate(year = parse_number(year), Breed = breed_rank_all(Breed)) %>%
+        filter(!is.na(rank), rank <= 10) %>%
+        arrange(Breed, year) %>%
+        group_by(Breed) %>%
+        # start a new line segment if a breed leaves the top 10 and comes back
+        mutate(run = cumsum(year - lag(year, default = first(year)) > 1)) %>%
+        ungroup() %>%
+        mutate(grp = paste(Breed, run))
+      
+      breed_years <- sort(unique(breed_top10$year))
+      
+      # one fixed color per breed so colors don't change as the slider moves
+      breed_pal <- setNames(scales::hue_pal()(n_distinct(breed_top10$Breed)),
+                            unique(breed_top10$Breed))
+      
+      output$breed_plot <- renderPlot({
+        d <- filter(breed_top10, year <= input$breed_year)
+        
+        ggplot(d, aes(x = year, y = rank)) +
+          geom_path(aes(group = grp, colour = Breed), linewidth = 1.2, alpha = 0.5) +
+          geom_point(aes(fill = Breed), shape = 21, size = 23,
+                     colour = "white", stroke = 1) +
+          geom_text(aes(label = str_wrap(Breed, 9)),
+                    colour = "white", size = 2.4, fontface = "bold",
+                    lineheight = 0.85, family = "sans") +
+          scale_x_continuous(breaks = breed_years,
+                             limits = c(min(breed_years) - 0.5, max(breed_years) + 0.5)) +
+          scale_y_reverse(breaks = 1:10, limits = c(10.5, 0.5)) +   # rank 1 at the top
+          scale_colour_manual(values = breed_pal) +
+          scale_fill_manual(values = breed_pal) +
+          guides(colour = "none", fill = "none") +
+          labs(x = "Year", y = "Dog Breed Popularity Rank") +
+          theme_minimal(base_size = 14) +
+          theme(panel.grid.minor = element_blank())
+      })
       
       # TRAITS & TRENDS PAGE -------------------------
       
@@ -211,6 +254,18 @@ library(htmltools)
         p(em("Data reflects breeds officially recognized by the Fédération Cynologique Internationale"))
       )
       
+      h2("Top 10 Most Popular Dog Breeds Over Time"),
+      
+      p("Use the slider to navigate between years and see how the top 10 most popular dog breeds have shifted over time!"),
+      sliderInput(
+        "breed_year", "Year",
+        min = min(breed_years), max = max(breed_years), value = min(breed_years),
+        step = 1, sep = "", width = "100%",
+        animate = animationOptions(interval = 900)   # adds a play button
+      ),
+      plotOutput("breed_plot", height = "800px")
+      )
+
       
       
       
