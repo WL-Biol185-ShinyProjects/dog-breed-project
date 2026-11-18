@@ -228,6 +228,7 @@ server <- function(input, output, session) {
   source("server/soul_dog.R", local = TRUE)
   source("server/find_breed.R", local = TRUE)
   source("server/references.R", local = TRUE)
+  source("server/popularity.R", local = TRUE)
 }
 
 
