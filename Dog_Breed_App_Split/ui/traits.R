@@ -108,7 +108,7 @@ library(htmltools)
           weight      = 1,
           color       = "white",
           highlightOptions = highlightOptions(weight = 3, color = "#75462F",
-                                              fillColor = "#E08E45", fillOpacity = 0.9,
+                                              fillColor = "hotpink", fillOpacity = 0.9,
                                               bringToFront = TRUE),
           label = ~ifelse(is.na(n_breeds),
                           paste0(name, ": no breeds recorded"),
